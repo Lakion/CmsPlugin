@@ -1,0 +1,3 @@
+imports:
+    - suites/route.yml
+    - suites/static_content.yml

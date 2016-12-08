@@ -1,0 +1,18 @@
+default:
+    suites:
+        ui_route:
+            contexts_services:
+                - lakion_sylius_cms.context.hook.phpcr
+                - sylius.behat.context.hook.doctrine_orm
+
+                - sylius.behat.context.transform.shared_storage
+
+                - lakion_sylius_cms.context.setup.route
+                - sylius.behat.context.setup.admin_security
+                - sylius.behat.context.setup.static_content
+
+                - lakion_sylius_cms.context.ui.admin.managing_routes
+                - sylius.behat.context.ui.admin.notification
+
+            filters:
+                tags: "@route && @ui"
