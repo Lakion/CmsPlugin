@@ -5,7 +5,7 @@ namespace Lakion\SyliusCmsBundle;
 use Sylius\Bundle\ResourceBundle\AbstractResourceBundle;
 use Sylius\Bundle\ResourceBundle\SyliusResourceBundle;
 
-final class SyliusContentBundle extends AbstractResourceBundle
+final class LakionSyliusCmsBundle extends AbstractResourceBundle
 {
     /**
      * {@inheritdoc}

@@ -1,4 +1,4 @@
-sylius:
+lakion_sylius_cms:
     form:
         route:
             name: Emri

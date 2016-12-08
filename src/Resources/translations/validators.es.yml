@@ -1,4 +1,4 @@
-sylius:
+lakion_sylius_cms:
     route:
         name:
             not_blank: Por favor, introduzca un nombre de ruta.

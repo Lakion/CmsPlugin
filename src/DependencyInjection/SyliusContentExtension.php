@@ -3,11 +3,11 @@
 namespace Lakion\SyliusCmsBundle\DependencyInjection;
 
 use Sylius\Bundle\ResourceBundle\DependencyInjection\Extension\AbstractResourceExtension;
+use Sylius\Bundle\ResourceBundle\SyliusResourceBundle;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\DependencyInjection\Parameter;
-use Symfony\Component\DependencyInjection\Reference;
 
 final class SyliusContentExtension extends AbstractResourceExtension
 {
@@ -19,7 +19,7 @@ final class SyliusContentExtension extends AbstractResourceExtension
         $config = $this->processConfiguration($this->getConfiguration($config, $container), $config);
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
-        $this->registerResources('sylius', $config['driver'], $config['resources'], $container);
+        $this->registerResources('sylius', SyliusResourceBundle::DRIVER_DOCTRINE_PHPCR_ODM, $config['resources'], $container);
 
         $loader->load('services.xml');
 

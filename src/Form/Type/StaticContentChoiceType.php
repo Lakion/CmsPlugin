@@ -2,15 +2,24 @@
 
 namespace Lakion\SyliusCmsBundle\Form\Type;
 
-class StaticContentChoiceType extends ResourceChoiceType
+use Doctrine\Bundle\PHPCRBundle\Form\Type\DocumentType;
+use Symfony\Component\Form\AbstractType;
+
+final class StaticContentChoiceType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
-    public function configureOptions(OptionsResolver $resolver)
+    public function getParent()
     {
-        parent::configureOptions($resolver);
+        return DocumentType::class;
+    }
 
-        $resolver->setDefaults(['property' => 'id']);
+    /**
+     * {@inheritdoc}
+     */
+    public function getBlockPrefix()
+    {
+        return 'lakion_sylius_cms_static_content_choice';
     }
 }

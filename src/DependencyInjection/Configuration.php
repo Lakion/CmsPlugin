@@ -2,6 +2,14 @@
 
 namespace Lakion\SyliusCmsBundle\DependencyInjection;
 
+use Lakion\SyliusCmsBundle\Document\Route;
+use Lakion\SyliusCmsBundle\Document\StaticContent;
+use Lakion\SyliusCmsBundle\Repository\StaticContentRepository;
+use Sylius\Bundle\ResourceBundle\Controller\ResourceController;
+use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
+use Symfony\Component\Config\Definition\Builder\TreeBuilder;
+use Symfony\Component\Config\Definition\ConfigurationInterface;
+
 final class Configuration implements ConfigurationInterface
 {
     /**
@@ -10,14 +18,7 @@ final class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('sylius_content');
-
-        $rootNode
-            ->addDefaultsIfNotSet()
-            ->children()
-                ->scalarNode('driver')->defaultValue(SyliusResourceBundle::DRIVER_DOCTRINE_PHPCR_ODM)->end()
-            ->end()
-        ;
+        $rootNode = $treeBuilder->root('lakion_sylius_cms');
 
         $this->addResourcesSection($rootNode);
 
@@ -44,22 +45,6 @@ final class Configuration implements ConfigurationInterface
                                         ->scalarNode('model')->defaultValue(Route::class)->cannotBeEmpty()->cannotBeEmpty()->end()
                                         ->scalarNode('controller')->defaultValue(ResourceController::class)->end()
                                         ->scalarNode('repository')->cannotBeEmpty()->end()
-                                        ->scalarNode('factory')->defaultValue(Factory::class)->end()
-                                        ->arrayNode('form')
-                                            ->addDefaultsIfNotSet()
-                                            ->children()
-                                                ->scalarNode('default')->defaultValue(RouteType::class)->cannotBeEmpty()->end()
-                                            ->end()
-                                        ->end()
-                                    ->end()
-                                ->end()
-                                ->arrayNode('validation_groups')
-                                    ->addDefaultsIfNotSet()
-                                    ->children()
-                                        ->arrayNode('default')
-                                            ->prototype('scalar')->end()
-                                            ->defaultValue(['sylius'])
-                                        ->end()
                                     ->end()
                                 ->end()
                             ->end()
@@ -73,24 +58,7 @@ final class Configuration implements ConfigurationInterface
                                     ->children()
                                         ->scalarNode('model')->defaultValue(StaticContent::class)->cannotBeEmpty()->end()
                                         ->scalarNode('controller')->defaultValue(ResourceController::class)->cannotBeEmpty()->end()
-                                        ->scalarNode('repository')->cannotBeEmpty(StaticContentRepository::class)->end()
-                                        ->scalarNode('factory')->defaultValue(Factory::class)->end()
-                                        ->arrayNode('form')
-                                            ->addDefaultsIfNotSet()
-                                            ->children()
-                                                ->scalarNode('default')->defaultValue(StaticContentType::class)->cannotBeEmpty()->end()
-                                                ->scalarNode('choice')->defaultValue(StaticContentChoiceType::class)->cannotBeEmpty()->end()
-                                            ->end()
-                                        ->end()
-                                    ->end()
-                                ->end()
-                                ->arrayNode('validation_groups')
-                                    ->addDefaultsIfNotSet()
-                                    ->children()
-                                        ->arrayNode('default')
-                                            ->prototype('scalar')->end()
-                                            ->defaultValue(['sylius'])
-                                        ->end()
+                                        ->scalarNode('repository')->defaultValue(StaticContentRepository::class)->cannotBeEmpty()->end()
                                     ->end()
                                 ->end()
                             ->end()
