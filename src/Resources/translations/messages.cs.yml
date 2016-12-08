@@ -1,0 +1,12 @@
+sylius:
+    form:
+        route:
+            name: Jméno
+            parent: Rodič
+        static_content:
+            body: Tělo
+            internal_name: Interní název
+            menu_nodes: Nabídka uzlů
+            parent: Rodič
+            routes: Cesty
+            title: Název

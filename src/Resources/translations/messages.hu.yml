@@ -1,0 +1,11 @@
+sylius:
+    form:
+        route:
+            name: Név
+            parent: Szülő
+        static_content:
+            body: Törzs
+            menu_nodes: Menüpont hozzáadása
+            parent: Szülő
+            routes: Útvonalak
+            title: Cím

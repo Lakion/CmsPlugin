@@ -1,0 +1,6 @@
+sylius:
+    form:
+        route:
+            name: Tên
+        static_content:
+            title: Tiêu đề

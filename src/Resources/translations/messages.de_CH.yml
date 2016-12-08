@@ -1,0 +1,9 @@
+sylius:
+    form:
+        route:
+            content: Inhalt
+            name: Name
+            parent: Parent
+        static_content:
+            body: Body
+            title: Titel

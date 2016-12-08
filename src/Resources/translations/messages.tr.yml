@@ -1,0 +1,12 @@
+sylius:
+    form:
+        route:
+            content: İçerik
+            name: Ad
+            parent: Üst
+        static_content:
+            body: İçerik
+            menu_nodes: Menü düğümleri
+            parent: Üst
+            routes: Rotalar
+            title: Başlık

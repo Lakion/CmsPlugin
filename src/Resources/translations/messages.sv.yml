@@ -1,0 +1,12 @@
+sylius:
+    form:
+        route:
+            content: Innehåll
+            name: Namn
+            parent: Förälder
+        static_content:
+            body: Brödtext
+            menu_nodes: Menynoder
+            parent: Förälder
+            routes: Rutter
+            title: Titel

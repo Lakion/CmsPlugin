@@ -1,0 +1,7 @@
+sylius:
+    form:
+        route:
+            name: Nom
+        static_content:
+            body: Cos
+            title: Títol

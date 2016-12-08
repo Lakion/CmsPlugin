@@ -1,0 +1,21 @@
+sylius:
+    route:
+        name:
+            not_blank: Wprowadź nazwę URL.
+        content:
+            not_blank: Wprowadź URL.
+        start_date:
+            invalid_date: Data publikacji jest nieprawidłowa.
+        end_date:
+            invalid_date: Data zakończenia publikacji jest nieprawidłowa.
+    static_content:
+        name:
+            not_blank: Wprowadź nazwę strony statycznej.
+        title:
+            not_blank: Wprowadź tytuł strony statycznej.
+        body:
+            not_blank: Wprowadź zawartość strony statycznej.
+        start_date:
+            invalid_date: Data publikacji jest nieprawidłowa.
+        end_date:
+            invalid_date: Data zakończenia publikacji jest nieprawidłowa.

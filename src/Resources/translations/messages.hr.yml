@@ -1,0 +1,11 @@
+sylius:
+    form:
+        route:
+            name: Naziv grupe
+            parent: Nadređena kategorija
+        static_content:
+            body: Poruka
+            menu_nodes: Čvor izbornika
+            parent: Nadređena kategorija
+            routes: Rute
+            title: Naslov

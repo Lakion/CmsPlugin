@@ -1,0 +1,7 @@
+sylius:
+    form:
+        route:
+            name: الاسم
+        static_content:
+            menu_nodes: عقدة القائمة
+            routes: طرق

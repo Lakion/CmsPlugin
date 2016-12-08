@@ -1,0 +1,6 @@
+sylius:
+    form:
+        route:
+            name: Ονομασία
+        static_content:
+            title: Τίτλος

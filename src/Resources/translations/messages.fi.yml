@@ -1,0 +1,6 @@
+sylius:
+    form:
+        route:
+            parent: Vanhempi
+        static_content:
+            parent: Vanhempi

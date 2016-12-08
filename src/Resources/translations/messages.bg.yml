@@ -1,0 +1,12 @@
+sylius:
+    form:
+        route:
+            name: Име
+            parent: Източник
+        static_content:
+            body: Тяло
+            internal_name: Вътрешно име
+            menu_nodes: Меню деца
+            parent: Родител
+            routes: Маршрути
+            title: Заглавие
