@@ -25,6 +25,7 @@ framework:
     trusted_proxies: ~
     session:
         handler_id: ~
+    test: ~
 
 doctrine:
     dbal:
