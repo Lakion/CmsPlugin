@@ -25,5 +25,14 @@
         <service id="sylius.admin.content_menu_builder" class="Lakion\SyliusCmsBundle\Menu\ContentMenuBuilder">
             <tag name="kernel.event_listener" event="sylius.menu.admin.main" method="configureMenu" />
         </service>
+
+        <service id="sylius.fixture.example_factory.static_content" class="Lakion\SyliusCmsBundle\Fixture\Factory\StaticContentExampleFactory">
+            <argument type="service" id="sylius.factory.static_content" />
+        </service>
+
+        <service id="sylius.fixture.example_factory.route" class="Lakion\SyliusCmsBundle\Fixture\Factory\RouteExampleFactory">
+            <argument type="service" id="sylius.factory.route" />
+            <argument type="service" id="sylius.repository.static_content" />
+        </service>
     </services>
 </container>
