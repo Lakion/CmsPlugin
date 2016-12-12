@@ -4,9 +4,6 @@ namespace Lakion\SyliusCmsBundle\Menu;
 
 use Sylius\Bundle\UiBundle\Menu\Event\MenuBuilderEvent;
 
-/**
- * @author Kamil Kokot <kamil.kokot@lakion.com>
- */
 final class ContentMenuBuilder
 {
     /**

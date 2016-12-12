@@ -1,0 +1,24 @@
+sylius_admin_dashboard_redirect:
+    path: /admin
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: sylius_admin_dashboard
+        permanent: true
+
+sylius_shop:
+    resource: "@SyliusShopBundle/Resources/config/routing.yml"
+
+sylius_admin:
+    resource: "@SyliusAdminBundle/Resources/config/routing.yml"
+    prefix: /admin
+
+sylius_api:
+    resource: "@SyliusApiBundle/Resources/config/routing/main.yml"
+    prefix: /api
+
+lakion_sylius_cms_admin:
+    resource: "@LakionSyliusCmsBundle/Resources/config/app/admin_routing.yml"
+    prefix: /admin
+
+lakion_sylius_cms_shop:
+    resource: "@LakionSyliusCmsBundle/Resources/config/app/shop_routing.yml"
