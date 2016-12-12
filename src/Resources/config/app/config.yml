@@ -25,3 +25,10 @@ cmf_routing:
                 enable_initializer: true
                 route_basepaths:
                     - /cms/routes
+
+doctrine_cache:
+    providers:
+        phpcr_meta:
+            type: array
+        phpcr_nodes:
+            type: array

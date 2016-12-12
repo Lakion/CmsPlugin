@@ -9,7 +9,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\DependencyInjection\Parameter;
 
-final class SyliusContentExtension extends AbstractResourceExtension
+final class LakionSyliusCmsExtension extends AbstractResourceExtension
 {
     /**
      * {@inheritdoc}

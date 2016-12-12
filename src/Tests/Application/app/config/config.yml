@@ -1,0 +1,56 @@
+parameters:
+    locale: "en_US"
+    secret: "Three can keep a secret, if two of them are dead."
+
+imports:
+    - { resource: "@SyliusCoreBundle/Resources/config/app/config.yml" }
+    - { resource: "@SyliusAdminBundle/Resources/config/app/config.yml" }
+    - { resource: "@SyliusShopBundle/Resources/config/app/config.yml" }
+    - { resource: "@SyliusApiBundle/Resources/config/app/config.yml" }
+    - { resource: "@LakionSyliusCmsBundle/Resources/config/app/config.yml" }
+
+    - { resource: "security.yml" }
+
+framework:
+    translator: { fallbacks: ["%locale%"] }
+    secret: "%secret"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: "%kernel.debug%"
+    form: true
+    csrf_protection: true
+    validation: { enable_annotations: true }
+    templating: { engines: ["twig"] }
+    default_locale: "%locale%"
+    trusted_proxies: ~
+    session:
+        handler_id: ~
+
+doctrine:
+    dbal:
+        driver: "pdo_sqlite"
+        path: "%kernel.cache_dir%/db.sql"
+        charset: UTF8
+
+doctrine_phpcr:
+    session:
+        backend:
+            type: doctrinedbal
+            connection: default
+            caches:
+                meta: doctrine_cache.providers.phpcr_meta
+                nodes: doctrine_cache.providers.phpcr_nodes
+        workspace: default
+    odm:
+        auto_mapping: true
+        auto_generate_proxy_classes: "%kernel.debug%"
+
+sylius_resource:
+    drivers:
+        - doctrine/orm
+        - doctrine/phpcr-odm
+
+sylius_grid:
+    drivers:
+        - doctrine/orm
+        - doctrine/phpcr-odm

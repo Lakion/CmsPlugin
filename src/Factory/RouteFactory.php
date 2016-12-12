@@ -5,6 +5,7 @@ namespace Lakion\SyliusCmsBundle\Factory;
 use Doctrine\Common\Persistence\ObjectManager;
 use Lakion\SyliusCmsBundle\Document\Route;
 use Sylius\Component\Resource\Factory\FactoryInterface;
+use Webmozart\Assert\Assert;
 
 final class RouteFactory implements FactoryInterface
 {
@@ -26,13 +27,15 @@ final class RouteFactory implements FactoryInterface
     /**
      * @param FactoryInterface $decoratedFactory
      * @param ObjectManager $documentManager
-     * @param string $routeParentPath
+     * @param array $routeParentsPaths
      */
-    public function __construct(FactoryInterface $decoratedFactory, ObjectManager $documentManager, $routeParentPath)
+    public function __construct(FactoryInterface $decoratedFactory, ObjectManager $documentManager, $routeParentsPaths)
     {
         $this->decoratedFactory = $decoratedFactory;
         $this->documentManager = $documentManager;
-        $this->routeParentPath = $routeParentPath;
+
+        Assert::notEmpty($routeParentsPaths);
+        $this->routeParentPath = current($routeParentsPaths);
     }
 
     /**

@@ -19,7 +19,7 @@
                 </service>
             </argument>
             <argument type="service" id="doctrine_phpcr.odm.document_manager" />
-            <argument>%cmf_routing.dynamic.persistence.phpcr.route_basepath%</argument>
+            <argument>%cmf_routing.dynamic.persistence.phpcr.route_basepaths%</argument>
         </service>
 
         <service id="sylius.admin.content_menu_builder" class="Lakion\SyliusCmsBundle\Menu\ContentMenuBuilder">
