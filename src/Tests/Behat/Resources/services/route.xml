@@ -25,15 +25,15 @@
 
         <service id="lakion_sylius_cms.page.admin.route.index" class="%lakion_sylius_cms.page.admin.route.index.class%"
                  parent="sylius.behat.page.admin.crud.index" public="false">
-            <argument type="string">lakion_sylius_cms_admin_route_index</argument>
+            <argument type="string">sylius_admin_route_index</argument>
         </service>
         <service id="lakion_sylius_cms.page.admin.route.create" class="%lakion_sylius_cms.page.admin.route.create.class%"
                  parent="sylius.behat.page.admin.crud.create" public="false">
-            <argument type="string">lakion_sylius_cms_admin_route_create</argument>
+            <argument type="string">sylius_admin_route_create</argument>
         </service>
         <service id="lakion_sylius_cms.page.admin.route.update" class="%lakion_sylius_cms.page.admin.route.update.class%"
                  parent="sylius.behat.page.admin.crud.update" public="false">
-            <argument type="string">lakion_sylius_cms_admin_route_create</argument>
+            <argument type="string">sylius_admin_route_update</argument>
         </service>
     </services>
 </container>

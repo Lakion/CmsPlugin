@@ -1,6 +1,6 @@
 lakion_admin_route:
-    resource: "@LakionSyliusCms/Resources/config/app/routing/admin/route.yml"
+    resource: "@LakionSyliusCmsBundle/Resources/config/app/routing/admin/route.yml"
 
 lakion_admin_static_content:
-    resource: "@LakionSyliusCms/Resources/config/app/routing/admin/static_content.yml"
+    resource: "@LakionSyliusCmsBundle/Resources/config/app/routing/admin/static_content.yml"
 

@@ -112,10 +112,7 @@ final class ManagingStaticContentsContext implements Context
             $this->indexPage->open();
         }
 
-        Assert::true(
-            $this->indexPage->isSingleResourceOnPage(['title' => $title]),
-            sprintf('Could not find static content with title "%s"!', $title)
-        );
+        Assert::true($this->indexPage->isSingleResourceOnPage(['title' => $title]));
     }
 
     /**
@@ -139,10 +136,7 @@ final class ManagingStaticContentsContext implements Context
             $this->indexPage->open();
         }
 
-        Assert::false(
-            $this->indexPage->isSingleResourceOnPage(['title' => $title]),
-            sprintf('Static content with title %s was created, but it should not.', $title)
-        );
+        Assert::false($this->indexPage->isSingleResourceOnPage(['title' => $title]));
     }
 
     /**
@@ -194,9 +188,6 @@ final class ManagingStaticContentsContext implements Context
      */
     public function theStaticContentShouldNoLongerExistInTheStore($title)
     {
-        Assert::false(
-            $this->indexPage->isSingleResourceOnPage(['title' => $title]),
-            sprintf('Static content with title %s exists, but should not.', $title)
-        );
+        Assert::false($this->indexPage->isSingleResourceOnPage(['title' => $title]));
     }
 }

@@ -46,12 +46,12 @@ final class StaticContentType extends AbstractResourceType
             ])
             ->add('publishStartDate', DateTimeType::class, [
                 'label' => 'lakion_sylius_cms.form.static_content.publish_start_date',
-                'empty_value' => ['year' => '-', 'month' => '-', 'day' => '-'],
+                'placeholder' => ['year' => '-', 'month' => '-', 'day' => '-'],
                 'time_widget' => 'text',
             ])
             ->add('publishEndDate', DateTimeType::class, [
                 'label' => 'lakion_sylius_cms.form.static_content.publish_end_date',
-                'empty_value' => ['year' => '-', 'month' => '-', 'day' => '-'],
+                'placeholder' => ['year' => '-', 'month' => '-', 'day' => '-'],
                 'time_widget' => 'text',
             ])
         ;

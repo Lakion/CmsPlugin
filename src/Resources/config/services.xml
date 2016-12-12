@@ -2,6 +2,23 @@
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
+        <service id="sylius.form.type.route" class="Lakion\SyliusCmsBundle\Form\Type\RouteType">
+            <argument>%sylius.model.route.class%</argument>
+            <argument type="collection"><argument>sylius</argument></argument>
+            <tag name="form.type" />
+        </service>
+
+        <service id="sylius.form.type.static_content" class="Lakion\SyliusCmsBundle\Form\Type\StaticContentType">
+            <argument>%sylius.model.static_content.class%</argument>
+            <argument type="collection"><argument>sylius</argument></argument>
+            <tag name="form.type" />
+        </service>
+
+        <service id="sylius.form.type.static_content_choice" class="Lakion\SyliusCmsBundle\Form\Type\StaticContentChoiceType">
+            <argument>%sylius.model.static_content.class%</argument>
+            <tag name="form.type" />
+        </service>
+
         <service id="sylius.factory.static_content" class="Lakion\SyliusCmsBundle\Factory\StaticContentFactory">
             <argument type="service">
                 <service class="Sylius\Component\Resource\Factory\Factory">

@@ -4,6 +4,8 @@ namespace Lakion\SyliusCmsBundle\DependencyInjection;
 
 use Lakion\SyliusCmsBundle\Document\Route;
 use Lakion\SyliusCmsBundle\Document\StaticContent;
+use Lakion\SyliusCmsBundle\Form\Type\RouteType;
+use Lakion\SyliusCmsBundle\Form\Type\StaticContentType;
 use Lakion\SyliusCmsBundle\Repository\StaticContentRepository;
 use Sylius\Bundle\ResourceBundle\Controller\ResourceController;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
@@ -45,6 +47,7 @@ final class Configuration implements ConfigurationInterface
                                         ->scalarNode('model')->defaultValue(Route::class)->cannotBeEmpty()->cannotBeEmpty()->end()
                                         ->scalarNode('controller')->defaultValue(ResourceController::class)->end()
                                         ->scalarNode('repository')->cannotBeEmpty()->end()
+                                        ->scalarNode('form')->defaultValue(RouteType::class)->end()
                                     ->end()
                                 ->end()
                             ->end()
@@ -59,6 +62,7 @@ final class Configuration implements ConfigurationInterface
                                         ->scalarNode('model')->defaultValue(StaticContent::class)->cannotBeEmpty()->end()
                                         ->scalarNode('controller')->defaultValue(ResourceController::class)->cannotBeEmpty()->end()
                                         ->scalarNode('repository')->defaultValue(StaticContentRepository::class)->cannotBeEmpty()->end()
+                                        ->scalarNode('form')->defaultValue(StaticContentType::class)->end()
                                     ->end()
                                 ->end()
                             ->end()

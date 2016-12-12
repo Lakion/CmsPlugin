@@ -4,13 +4,11 @@
     <class name="Symfony\Cmf\Bundle\RoutingBundle\Doctrine\Phpcr\Route">
         <property name="name">
             <constraint name="NotBlank">
-                <option name="message">sylius.route.name.not_blank</option>
                 <option name="groups">sylius</option>
             </constraint>
         </property>
         <property name="content">
             <constraint name="NotBlank">
-                <option name="message">sylius.route.content.not_blank</option>
                 <option name="groups">sylius</option>
             </constraint>
         </property>

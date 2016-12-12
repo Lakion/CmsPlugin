@@ -57,6 +57,7 @@ final class RouteContext implements Context
 
         $this->routeManager->persist($route);
         $this->routeManager->flush();
+        $this->routeManager->clear();
 
         $this->sharedStorage->set('route', $route);
     }
@@ -82,6 +83,7 @@ final class RouteContext implements Context
 
         $this->routeManager->persist($route);
         $this->routeManager->flush();
+        $this->routeManager->clear();
 
         $this->sharedStorage->set('route', $route);
     }

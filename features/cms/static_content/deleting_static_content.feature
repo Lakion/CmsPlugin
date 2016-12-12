@@ -8,7 +8,7 @@ Feature: Deleting a static content
         Given I am logged in as an administrator
 
     @ui
-    Scenario: Deleted taxon should disappear from the registry
+    Scenario: Deleted static content should disappear from the registry
         Given the store has static content "Krzysztof Krawczyk"
         When I delete static content "Krzysztof Krawczyk"
         Then I should be notified that it has been successfully deleted

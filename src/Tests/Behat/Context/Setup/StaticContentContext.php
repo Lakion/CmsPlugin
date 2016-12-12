@@ -49,6 +49,7 @@ final class StaticContentContext implements Context
 
         $this->staticContentManager->persist($staticContent);
         $this->staticContentManager->flush();
+        $this->staticContentManager->clear();
 
         $this->sharedStorage->set('static_content', $staticContent);
     }

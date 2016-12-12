@@ -1,4 +1,4 @@
-lakion_shop_static_content_show:
+lakion_sylius_cms_shop_static_content_show:
     path: /{name}
     methods: [GET]
     defaults:

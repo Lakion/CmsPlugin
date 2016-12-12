@@ -2,8 +2,8 @@
 
 namespace Lakion\SyliusCmsBundle\Tests\Behat\Page\Shop;
 
-use Lakion\SyliusCmsBundle\Tests\Behat\Page\SymfonyPageInterface;
 use Lakion\SyliusCmsBundle\Document\StaticContent;
+use Sylius\Behat\Page\SymfonyPageInterface;
 
 interface StaticContentPageInterface extends SymfonyPageInterface
 {
