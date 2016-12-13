@@ -14,6 +14,12 @@
             <tag name="form.type" />
         </service>
 
+        <service id="lakion_sylius_cms.form.type.string_block" class="Lakion\SyliusCmsBundle\Form\Type\StringBlockType">
+            <argument>%lakion_sylius_cms.model.string_block.class%</argument>
+            <argument type="collection"><argument>sylius</argument></argument>
+            <tag name="form.type" />
+        </service>
+
         <service id="lakion_sylius_cms.form.type.static_content_choice" class="Lakion\SyliusCmsBundle\Form\Type\StaticContentChoiceType">
             <argument>%lakion_sylius_cms.model.static_content.class%</argument>
             <tag name="form.type" />
@@ -27,6 +33,16 @@
             </argument>
             <argument type="service" id="doctrine_phpcr.odm.document_manager" />
             <argument>%cmf_content.persistence.phpcr.content_basepath%</argument>
+        </service>
+
+        <service id="lakion_sylius_cms.factory.string_block" class="Lakion\SyliusCmsBundle\Factory\StringBlockFactory">
+            <argument type="service">
+                <service class="Sylius\Component\Resource\Factory\Factory">
+                    <argument>%lakion_sylius_cms.model.string_block.class%</argument>
+                </service>
+            </argument>
+            <argument type="service" id="doctrine_phpcr.odm.document_manager" />
+            <argument>%cmf_block.persistence.phpcr.block_basepath%</argument>
         </service>
 
         <service id="lakion_sylius_cms.factory.route" class="Lakion\SyliusCmsBundle\Factory\RouteFactory">

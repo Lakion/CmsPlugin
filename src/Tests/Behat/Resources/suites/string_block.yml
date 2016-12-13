@@ -1,0 +1,17 @@
+default:
+    suites:
+        ui_string_block:
+            contexts_services:
+                - lakion_sylius_cms.context.hook.phpcr
+                - sylius.behat.context.hook.doctrine_orm
+
+                - sylius.behat.context.transform.shared_storage
+
+                - lakion_sylius_cms.context.setup.string_block
+                - sylius.behat.context.setup.admin_security
+
+                - lakion_sylius_cms.context.ui.admin.managing_string_blocks
+                - sylius.behat.context.ui.admin.notification
+
+            filters:
+                tags: "@string_block && @ui && ~@todo"

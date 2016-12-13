@@ -10,7 +10,6 @@ lakion_sylius_cms_admin_static_content:
             all:
                 templates:
                     form: "@LakionSyliusCms/Admin/StaticContent/_form.html.twig"
-
     type: sylius.resource
 
 lakion_sylius_cms_admin_static_content_update:

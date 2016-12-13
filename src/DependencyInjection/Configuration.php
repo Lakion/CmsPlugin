@@ -4,8 +4,10 @@ namespace Lakion\SyliusCmsBundle\DependencyInjection;
 
 use Lakion\SyliusCmsBundle\Document\Route;
 use Lakion\SyliusCmsBundle\Document\StaticContent;
+use Lakion\SyliusCmsBundle\Document\StringBlock;
 use Lakion\SyliusCmsBundle\Form\Type\RouteType;
 use Lakion\SyliusCmsBundle\Form\Type\StaticContentType;
+use Lakion\SyliusCmsBundle\Form\Type\StringBlockType;
 use Lakion\SyliusCmsBundle\Repository\StaticContentRepository;
 use Sylius\Bundle\ResourceBundle\Controller\ResourceController;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
@@ -37,6 +39,7 @@ final class Configuration implements ConfigurationInterface
 
         $this->addResourcesRouteSection($resourcesNodeBuilder);
         $this->addResourcesStaticContentSection($resourcesNodeBuilder);
+        $this->addResourcesStringBlockSection($resourcesNodeBuilder);
     }
 
     /**
@@ -74,6 +77,25 @@ final class Configuration implements ConfigurationInterface
                             ->scalarNode('controller')->defaultValue(ResourceController::class)->cannotBeEmpty()->end()
                             ->scalarNode('repository')->defaultValue(StaticContentRepository::class)->cannotBeEmpty()->end()
                             ->scalarNode('form')->defaultValue(StaticContentType::class)->cannotBeEmpty()->end()
+        ;
+    }
+
+    /**
+     * @param NodeBuilder $resourcesNodeBuilder
+     */
+    private function addResourcesStringBlockSection(NodeBuilder $resourcesNodeBuilder)
+    {
+        $resourcesNodeBuilder
+            ->arrayNode('string_block')
+                ->addDefaultsIfNotSet()
+                ->children()
+                    ->arrayNode('classes')
+                        ->addDefaultsIfNotSet()
+                        ->children()
+                            ->scalarNode('model')->defaultValue(StringBlock::class)->cannotBeEmpty()->end()
+                            ->scalarNode('controller')->defaultValue(ResourceController::class)->cannotBeEmpty()->end()
+                            ->scalarNode('repository')->cannotBeEmpty()->end()
+                            ->scalarNode('form')->defaultValue(StringBlockType::class)->cannotBeEmpty()->end()
         ;
     }
 }

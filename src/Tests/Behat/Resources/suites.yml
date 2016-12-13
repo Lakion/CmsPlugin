@@ -1,3 +1,4 @@
 imports:
     - suites/route.yml
     - suites/static_content.yml
+    - suites/string_block.yml
