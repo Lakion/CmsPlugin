@@ -11,8 +11,8 @@
     <services>
         <service id="lakion_sylius_cms.context.setup.static_content" class="Lakion\SyliusCmsBundle\Tests\Behat\Context\Setup\StaticContentContext">
             <argument type="service" id="sylius.behat.shared_storage" />
-            <argument type="service" id="__symfony__.sylius.fixture.example_factory.static_content" />
-            <argument type="service" id="__symfony__.sylius.manager.static_content" />
+            <argument type="service" id="__symfony__.lakion_sylius_cms.fixture.example_factory.static_content" />
+            <argument type="service" id="__symfony__.lakion_sylius_cms.manager.static_content" />
             <tag name="fob.context_service" />
         </service>
 
@@ -30,15 +30,15 @@
 
         <service id="lakion_sylius_cms.page.admin.static_content.index" class="%lakion_sylius_cms.page.admin.static_content.index.class%"
                  parent="sylius.behat.page.admin.crud.index" public="false">
-            <argument type="string">sylius_admin_static_content_index</argument>
+            <argument type="string">lakion_sylius_cms_admin_static_content_index</argument>
         </service>
         <service id="lakion_sylius_cms.page.admin.static_content.create" class="%lakion_sylius_cms.page.admin.static_content.create.class%"
                  parent="sylius.behat.page.admin.crud.create" public="false">
-            <argument type="string">sylius_admin_static_content_create</argument>
+            <argument type="string">lakion_sylius_cms_admin_static_content_create</argument>
         </service>
         <service id="lakion_sylius_cms.page.admin.static_content.update" class="%lakion_sylius_cms.page.admin.static_content.update.class%"
                  parent="sylius.behat.page.admin.crud.update" public="false">
-            <argument type="string">sylius_admin_static_content_update</argument>
+            <argument type="string">lakion_sylius_cms_admin_static_content_update</argument>
         </service>
 
         <service id="lakion_sylius_cms.page.shop.static_content.show" class="%lakion_sylius_cms.page.shop.static_content.show.class%"

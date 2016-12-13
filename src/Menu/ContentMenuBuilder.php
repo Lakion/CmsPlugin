@@ -15,16 +15,16 @@ final class ContentMenuBuilder
 
         $content = $menu
             ->addChild('content')
-            ->setLabel('sylius.menu.admin.main.content.header')
+            ->setLabel('lakion_sylius_cms.menu.admin.main.content.header')
         ;
         $content
-            ->addChild('static_contents', ['route' => 'sylius_admin_static_content_index'])
-            ->setLabel('sylius.menu.admin.main.content.static_contents')
+            ->addChild('static_contents', ['route' => 'lakion_sylius_cms_admin_static_content_index'])
+            ->setLabel('lakion_sylius_cms.menu.admin.main.content.static_contents')
             ->setLabelAttribute('icon', 'file')
         ;
         $content
-            ->addChild('routes', ['route' => 'sylius_admin_route_index'])
-            ->setLabel('sylius.menu.admin.main.content.routes')
+            ->addChild('routes', ['route' => 'lakion_sylius_cms_admin_route_index'])
+            ->setLabel('lakion_sylius_cms.menu.admin.main.content.routes')
             ->setLabelAttribute('icon', 'sitemap')
         ;
     }

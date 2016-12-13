@@ -10,9 +10,9 @@
     <services>
         <service id="lakion_sylius_cms.context.setup.route" class="Lakion\SyliusCmsBundle\Tests\Behat\Context\Setup\RouteContext">
             <argument type="service" id="sylius.behat.shared_storage" />
-            <argument type="service" id="__symfony__.sylius.fixture.example_factory.route" />
-            <argument type="service" id="__symfony__.sylius.manager.route" />
-            <argument type="service" id="__symfony__.sylius.repository.static_content" />
+            <argument type="service" id="__symfony__.lakion_sylius_cms.fixture.example_factory.route" />
+            <argument type="service" id="__symfony__.lakion_sylius_cms.manager.route" />
+            <argument type="service" id="__symfony__.lakion_sylius_cms.repository.static_content" />
             <tag name="fob.context_service" />
         </service>
 
@@ -25,15 +25,15 @@
 
         <service id="lakion_sylius_cms.page.admin.route.index" class="%lakion_sylius_cms.page.admin.route.index.class%"
                  parent="sylius.behat.page.admin.crud.index" public="false">
-            <argument type="string">sylius_admin_route_index</argument>
+            <argument type="string">lakion_sylius_cms_admin_route_index</argument>
         </service>
         <service id="lakion_sylius_cms.page.admin.route.create" class="%lakion_sylius_cms.page.admin.route.create.class%"
                  parent="sylius.behat.page.admin.crud.create" public="false">
-            <argument type="string">sylius_admin_route_create</argument>
+            <argument type="string">lakion_sylius_cms_admin_route_create</argument>
         </service>
         <service id="lakion_sylius_cms.page.admin.route.update" class="%lakion_sylius_cms.page.admin.route.update.class%"
                  parent="sylius.behat.page.admin.crud.update" public="false">
-            <argument type="string">sylius_admin_route_update</argument>
+            <argument type="string">lakion_sylius_cms_admin_route_update</argument>
         </service>
     </services>
 </container>

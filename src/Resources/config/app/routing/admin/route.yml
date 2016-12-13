@@ -1,19 +1,19 @@
-sylius_admin_route:
+lakion_sylius_cms_admin_route:
     resource: |
-        alias: sylius.route
+        alias: lakion_sylius_cms.route
         section: admin
         templates: SyliusAdminBundle:Crud
         except: ['show', 'update', 'delete']
         redirect: index
-        grid: sylius_admin_route
+        grid: lakion_sylius_cms_admin_route
         permission: true
     type: sylius.resource
 
-sylius_admin_route_update:
+lakion_sylius_cms_admin_route_update:
     path: /routes/{id}/edit
     methods: [GET, PUT]
     defaults:
-        _controller: sylius.controller.route:updateAction
+        _controller: lakion_sylius_cms.controller.route:updateAction
         _sylius:
             section: admin
             permission: true
@@ -24,11 +24,11 @@ sylius_admin_route_update:
     requirements:
         id: ".+"
 
-sylius_admin_route_delete:
+lakion_sylius_cms_admin_route_delete:
     path: /routes/{id}
     methods: [DELETE]
     defaults:
-        _controller: sylius.controller.route:deleteAction
+        _controller: lakion_sylius_cms.controller.route:deleteAction
         _sylius:
             section: admin
             permission: true

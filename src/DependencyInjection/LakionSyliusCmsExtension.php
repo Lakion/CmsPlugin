@@ -19,11 +19,11 @@ final class LakionSyliusCmsExtension extends AbstractResourceExtension
         $config = $this->processConfiguration($this->getConfiguration($config, $container), $config);
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
-        $this->registerResources('sylius', SyliusResourceBundle::DRIVER_DOCTRINE_PHPCR_ODM, $config['resources'], $container);
+        $this->registerResources('lakion_sylius_cms', SyliusResourceBundle::DRIVER_DOCTRINE_PHPCR_ODM, $config['resources'], $container);
 
         $loader->load('services.xml');
 
-        $staticContentRepository = $container->getDefinition('sylius.repository.static_content');
+        $staticContentRepository = $container->getDefinition('lakion_sylius_cms.repository.static_content');
         $staticContentRepository->addArgument(new Parameter('cmf_content.persistence.phpcr.content_basepath'));
     }
 }

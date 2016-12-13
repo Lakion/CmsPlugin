@@ -6,7 +6,7 @@ cmf_content:
     persistence:
         phpcr:
             content_basepath: /cms/pages
-            document_class: "%sylius.model.static_content.class%"
+            document_class: "%lakion_sylius_cms.model.static_content.class%"
 
 cmf_core:
     publish_workflow: true
