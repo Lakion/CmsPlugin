@@ -1,0 +1,10 @@
+lakion_sylius_cms_shop_static_content_show:
+    path: /{name}
+    methods: [GET]
+    defaults:
+        _controller: lakion_sylius_cms.controller.static_content:showAction
+        _sylius:
+            template: "@LakionSyliusCms/Shop/StaticContent/show.html.twig"
+            repository:
+                method: findPublishedOneByName
+                arguments: [$name]

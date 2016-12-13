@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <imports>
+        <import resource="services/route.xml" />
+        <import resource="services/static_content.xml" />
+    </imports>
+
+    <services>
+        <service id="lakion_sylius_cms.context.hook.phpcr" class="Lakion\SyliusCmsBundle\Tests\Behat\Context\Hook\PhpcrContext">
+            <argument type="service" id="__symfony_shared__.doctrine_phpcr.odm.document_manager" />
+            <argument type="service" id="__symfony_shared__.doctrine_phpcr.initializer_manager" />
+            <tag name="fob.context_service" />
+        </service>
+    </services>
+</container>

@@ -1,0 +1,34 @@
+imports:
+    - { resource: "grids/route.yml" }
+    - { resource: "grids/static_content.yml" }
+
+cmf_content:
+    persistence:
+        phpcr:
+            content_basepath: /cms/pages
+            document_class: "%lakion_sylius_cms.model.static_content.class%"
+
+cmf_core:
+    publish_workflow: true
+    persistence:
+        phpcr:
+            enabled: true
+
+cmf_routing:
+    chain:
+        routers_by_id:
+            router.default: 100
+    dynamic:
+        persistence:
+            phpcr:
+                enabled: true
+                enable_initializer: true
+                route_basepaths:
+                    - /cms/routes
+
+doctrine_cache:
+    providers:
+        phpcr_meta:
+            type: array
+        phpcr_nodes:
+            type: array
