@@ -1,6 +1,0 @@
-lakion_sylius_cms:
-    form:
-        route:
-            parent: Vanhempi
-        static_content:
-            parent: Vanhempi

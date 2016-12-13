@@ -1,9 +1,0 @@
-lakion_sylius_cms:
-    form:
-        route:
-            name: Navn
-            parent: Overordnede
-        static_content:
-            body: Krop
-            parent: Overordnede
-            title: Titel

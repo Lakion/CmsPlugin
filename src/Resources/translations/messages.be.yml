@@ -1,9 +1,0 @@
-lakion_sylius_cms:
-    form:
-        route:
-            name: Імя
-            parent: Бацькоўскі аб'ект
-        static_content:
-            body: Цела
-            parent: Бацькоўскі аб'ект
-            title: Назва

@@ -28,7 +28,7 @@ final class StaticContentType extends AbstractResourceType
                 'label' => 'lakion_sylius_cms.form.static_content.internal_name',
             ])
             ->add('locale', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.static_content.title',
+                'label' => 'lakion_sylius_cms.form.static_content.locale',
             ])
             ->add('title', TextType::class, [
                 'label' => 'lakion_sylius_cms.form.static_content.title',

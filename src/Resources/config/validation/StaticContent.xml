@@ -19,13 +19,11 @@
         </property>
         <property name="publishStartDate">
             <constraint name="DateTime">
-                <option name="message">lakion_sylius_cms.static_content.start_date.invalid_date</option>
                 <option name="groups">sylius</option>
             </constraint>
         </property>
         <property name="publishEndDate">
             <constraint name="DateTime">
-                <option name="message">lakion_sylius_cms.static_content.end_date.invalid_date</option>
                 <option name="groups">sylius</option>
             </constraint>
         </property>

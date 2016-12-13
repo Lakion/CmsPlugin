@@ -1,7 +1,0 @@
-lakion_sylius_cms:
-    form:
-        route:
-            name: Nom
-        static_content:
-            body: Cos
-            title: Títol

@@ -1,6 +1,0 @@
-lakion_sylius_cms:
-    form:
-        route:
-            name: Ονομασία
-        static_content:
-            title: Τίτλος

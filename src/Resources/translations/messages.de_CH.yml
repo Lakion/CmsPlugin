@@ -1,9 +1,0 @@
-lakion_sylius_cms:
-    form:
-        route:
-            content: Inhalt
-            name: Name
-            parent: Parent
-        static_content:
-            body: Body
-            title: Titel
