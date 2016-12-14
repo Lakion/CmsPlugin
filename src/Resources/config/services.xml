@@ -1,75 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <imports>
+        <import resource="services/route.xml" />
+        <import resource="services/static_content.xml" />
+        <import resource="services/string_block.xml" />
+    </imports>
+
     <services>
-        <service id="lakion_sylius_cms.form.type.route" class="Lakion\SyliusCmsBundle\Form\Type\RouteType">
-            <argument>%lakion_sylius_cms.model.route.class%</argument>
-            <argument type="collection"><argument>sylius</argument></argument>
-            <tag name="form.type" />
-        </service>
-
-        <service id="lakion_sylius_cms.form.type.static_content" class="Lakion\SyliusCmsBundle\Form\Type\StaticContentType">
-            <argument>%lakion_sylius_cms.model.static_content.class%</argument>
-            <argument type="collection"><argument>sylius</argument></argument>
-            <tag name="form.type" />
-        </service>
-
-        <service id="lakion_sylius_cms.form.type.string_block" class="Lakion\SyliusCmsBundle\Form\Type\StringBlockType">
-            <argument>%lakion_sylius_cms.model.string_block.class%</argument>
-            <argument type="collection"><argument>sylius</argument></argument>
-            <tag name="form.type" />
-        </service>
-
-        <service id="lakion_sylius_cms.form.type.static_content_choice" class="Lakion\SyliusCmsBundle\Form\Type\StaticContentChoiceType">
-            <argument>%lakion_sylius_cms.model.static_content.class%</argument>
-            <tag name="form.type" />
-        </service>
-
-        <service id="lakion_sylius_cms.factory.static_content" class="Lakion\SyliusCmsBundle\Factory\StaticContentFactory">
-            <argument type="service">
-                <service class="Sylius\Component\Resource\Factory\Factory">
-                    <argument>%lakion_sylius_cms.model.static_content.class%</argument>
-                </service>
-            </argument>
-            <argument type="service" id="doctrine_phpcr.odm.document_manager" />
-            <argument>%cmf_content.persistence.phpcr.content_basepath%</argument>
-        </service>
-
-        <service id="lakion_sylius_cms.factory.string_block" class="Lakion\SyliusCmsBundle\Factory\StringBlockFactory">
-            <argument type="service">
-                <service class="Sylius\Component\Resource\Factory\Factory">
-                    <argument>%lakion_sylius_cms.model.string_block.class%</argument>
-                </service>
-            </argument>
-            <argument type="service" id="doctrine_phpcr.odm.document_manager" />
-            <argument>%cmf_block.persistence.phpcr.block_basepath%</argument>
-        </service>
-
-        <service id="lakion_sylius_cms.factory.route" class="Lakion\SyliusCmsBundle\Factory\RouteFactory">
-            <argument type="service">
-                <service class="Sylius\Component\Resource\Factory\Factory">
-                    <argument>%lakion_sylius_cms.model.route.class%</argument>
-                </service>
-            </argument>
-            <argument type="service" id="doctrine_phpcr.odm.document_manager" />
-            <argument>%cmf_routing.dynamic.persistence.phpcr.route_basepaths%</argument>
-        </service>
-
         <service id="lakion_sylius_cms.admin.content_menu_builder" class="Lakion\SyliusCmsBundle\Menu\ContentMenuBuilder">
             <tag name="kernel.event_listener" event="sylius.menu.admin.main" method="configureMenu" />
-        </service>
-
-        <service id="lakion_sylius_cms.fixture.example_factory.static_content" class="Lakion\SyliusCmsBundle\Fixture\Factory\StaticContentExampleFactory">
-            <argument type="service" id="lakion_sylius_cms.factory.static_content" />
-        </service>
-
-        <service id="lakion_sylius_cms.fixture.example_factory.route" class="Lakion\SyliusCmsBundle\Fixture\Factory\RouteExampleFactory">
-            <argument type="service" id="lakion_sylius_cms.factory.route" />
-            <argument type="service" id="lakion_sylius_cms.repository.static_content" />
-        </service>
-
-        <service id="lakion_sylius_cms.fixture.example_factory.string_block" class="Lakion\SyliusCmsBundle\Fixture\Factory\StringBlockExampleFactory">
-            <argument type="service" id="lakion_sylius_cms.factory.string_block" />
         </service>
     </services>
 </container>
