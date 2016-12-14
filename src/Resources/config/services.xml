@@ -67,5 +67,9 @@
             <argument type="service" id="lakion_sylius_cms.factory.route" />
             <argument type="service" id="lakion_sylius_cms.repository.static_content" />
         </service>
+
+        <service id="lakion_sylius_cms.fixture.example_factory.string_block" class="Lakion\SyliusCmsBundle\Fixture\Factory\StringBlockExampleFactory">
+            <argument type="service" id="lakion_sylius_cms.factory.string_block" />
+        </service>
     </services>
 </container>
