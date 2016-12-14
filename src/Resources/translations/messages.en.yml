@@ -17,6 +17,10 @@ lakion_sylius_cms:
             title: Title
             locale: Locale
 
+        string_block:
+            body: Body
+            name: Name
+
     ui:
         static_contents: "Static contents"
         routes: "Routes"

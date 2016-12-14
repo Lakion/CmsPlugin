@@ -4,6 +4,7 @@
     <imports>
         <import resource="services/route.xml" />
         <import resource="services/static_content.xml" />
+        <import resource="services/string_block.xml" />
     </imports>
 
     <services>

@@ -27,5 +27,11 @@ final class ContentMenuBuilder
             ->setLabel('lakion_sylius_cms.menu.admin.main.content.routes')
             ->setLabelAttribute('icon', 'sitemap')
         ;
+
+        $content
+            ->addChild('string_blocks', ['route' => 'lakion_sylius_cms_admin_string_block_index'])
+            ->setLabel('lakion_sylius_cms.menu.admin.main.content.string_blocks')
+            ->setLabelAttribute('icon', 'font')
+        ;
     }
 }
