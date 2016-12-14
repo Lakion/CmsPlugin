@@ -19,7 +19,7 @@
                     <argument>%lakion_sylius_cms.model.static_content.class%</argument>
                 </service>
             </argument>
-            <argument type="service" id="doctrine_phpcr.odm.document_manager" />
+            <argument type="service" id="lakion_sylius_cms.manager.static_content" />
             <argument>%cmf_content.persistence.phpcr.content_basepath%</argument>
         </service>
 

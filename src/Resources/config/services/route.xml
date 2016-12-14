@@ -14,7 +14,7 @@
                     <argument>%lakion_sylius_cms.model.route.class%</argument>
                 </service>
             </argument>
-            <argument type="service" id="doctrine_phpcr.odm.document_manager" />
+            <argument type="service" id="lakion_sylius_cms.manager.route" />
             <argument>%cmf_routing.dynamic.persistence.phpcr.route_basepaths%</argument>
         </service>
 

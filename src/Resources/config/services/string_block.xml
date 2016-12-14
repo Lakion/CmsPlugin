@@ -14,7 +14,7 @@
                     <argument>%lakion_sylius_cms.model.string_block.class%</argument>
                 </service>
             </argument>
-            <argument type="service" id="doctrine_phpcr.odm.document_manager" />
+            <argument type="service" id="lakion_sylius_cms.manager.string_block" />
             <argument>%cmf_block.persistence.phpcr.block_basepath%</argument>
         </service>
 
