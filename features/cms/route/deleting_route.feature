@@ -8,7 +8,7 @@ Feature: Deleting a route
         Given the store has static content "Krzysztof Krawczyk"
         And I am logged in as an administrator
 
-    @ui
+    @ui @todo
     Scenario: Deleted taxon should disappear from the registry
         Given the store has route "krzysztof-krawczyk"
         When I delete route "krzysztof-krawczyk"
