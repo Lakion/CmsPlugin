@@ -22,5 +22,9 @@
             <argument type="service" id="lakion_sylius_cms.factory.route" />
             <argument type="service" id="lakion_sylius_cms.repository.static_content" />
         </service>
+
+        <service id="lakion_sylius_cms.admin.content_menu_builder.route" class="Lakion\SyliusCmsBundle\Menu\ContentMenuBuilder">
+            <tag name="kernel.event_listener" event="sylius.menu.admin.main" method="configureRouteMenu" />
+        </service>
     </services>
 </container>
