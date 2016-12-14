@@ -1,4 +1,1 @@
-Sylius CMS Bundle by Lakion
-===========================
-
-...
+# Sylius CMS Bundle by Lakion [![License](https://img.shields.io/packagist/l/lakion/sylius-cms-bundle.svg)](https://packagist.org/packages/lakion/sylius-cms-bundle) [![Version](https://img.shields.io/packagist/v/lakion/sylius-cms-bundle.svg)](https://packagist.org/packages/lakion/sylius-cms-bundle) [![Build status on Linux](https://img.shields.io/travis/Lakion/SyliusCmsBundle/master.svg)](http://travis-ci.org/Lakion/SyliusCmsBundle) [![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/Lakion/SyliusCmsBundle.svg)](https://scrutinizer-ci.com/g/Lakion/SyliusCmsBundle/)
