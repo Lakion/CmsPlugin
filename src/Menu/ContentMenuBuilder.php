@@ -16,7 +16,7 @@ final class ContentMenuBuilder
 
         $contentMenu
             ->addChild('routes', ['route' => 'lakion_sylius_cms_admin_route_index'])
-            ->setLabel('lakion_sylius_cms.menu.admin.main.content.routes')
+            ->setLabel('lakion_sylius_cms.menu.admin.routes')
             ->setLabelAttribute('icon', 'sitemap')
         ;
     }
@@ -30,7 +30,7 @@ final class ContentMenuBuilder
 
         $contentMenu
             ->addChild('static_contents', ['route' => 'lakion_sylius_cms_admin_static_content_index'])
-            ->setLabel('lakion_sylius_cms.menu.admin.main.content.static_contents')
+            ->setLabel('lakion_sylius_cms.menu.admin.static_contents')
             ->setLabelAttribute('icon', 'file')
         ;
     }
@@ -44,7 +44,7 @@ final class ContentMenuBuilder
 
         $contentMenu
             ->addChild('string_blocks', ['route' => 'lakion_sylius_cms_admin_string_block_index'])
-            ->setLabel('lakion_sylius_cms.menu.admin.main.content.string_blocks')
+            ->setLabel('lakion_sylius_cms.menu.admin.string_blocks')
             ->setLabelAttribute('icon', 'font')
         ;
     }
@@ -60,7 +60,7 @@ final class ContentMenuBuilder
 
         $contentMenu = $adminMenu
             ->addChild('content')
-            ->setLabel('lakion_sylius_cms.menu.admin.main.content.header')
+            ->setLabel('lakion_sylius_cms.menu.admin.header')
         ;
 
         return $contentMenu;
