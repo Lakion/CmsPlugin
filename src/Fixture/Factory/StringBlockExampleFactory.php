@@ -2,22 +2,19 @@
 
 namespace Lakion\SyliusCmsBundle\Fixture\Factory;
 
-use Lakion\SyliusCmsBundle\Document\Route;
-use Lakion\SyliusCmsBundle\Document\StaticContent;
+use Lakion\SyliusCmsBundle\Document\StringBlock;
 use Sylius\Bundle\CoreBundle\Fixture\Factory\ExampleFactoryInterface;
-use Sylius\Bundle\CoreBundle\Fixture\OptionsResolver\LazyOption;
 use Sylius\Component\Core\Formatter\StringInflector;
 use Sylius\Component\Resource\Factory\FactoryInterface;
-use Sylius\Component\Resource\Repository\RepositoryInterface;
 use Symfony\Component\OptionsResolver\Options;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-final class RouteExampleFactory implements ExampleFactoryInterface
+final class StringBlockExampleFactory implements ExampleFactoryInterface
 {
     /**
      * @var FactoryInterface
      */
-    private $routeFactory;
+    private $factory;
 
     /**
      * @var \Faker\Generator
@@ -30,12 +27,11 @@ final class RouteExampleFactory implements ExampleFactoryInterface
     private $optionsResolver;
 
     /**
-     * @param FactoryInterface $routeFactory
-     * @param RepositoryInterface $staticContentRepository
+     * @param FactoryInterface $factory
      */
-    public function __construct(FactoryInterface $routeFactory, RepositoryInterface $staticContentRepository)
+    public function __construct(FactoryInterface $factory)
     {
-        $this->routeFactory = $routeFactory;
+        $this->factory = $factory;
 
         $this->faker = \Faker\Factory::create();
         $this->optionsResolver =
@@ -45,9 +41,10 @@ final class RouteExampleFactory implements ExampleFactoryInterface
                 })
                 ->setAllowedTypes('name', 'string')
 
-                ->setDefault('content', LazyOption::randomOne($staticContentRepository))
-                ->setAllowedTypes('content', ['string', StaticContent::class])
-                ->setNormalizer('content', LazyOption::findOneBy($staticContentRepository, 'name'))
+                ->setDefault('body', function (Options $options) {
+                    return $this->faker->sentence();
+                })
+                ->setAllowedTypes('body', 'string')
         ;
     }
 
@@ -58,11 +55,11 @@ final class RouteExampleFactory implements ExampleFactoryInterface
     {
         $options = $this->optionsResolver->resolve($options);
 
-        /** @var Route $route */
-        $route = $this->routeFactory->createNew();
-        $route->setName($options['name']);
-        $route->setContent($options['content']);
+        /** @var StringBlock $stringBlock */
+        $stringBlock = $this->factory->createNew();
+        $stringBlock->setName($options['name']);
+        $stringBlock->setBody($options['body']);
 
-        return $route;
+        return $stringBlock;
     }
 }
