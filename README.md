@@ -20,10 +20,13 @@ Simple CMS for Sylius.
 
     ```php
     new \Doctrine\Bundle\PHPCRBundle\DoctrinePHPCRBundle(),
-    new \Symfony\Cmf\Bundle\CoreBundle\CmfCoreBundle(),
+    new \Sonata\BlockBundle\SonataBlockBundle(),
+    new \Sonata\CoreBundle\SonataCoreBundle(),
+    new \Symfony\Cmf\Bundle\BlockBundle\CmfBlockBundle(),
     new \Symfony\Cmf\Bundle\ContentBundle\CmfContentBundle(),
+    new \Symfony\Cmf\Bundle\CoreBundle\CmfCoreBundle(),
+    new \Symfony\Cmf\Bundle\MenuBundle\CmfMenuBundle(),
     new \Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
-    new \Symfony\Cmf\Bundle\MenuBundle\CmfMenuBundle(),   
     ```
 
 4. Import config file in `app/config/config.yml`:
