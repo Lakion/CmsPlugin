@@ -7,7 +7,7 @@ Feature: Deleting a static content
     Background:
         Given I am logged in as an administrator
 
-    @ui
+    @ui @todo
     Scenario: Deleted static content should disappear from the registry
         Given the store has static content "Krzysztof Krawczyk"
         When I delete static content "Krzysztof Krawczyk"

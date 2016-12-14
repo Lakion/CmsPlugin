@@ -15,4 +15,4 @@ default:
                 - sylius.behat.context.ui.admin.notification
 
             filters:
-                tags: "@route && @ui"
+                tags: "@route && @ui && ~@todo"

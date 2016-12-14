@@ -38,9 +38,6 @@ doctrine_phpcr:
         backend:
             type: doctrinedbal
             connection: default
-            caches:
-                meta: doctrine_cache.providers.phpcr_meta
-                nodes: doctrine_cache.providers.phpcr_nodes
         workspace: default
     odm:
         auto_mapping: true
