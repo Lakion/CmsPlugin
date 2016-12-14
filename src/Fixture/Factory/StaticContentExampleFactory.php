@@ -39,12 +39,18 @@ final class StaticContentExampleFactory implements ExampleFactoryInterface
                 ->setDefault('title', function (Options $options) {
                     return $this->faker->words(3, true);
                 })
+                ->setAllowedTypes('title', 'string')
+
                 ->setDefault('name', function (Options $options) {
                     return StringInflector::nameToCode($options['title']);
                 })
+                ->setAllowedTypes('name', 'string')
+
                 ->setDefault('body', function (Options $options) {
                     return $this->faker->paragraphs(4, true);
                 })
+                ->setAllowedTypes('body', 'string')
+
                 ->setDefault('publishable', function (Options $options) {
                     return $this->faker->boolean(90);
                 })

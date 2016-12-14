@@ -43,6 +43,8 @@ final class RouteExampleFactory implements ExampleFactoryInterface
                 ->setDefault('name', function (Options $options) {
                     return StringInflector::nameToCode($this->faker->words(3, true));
                 })
+                ->setAllowedTypes('name', 'string')
+
                 ->setDefault('content', LazyOption::randomOne($staticContentRepository))
                 ->setAllowedTypes('content', ['string', StaticContent::class])
                 ->setNormalizer('content', LazyOption::findOneBy($staticContentRepository, 'name'))

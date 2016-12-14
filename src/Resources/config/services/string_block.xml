@@ -22,6 +22,12 @@
             <argument type="service" id="lakion_sylius_cms.factory.string_block" />
         </service>
 
+        <service id="lakion_sylius_cms.fixture.string_block" class="Lakion\SyliusCmsBundle\Fixture\StringBlockFixture">
+            <argument type="service" id="lakion_sylius_cms.manager.string_block" />
+            <argument type="service" id="lakion_sylius_cms.fixture.example_factory.string_block" />
+            <tag name="sylius_fixtures.fixture" />
+        </service>
+
         <service id="lakion_sylius_cms.admin.content_menu_builder.string_block" class="Lakion\SyliusCmsBundle\Menu\ContentMenuBuilder">
             <tag name="kernel.event_listener" event="sylius.menu.admin.main" method="configureStringBlockMenu" />
         </service>
