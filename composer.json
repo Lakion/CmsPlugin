@@ -1,7 +1,7 @@
 {
     "name": "lakion/sylius-cms-bundle",
     "type": "sylius-bundle",
-    "description": "Sylius content bundle.",
+    "description": "Simple CMS for Sylius.",
     "license": "MIT",
     "authors": [
         {
