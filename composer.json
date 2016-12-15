@@ -23,6 +23,7 @@
     },
     "require-dev": {
         "jackalope/jackalope-doctrine-dbal": "^1.2",
+        "php-http/socket-client": "^1.2",
 
         "behat/behat": "^3.2",
         "behat/mink": "^1.7",
