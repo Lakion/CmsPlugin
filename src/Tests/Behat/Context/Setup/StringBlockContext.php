@@ -4,7 +4,9 @@ namespace Lakion\SyliusCmsBundle\Tests\Behat\Context\Setup;
 
 use Behat\Behat\Context\Context;
 use Doctrine\Common\Persistence\ObjectManager;
+use Lakion\SyliusCmsBundle\Document\StringBlock;
 use Sylius\Behat\Service\SharedStorageInterface;
+use Sylius\Bundle\CoreBundle\Fixture\Factory\ExampleFactoryInterface;
 use Sylius\Component\Resource\Factory\FactoryInterface;
 
 final class StringBlockContext implements Context
@@ -15,28 +17,28 @@ final class StringBlockContext implements Context
     private $sharedStorage;
 
     /**
-     * @var FactoryInterface
+     * @var ExampleFactoryInterface
      */
-    private $factory;
+    private $stringBlockExampleFactory;
 
     /**
      * @var ObjectManager
      */
-    private $manager;
+    private $stringBlockManager;
 
     /**
      * @param SharedStorageInterface $sharedStorage
-     * @param FactoryInterface $factory
-     * @param ObjectManager $manager
+     * @param ExampleFactoryInterface $stringBlockExampleFactory
+     * @param ObjectManager $stringBlockManager
      */
     public function __construct(
         SharedStorageInterface $sharedStorage,
-        FactoryInterface $factory,
-        ObjectManager $manager
+        ExampleFactoryInterface $stringBlockExampleFactory,
+        ObjectManager $stringBlockManager
     ) {
         $this->sharedStorage = $sharedStorage;
-        $this->factory = $factory;
-        $this->manager = $manager;
+        $this->stringBlockExampleFactory = $stringBlockExampleFactory;
+        $this->stringBlockManager = $stringBlockManager;
     }
 
     /**
@@ -44,7 +46,14 @@ final class StringBlockContext implements Context
      */
     public function theStoreHasStringBlock($name)
     {
-        $this->theStoreHasStringBlockWithBody($name, 'Random content');
+        $stringBlock = $this->stringBlockExampleFactory->create([
+            'name' => $name,
+        ]);
+
+        $this->stringBlockManager->persist($stringBlock);
+        $this->stringBlockManager->flush();
+
+        $this->sharedStorage->set('string_block', $stringBlock);
     }
 
     /**
@@ -52,14 +61,14 @@ final class StringBlockContext implements Context
      */
     public function theStoreHasStringBlockWithBody($name, $body)
     {
-        $block = $this->factory->createNew();
+        $stringBlock = $this->stringBlockExampleFactory->create([
+            'name' => $name,
+            'body' => $body,
+        ]);
 
-        $block->setName($name);
-        $block->setBody($body);
+        $this->stringBlockManager->persist($stringBlock);
+        $this->stringBlockManager->flush();
 
-        $this->manager->persist($block);
-        $this->manager->flush();
-
-        $this->sharedStorage->set('string_block', $block);
+        $this->sharedStorage->set('string_block', $stringBlock);
     }
 }

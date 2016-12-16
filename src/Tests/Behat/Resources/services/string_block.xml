@@ -10,7 +10,7 @@
     <services>
         <service id="lakion_sylius_cms.context.setup.string_block" class="Lakion\SyliusCmsBundle\Tests\Behat\Context\Setup\StringBlockContext">
             <argument type="service" id="sylius.behat.shared_storage" />
-            <argument type="service" id="__symfony__.lakion_sylius_cms.factory.string_block" />
+            <argument type="service" id="__symfony__.lakion_sylius_cms.fixture.example_factory.string_block" />
             <argument type="service" id="__symfony__.lakion_sylius_cms.manager.string_block" />
             <tag name="fob.context_service" />
         </service>
