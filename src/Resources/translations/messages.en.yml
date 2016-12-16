@@ -1,5 +1,12 @@
 lakion_sylius_cms:
     form:
+        custom_block:
+            body: "Body"
+            image: "Image"
+            link: "Link"
+            name: "Name"
+            title: "Title"
+
         route:
             content: "Content"
             name: "Name"
@@ -23,11 +30,13 @@ lakion_sylius_cms:
 
     menu:
         admin:
+            custom_blocks: "Custom blocks"
             routes: "Routes"
             static_contents: "Static contents"
             string_blocks: "String blocks"
 
     ui:
+        custom_blocks: "Custom blocks"
         routes: "Routes"
         static_contents: "Static contents"
         string_blocks: "String blocks"

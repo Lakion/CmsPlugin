@@ -18,6 +18,7 @@
         "doctrine/phpcr-odm": "^2.0@dev",
         "symfony-cmf/block-bundle": "^2.0@dev",
         "symfony-cmf/content-bundle": "^2.0@dev",
+        "symfony-cmf/media-bundle": "dev-master",
         "symfony-cmf/menu-bundle": "^2.0@dev",
         "symfony-cmf/routing-bundle": "^2.0@dev"
     },

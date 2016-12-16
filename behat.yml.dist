@@ -14,3 +14,6 @@ default:
                 class: AppKernel
                 path: src/Tests/Application/app/AppKernel.php
                 bootstrap: src/Tests/Application/app/autoload.php
+
+        Behat\MinkExtension:
+            files_path: "%paths.base%/src/Tests/Fixtures/"
