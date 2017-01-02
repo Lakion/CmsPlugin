@@ -8,7 +8,7 @@
             <tag name="form.type" />
         </service>
 
-        <service id="lakion_sylius_cms.factory.string_block" class="Lakion\SyliusCmsBundle\Factory\StringBlockFactory">
+        <service id="lakion_sylius_cms.factory.string_block" class="Lakion\SyliusCmsBundle\Factory\DocumentFactory">
             <argument type="service">
                 <service class="Sylius\Component\Resource\Factory\Factory">
                     <argument>%lakion_sylius_cms.model.string_block.class%</argument>
