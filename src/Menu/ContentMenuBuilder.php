@@ -57,8 +57,9 @@ final class ContentMenuBuilder
     private function getContentMenu(MenuBuilderEvent $event)
     {
         $adminMenu = $event->getMenu();
+        $contentMenu = $adminMenu->getChild('content');
 
-        if (!($contentMenu = $adminMenu->getChild('content'))) {
+        if (null === $contentMenu) {
             $contentMenu = $adminMenu
                 ->addChild('content')
                 ->setLabel('lakion_sylius_cms.menu.admin.header')
