@@ -5,6 +5,7 @@
         <parameter key="lakion_sylius_cms.page.admin.string_block.index.class">%sylius.behat.page.admin.crud.index.class%</parameter>
         <parameter key="lakion_sylius_cms.page.admin.string_block.create.class">Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\StringBlock\CreatePage</parameter>
         <parameter key="lakion_sylius_cms.page.admin.string_block.update.class">Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\StringBlock\UpdatePage</parameter>
+        <parameter key="lakion_sylius_cms.page.admin.string_block.show.class">Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\StringBlock\ShowPage</parameter>
     </parameters>
 
     <services>
@@ -19,6 +20,7 @@
             <argument type="service" id="lakion_sylius_cms.page.admin.string_block.index" />
             <argument type="service" id="lakion_sylius_cms.page.admin.string_block.create" />
             <argument type="service" id="lakion_sylius_cms.page.admin.string_block.update" />
+            <argument type="service" id="lakion_sylius_cms.page.admin.string_block.show" />
             <tag name="fob.context_service" />
         </service>
 
@@ -31,5 +33,6 @@
         <service id="lakion_sylius_cms.page.admin.string_block.update" class="%lakion_sylius_cms.page.admin.string_block.update.class%" parent="sylius.behat.page.admin.crud.update" public="false">
             <argument type="string">lakion_sylius_cms_admin_string_block_update</argument>
         </service>
+        <service id="lakion_sylius_cms.page.admin.string_block.show" class="%lakion_sylius_cms.page.admin.string_block.show.class%" parent="sylius.behat.symfony_page" public="false" />
     </services>
 </container>

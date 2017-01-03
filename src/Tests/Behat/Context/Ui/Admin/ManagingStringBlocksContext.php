@@ -3,6 +3,7 @@
 namespace Lakion\SyliusCmsBundle\Tests\Behat\Context\Ui\Admin;
 
 use Behat\Behat\Context\Context;
+use Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\StringBlock\ShowPageInterface;
 use Sylius\Behat\Page\Admin\Crud\IndexPageInterface;
 use Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\StringBlock\CreatePageInterface;
 use Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\StringBlock\UpdatePageInterface;
@@ -27,18 +28,26 @@ final class ManagingStringBlocksContext implements Context
     private $updatePage;
 
     /**
+     * @var ShowPageInterface
+     */
+    private $showPage;
+
+    /**
      * @param IndexPageInterface $indexPage
      * @param CreatePageInterface $createPage
      * @param UpdatePageInterface $updatePage
+     * @param ShowPageInterface $showPage
      */
     public function __construct(
         IndexPageInterface $indexPage,
         CreatePageInterface $createPage,
-        UpdatePageInterface $updatePage
+        UpdatePageInterface $updatePage,
+        ShowPageInterface $showPage
     ) {
         $this->indexPage = $indexPage;
         $this->createPage = $createPage;
         $this->updatePage = $updatePage;
+        $this->showPage = $showPage;
     }
 
     /**
@@ -146,6 +155,14 @@ final class ManagingStringBlocksContext implements Context
     }
 
     /**
+     * @When /^I preview (this string block)$/
+     */
+    public function iPreviewStringBlock(StringBlock $stringBlock)
+    {
+        $this->showPage->open(['id' => $stringBlock->getId()]);
+    }
+
+    /**
      * @When I change its body to :body
      */
     public function iChangeItsBodyTo($body)
@@ -169,6 +186,14 @@ final class ManagingStringBlocksContext implements Context
     {
         $this->indexPage->open();
         $this->indexPage->deleteResourceOnPage(['name' => $name]);
+    }
+
+    /**
+     * @Then I should see :expected in this block contents
+     */
+    public function iShouldSeeInThisBlockContents($expected)
+    {
+        Assert::contains($this->showPage->getBlockContents(), $expected);
     }
 
     /**
