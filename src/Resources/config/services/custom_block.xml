@@ -31,5 +31,12 @@
         <service id="lakion_sylius_cms.admin.content_menu_builder.custom_block" class="Lakion\SyliusCmsBundle\Menu\ContentMenuBuilder">
             <tag name="kernel.event_listener" event="sylius.menu.admin.main" method="configureCustomBlockMenu" />
         </service>
+
+        <service id="lakion_sylius_cms.block.custom" class="Symfony\Cmf\Bundle\BlockBundle\Block\SimpleBlockService">
+            <tag name="sonata.block" />
+            <argument>lakion_sylius_cms.block.custom</argument>
+            <argument type="service" id="templating" />
+            <argument>LakionSyliusCmsBundle:Block:block_custom.html.twig</argument>
+        </service>
     </services>
 </container>

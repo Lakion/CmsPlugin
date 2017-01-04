@@ -14,6 +14,17 @@ lakion_sylius_cms_admin_custom_block:
                 icon: font
     type: sylius.resource
 
+lakion_sylius_cms_admin_custom_block_show:
+    path: /custom-blocks{id}/show
+    methods: [GET]
+    defaults:
+        _controller: lakion_sylius_cms.controller.custom_block:showAction
+        _sylius:
+            section: admin
+            template: "@LakionSyliusCms/Admin/CustomBlock/show.html.twig"
+    requirements:
+        id: ".+"
+
 lakion_sylius_cms_admin_custom_block_update:
     path: /custom-blocks{id}/edit
     methods: [GET, PUT]

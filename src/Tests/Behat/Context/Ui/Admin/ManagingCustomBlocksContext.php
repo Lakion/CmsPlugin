@@ -3,6 +3,7 @@
 namespace Lakion\SyliusCmsBundle\Tests\Behat\Context\Ui\Admin;
 
 use Behat\Behat\Context\Context;
+use Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\CustomBlock\ShowPageInterface;
 use Sylius\Behat\Page\Admin\Crud\IndexPageInterface;
 use Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\CustomBlock\CreatePageInterface;
 use Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\CustomBlock\UpdatePageInterface;
@@ -27,18 +28,26 @@ final class ManagingCustomBlocksContext implements Context
     private $updatePage;
 
     /**
+     * @var ShowPageInterface
+     */
+    private $showPage;
+
+    /**
      * @param IndexPageInterface $indexPage
      * @param CreatePageInterface $createPage
      * @param UpdatePageInterface $updatePage
+     * @param ShowPageInterface $showPage
      */
     public function __construct(
         IndexPageInterface $indexPage,
         CreatePageInterface $createPage,
-        UpdatePageInterface $updatePage
+        UpdatePageInterface $updatePage,
+        ShowPageInterface $showPage
     ) {
         $this->indexPage = $indexPage;
         $this->createPage = $createPage;
         $this->updatePage = $updatePage;
+        $this->showPage = $showPage;
     }
 
     /**
@@ -162,6 +171,14 @@ final class ManagingCustomBlocksContext implements Context
     }
 
     /**
+     * @When /^I preview (this custom block)$/
+     */
+    public function iPreviewCustomBlock(CustomBlock $customBlock)
+    {
+        $this->showPage->open(['id' => $customBlock->getId()]);
+    }
+
+    /**
      * @Given /^I want to edit (this custom block)$/
      */
     public function iWantToEditThisCustomBlock(CustomBlock $customBlock)
@@ -209,6 +226,14 @@ final class ManagingCustomBlocksContext implements Context
     {
         $this->indexPage->open();
         $this->indexPage->deleteResourceOnPage(['name' => $name]);
+    }
+
+    /**
+     * @Then I should see :expected in this block contents
+     */
+    public function iShouldSeeInThisBlockContents($expected)
+    {
+        Assert::contains($this->showPage->getBlockContents(), $expected);
     }
 
     /**

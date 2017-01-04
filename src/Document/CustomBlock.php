@@ -18,6 +18,14 @@ class CustomBlock extends ImagineBlock implements ResourceInterface
     protected $body;
 
     /**
+     * {@inheritdoc}
+     */
+    public function getType()
+    {
+        return 'lakion_sylius_cms.block.custom';
+    }
+
+    /**
      * @return string
      */
     public function getTitle()

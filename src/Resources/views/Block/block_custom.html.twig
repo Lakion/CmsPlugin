@@ -1,0 +1,19 @@
+{% extends sonata_block.templates.block_base %}
+
+{% if block.filter %}
+    {% set filter = block.filter %}
+{% else %}
+    {% set filter = "cmf_block" %}
+{% endif %}
+
+{% block block %}
+    {% if block.linkUrl %}
+        <a href="{{ block.linkUrl }}" title="{{ block.label|default('') }}">
+    {% endif %}
+    <p><strong>{{ block.title }}</strong></p>
+    <p>{{ block.body }}</p>
+    {% if block.image is not null %}<img src="{{ block.image.id|imagine_filter(filter) }}" alt="{{ block.label }}" />{% endif %}
+    {% if block.linkUrl %}
+        </a>
+    {% endif %}
+{% endblock %}

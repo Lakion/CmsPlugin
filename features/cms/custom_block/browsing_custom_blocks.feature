@@ -13,3 +13,9 @@ Feature: Browsing custom blocks
         When I browse custom blocks of the store
         Then I should see 1 custom blocks in the list
         And I should see the custom block "summer-sale-info" in the list
+
+    @ui
+    Scenario: Preview custom block
+        Given the store has custom block "delivery-info" with body "Delivery only to the US!"
+        When I preview this custom block
+        Then I should see "Delivery only to the US!" in this block contents
