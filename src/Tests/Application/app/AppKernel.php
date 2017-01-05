@@ -10,9 +10,9 @@ final class AppKernel extends Kernel
      */
     public function registerBundles()
     {
-        return array_merge([
+        return array_merge(parent::registerBundles(), [
             new \Lakion\SyliusCmsBundle\LakionSyliusCmsBundle(),
-        ], parent::registerBundles(), [
+
             new \Doctrine\Bundle\PHPCRBundle\DoctrinePHPCRBundle(),
             new \Symfony\Cmf\Bundle\CoreBundle\CmfCoreBundle(),
             new \Symfony\Cmf\Bundle\ContentBundle\CmfContentBundle(),
