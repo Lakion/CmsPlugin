@@ -1,5 +1,5 @@
 @custom_block
-Feature: String block validation
+Feature: Custom block validation
     In order to avoid making mistakes when managing a custom block
     As an Administrator
     I want to be prevented from adding it without specifying required fields

@@ -5,11 +5,11 @@ Feature: Browsing custom blocks
     I want to browse custom blocks
 
     Background:
-        Given the store has custom block "summer-sale-info"
-        And I am logged in as an administrator
+        Given I am logged in as an administrator
 
     @ui
     Scenario: Browsing custom blocks in store
+        Given the store has custom block "summer-sale-info"
         When I browse custom blocks of the store
         Then I should see 1 custom blocks in the list
         And I should see the custom block "summer-sale-info" in the list
