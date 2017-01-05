@@ -137,10 +137,7 @@ final class ManagingCustomBlocksContext implements Context
             $this->indexPage->open();
         }
 
-        Assert::true(
-            $this->indexPage->isSingleResourceOnPage(['name' => $name]),
-            sprintf('Could not find custom block with name "%s"!', $name)
-        );
+        Assert::true($this->indexPage->isSingleResourceOnPage(['name' => $name]));
     }
 
     /**
@@ -164,10 +161,7 @@ final class ManagingCustomBlocksContext implements Context
             $this->indexPage->open();
         }
 
-        Assert::false(
-            $this->indexPage->isSingleResourceOnPage(['name' => $name]),
-            sprintf('Static content with name %s was created, but it should not.', $name)
-        );
+        Assert::false($this->indexPage->isSingleResourceOnPage(['name' => $name]));
     }
 
     /**
@@ -271,9 +265,6 @@ final class ManagingCustomBlocksContext implements Context
      */
     public function theCustomBlockShouldNoLongerExistInTheStore($name)
     {
-        Assert::false(
-            $this->indexPage->isSingleResourceOnPage(['name' => $name]),
-            sprintf('Static content with name %s exists, but should not.', $name)
-        );
+        Assert::false($this->indexPage->isSingleResourceOnPage(['name' => $name]));
     }
 }
