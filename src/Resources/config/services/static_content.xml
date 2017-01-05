@@ -13,7 +13,7 @@
             <tag name="form.type" />
         </service>
 
-        <service id="lakion_sylius_cms.factory.static_content" class="Lakion\SyliusCmsBundle\Factory\StaticContentFactory">
+        <service id="lakion_sylius_cms.factory.static_content" class="Lakion\SyliusCmsBundle\Factory\DocumentFactory">
             <argument type="service">
                 <service class="Sylius\Component\Resource\Factory\Factory">
                     <argument>%lakion_sylius_cms.model.static_content.class%</argument>

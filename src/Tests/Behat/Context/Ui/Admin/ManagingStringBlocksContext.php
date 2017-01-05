@@ -3,6 +3,7 @@
 namespace Lakion\SyliusCmsBundle\Tests\Behat\Context\Ui\Admin;
 
 use Behat\Behat\Context\Context;
+use Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\StringBlock\ShowPageInterface;
 use Sylius\Behat\Page\Admin\Crud\IndexPageInterface;
 use Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\StringBlock\CreatePageInterface;
 use Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\StringBlock\UpdatePageInterface;
@@ -27,18 +28,26 @@ final class ManagingStringBlocksContext implements Context
     private $updatePage;
 
     /**
+     * @var ShowPageInterface
+     */
+    private $showPage;
+
+    /**
      * @param IndexPageInterface $indexPage
      * @param CreatePageInterface $createPage
      * @param UpdatePageInterface $updatePage
+     * @param ShowPageInterface $showPage
      */
     public function __construct(
         IndexPageInterface $indexPage,
         CreatePageInterface $createPage,
-        UpdatePageInterface $updatePage
+        UpdatePageInterface $updatePage,
+        ShowPageInterface $showPage
     ) {
         $this->indexPage = $indexPage;
         $this->createPage = $createPage;
         $this->updatePage = $updatePage;
+        $this->showPage = $showPage;
     }
 
     /**
@@ -104,10 +113,7 @@ final class ManagingStringBlocksContext implements Context
             $this->indexPage->open();
         }
 
-        Assert::true(
-            $this->indexPage->isSingleResourceOnPage(['name' => $name]),
-            sprintf('Could not find string block with name "%s"!', $name)
-        );
+        Assert::true($this->indexPage->isSingleResourceOnPage(['name' => $name]));
     }
 
     /**
@@ -131,10 +137,7 @@ final class ManagingStringBlocksContext implements Context
             $this->indexPage->open();
         }
 
-        Assert::false(
-            $this->indexPage->isSingleResourceOnPage(['name' => $name]),
-            sprintf('Static content with name %s was created, but it should not.', $name)
-        );
+        Assert::false($this->indexPage->isSingleResourceOnPage(['name' => $name]));
     }
 
     /**
@@ -143,6 +146,14 @@ final class ManagingStringBlocksContext implements Context
     public function iWantToEditThisStringBlock(StringBlock $staticContent)
     {
         $this->updatePage->open(['id' => $staticContent->getId()]);
+    }
+
+    /**
+     * @When /^I preview (this string block)$/
+     */
+    public function iPreviewStringBlock(StringBlock $stringBlock)
+    {
+        $this->showPage->open(['id' => $stringBlock->getId()]);
     }
 
     /**
@@ -172,6 +183,14 @@ final class ManagingStringBlocksContext implements Context
     }
 
     /**
+     * @Then I should see :expected in this block contents
+     */
+    public function iShouldSeeInThisBlockContents($expected)
+    {
+        Assert::contains($this->showPage->getBlockContents(), $expected);
+    }
+
+    /**
      * @Then /^(this string block) should have body "([^"]+)"$/
      */
     public function thisStringBlockShouldHaveBody(StringBlock $staticContent, $body)
@@ -186,9 +205,6 @@ final class ManagingStringBlocksContext implements Context
      */
     public function theStringBlockShouldNoLongerExistInTheStore($name)
     {
-        Assert::false(
-            $this->indexPage->isSingleResourceOnPage(['name' => $name]),
-            sprintf('Static content with name %s exists, but should not.', $name)
-        );
+        Assert::false($this->indexPage->isSingleResourceOnPage(['name' => $name]));
     }
 }

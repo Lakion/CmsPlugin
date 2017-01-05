@@ -10,6 +10,20 @@ final class ContentMenuBuilder
     /**
      * @param MenuBuilderEvent $event
      */
+    public function configureCustomBlockMenu(MenuBuilderEvent $event)
+    {
+        $contentMenu = $this->getContentMenu($event);
+
+        $contentMenu
+            ->addChild('custom_blocks', ['route' => 'lakion_sylius_cms_admin_custom_block_index'])
+            ->setLabel('lakion_sylius_cms.menu.admin.custom_blocks')
+            ->setLabelAttribute('icon', 'font')
+        ;
+    }
+
+    /**
+     * @param MenuBuilderEvent $event
+     */
     public function configureRouteMenu(MenuBuilderEvent $event)
     {
         $contentMenu = $this->getContentMenu($event);

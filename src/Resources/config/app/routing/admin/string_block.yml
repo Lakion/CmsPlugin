@@ -14,6 +14,17 @@ lakion_sylius_cms_admin_string_block:
                 icon: font
     type: sylius.resource
 
+lakion_sylius_cms_admin_string_block_show:
+    path: /string-blocks{id}/show
+    methods: [GET]
+    defaults:
+        _controller: lakion_sylius_cms.controller.string_block:showAction
+        _sylius:
+            section: admin
+            template: "@LakionSyliusCms/Admin/StringBlock/show.html.twig"
+    requirements:
+        id: ".+"
+
 lakion_sylius_cms_admin_string_block_update:
     path: /string-blocks{id}/edit
     methods: [GET, PUT]

@@ -93,10 +93,7 @@ final class ManagingRoutesContext implements Context
             $this->indexPage->open();
         }
 
-        Assert::true(
-            $this->indexPage->isSingleResourceOnPage(['name' => $name]),
-            sprintf('Could not find route with name "%s"!', $name)
-        );
+        Assert::true($this->indexPage->isSingleResourceOnPage(['name' => $name]));
     }
 
     /**
@@ -125,10 +122,7 @@ final class ManagingRoutesContext implements Context
      */
     public function theRouteShouldNoLongerExistInTheStore($name)
     {
-        Assert::false(
-            $this->indexPage->isSingleResourceOnPage(['name' => $name]),
-            sprintf('Route with name "%s" exists, but should not.', $name)
-        );
+        Assert::false($this->indexPage->isSingleResourceOnPage(['name' => $name]));
     }
 
     /**
@@ -191,9 +185,6 @@ final class ManagingRoutesContext implements Context
             $this->indexPage->open();
         }
 
-        Assert::false(
-            $this->indexPage->isSingleResourceOnPage(['content' => $title]),
-            sprintf('Found route with content "%s" assigned, but expected not to.', $title)
-        );
+        Assert::false($this->indexPage->isSingleResourceOnPage(['content' => $title]));
     }
 }
