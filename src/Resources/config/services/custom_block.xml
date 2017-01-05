@@ -33,10 +33,10 @@
         </service>
 
         <service id="lakion_sylius_cms.block.custom" class="Symfony\Cmf\Bundle\BlockBundle\Block\SimpleBlockService">
-            <tag name="sonata.block" />
             <argument>lakion_sylius_cms.block.custom</argument>
             <argument type="service" id="templating" />
             <argument>LakionSyliusCmsBundle:Block:block_custom.html.twig</argument>
+            <tag name="sonata.block" />
         </service>
     </services>
 </container>
