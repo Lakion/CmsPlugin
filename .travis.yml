@@ -18,8 +18,8 @@ before_install:
 install:
     - composer update --prefer-dist
 
-    - src/Tests/Application/bin/console doctrine:schema:create --env=test -vvv --no-interaction
-    - src/Tests/Application/bin/console doctrine:phpcr:repository:init --env=test -vvv --no-interaction
+    - tests/Application/bin/console doctrine:schema:create --env=test -vvv --no-interaction
+    - tests/Application/bin/console doctrine:phpcr:repository:init --env=test -vvv --no-interaction
 
 script:
     - composer validate
