@@ -1,19 +1,19 @@
 imports:
     - vendor/sylius/sylius/behat.yml.dist
-    - src/Tests/Behat/Resources/suites.yml
+    - tests/Behat/Resources/suites.yml
 
 default:
     extensions:
         FriendsOfBehat\ContextServiceExtension:
             imports:
                 - "vendor/sylius/sylius/src/Sylius/Behat/Resources/config/services.xml"
-                - "src/Tests/Behat/Resources/services.xml"
+                - "tests/Behat/Resources/services.xml"
 
         FriendsOfBehat\SymfonyExtension:
             kernel:
                 class: AppKernel
-                path: src/Tests/Application/app/AppKernel.php
-                bootstrap: src/Tests/Application/app/autoload.php
+                path: tests/Application/app/AppKernel.php
+                bootstrap: tests/Application/app/autoload.php
 
         Behat\MinkExtension:
-            files_path: "%paths.base%/src/Tests/Fixtures/"
+            files_path: "%paths.base%/tests/Fixtures/"
