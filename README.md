@@ -10,13 +10,7 @@ Simple CMS for Sylius.
     $ composer require lakion/sylius-cms-bundle
     ```
     
-2. Add this bundle in `AppKernel.php` (**before `SyliusGridBundle`**):
-
-    ```php
-    new \Lakion\SyliusCmsBundle\LakionSyliusCmsBundle(),
-    ```
-    
-3. Add dependent bundles in `AppKernel.php` if they do not exist yet:
+2. Add this bundle & dependent ones to `AppKernel.php` if they do not exist yet:
 
     ```php
     new \Doctrine\Bundle\PHPCRBundle\DoctrinePHPCRBundle(),
@@ -27,16 +21,17 @@ Simple CMS for Sylius.
     new \Symfony\Cmf\Bundle\CoreBundle\CmfCoreBundle(),
     new \Symfony\Cmf\Bundle\MenuBundle\CmfMenuBundle(),
     new \Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
+    new \Lakion\SyliusCmsBundle\LakionSyliusCmsBundle(),
     ```
 
-4. Import config file in `app/config/config.yml`:
+3. Import config file in `app/config/config.yml`:
 
     ```yaml
     imports:
        - { resource: "@LakionSyliusCmsBundle/Resources/config/app/config.yml" }
     ```
 
-5. Import routing files in `app/config/routing.yml`:
+4. Import routing files in `app/config/routing.yml`:
 
     ```yaml
     lakion_sylius_cms_admin:
@@ -47,13 +42,13 @@ Simple CMS for Sylius.
         resource: "@LakionSyliusCmsBundle/Resources/config/app/shop_routing.yml"
     ```
 
-6. Install PHPCR implementation of your choice:
+5. Install PHPCR implementation of your choice:
  
     ```bash
     $ composer require jackalope/jackalope-doctrine-dbal
     ```
 
-7. Configure Doctrine PHPCR Bundle (`doctrine_phpcr`) in `app/config/config.yml`:
+6. Configure Doctrine PHPCR Bundle (`doctrine_phpcr`) in `app/config/config.yml`:
 
     ```yaml
     doctrine_phpcr:
