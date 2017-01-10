@@ -10,4 +10,9 @@ interface ShowPageInterface extends PageInterface
      * @return string
      */
     public function getBlockContents();
+
+    /**
+     * @return string
+     */
+    public function getBlockImageUrl();
 }

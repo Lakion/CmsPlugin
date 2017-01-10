@@ -34,3 +34,7 @@ cmf_block:
 
 sonata_block:
     default_contexts: [lakion_sylius_cms]
+
+liip_imagine:
+    filter_sets:
+        cmf_block: ~

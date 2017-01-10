@@ -17,6 +17,14 @@ class ShowPage extends SymfonyPage implements ShowPageInterface
     /**
      * {@inheritdoc}
      */
+    public function getBlockImageUrl()
+    {
+        return $this->getElement('block')->find('css', 'img')->getAttribute('src');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     protected function getDefinedElements()
     {
         return array_merge(parent::getDefinedElements(), [

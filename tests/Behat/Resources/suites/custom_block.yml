@@ -5,6 +5,7 @@ default:
                 - lakion_sylius_cms.context.hook.phpcr
                 - sylius.behat.context.hook.doctrine_orm
 
+                - lakion_sylius_cms.context.transform.custom_block
                 - sylius.behat.context.transform.shared_storage
 
                 - lakion_sylius_cms.context.setup.custom_block
