@@ -68,6 +68,17 @@ final class ManagingCustomBlocksContext implements Context
     }
 
     /**
+     * @Given I have created a custom block :name with image :imagePath
+     */
+    public function iHaveCreatedCustomBlockWithImage($name, $imagePath)
+    {
+        $this->iWantToCreateNewCustomBlock();
+        $this->iSetItsNameTo($name);
+        $this->iAttachAsItsImage($imagePath);
+        $this->iAddIt();
+    }
+
+    /**
      * @When I set its body to :body
      */
     public function iSetItsBodyTo($body)
@@ -166,6 +177,7 @@ final class ManagingCustomBlocksContext implements Context
 
     /**
      * @When /^I preview (this custom block)$/
+     * @When I preview custom block :customBlock
      */
     public function iPreviewCustomBlock(CustomBlock $customBlock)
     {
@@ -228,6 +240,15 @@ final class ManagingCustomBlocksContext implements Context
     public function iShouldSeeInThisBlockContents($expected)
     {
         Assert::contains($this->showPage->getBlockContents(), $expected);
+    }
+
+    /**
+     * @Then I should see an image
+     */
+    public function iShouldSeeImage()
+    {
+        // TODO: No other way to be sure that image was uploaded properly without messing with setting up the server
+        Assert::notEmpty($this->showPage->getBlockImageUrl());
     }
 
     /**

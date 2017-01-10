@@ -19,3 +19,9 @@ Feature: Browsing custom blocks
         Given the store has custom block "delivery-info" with body "Delivery only to the US!"
         When I preview this custom block
         Then I should see "Delivery only to the US!" in this block contents
+
+    @ui
+    Scenario: Preview custom block with an image
+        Given I have created a custom block "logo" with image "logo.png"
+        When I preview custom block "logo"
+        Then I should see an image
