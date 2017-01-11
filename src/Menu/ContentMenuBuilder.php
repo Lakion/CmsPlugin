@@ -79,6 +79,20 @@ final class ContentMenuBuilder
 
     /**
      * @param MenuBuilderEvent $event
+     */
+    public function configureTaxonBlockMenu(MenuBuilderEvent $event)
+    {
+        $contentMenu = $this->getContentMenu($event);
+
+        $contentMenu
+            ->addChild('taxon_blocks', ['route' => 'lakion_sylius_cms_admin_taxon_block_index'])
+            ->setLabel('lakion_sylius_cms.menu.admin.taxon_blocks')
+            ->setLabelAttribute('icon', 'font')
+        ;
+    }
+
+    /**
+     * @param MenuBuilderEvent $event
      *
      * @return ItemInterface
      */

@@ -12,3 +12,6 @@ lakion_sylius_cms_admin_static_content:
 
 lakion_sylius_cms_admin_string_block:
     resource: "@LakionSyliusCmsBundle/Resources/config/app/routing/admin/string_block.yml"
+
+lakion_sylius_cms_admin_taxon_block:
+    resource: "@LakionSyliusCmsBundle/Resources/config/app/routing/admin/taxon_block.yml"

@@ -7,11 +7,13 @@ use Lakion\SyliusCmsBundle\Document\ProductBlock;
 use Lakion\SyliusCmsBundle\Document\Route;
 use Lakion\SyliusCmsBundle\Document\StaticContent;
 use Lakion\SyliusCmsBundle\Document\StringBlock;
+use Lakion\SyliusCmsBundle\Document\TaxonBlock;
 use Lakion\SyliusCmsBundle\Form\Type\CustomBlockType;
 use Lakion\SyliusCmsBundle\Form\Type\ProductBlockType;
 use Lakion\SyliusCmsBundle\Form\Type\RouteType;
 use Lakion\SyliusCmsBundle\Form\Type\StaticContentType;
 use Lakion\SyliusCmsBundle\Form\Type\StringBlockType;
+use Lakion\SyliusCmsBundle\Form\Type\TaxonBlockType;
 use Lakion\SyliusCmsBundle\Repository\StaticContentRepository;
 use Sylius\Bundle\ResourceBundle\Controller\ResourceController;
 use Symfony\Component\Config\Definition\Builder\NodeBuilder;
@@ -45,6 +47,7 @@ final class Configuration implements ConfigurationInterface
         $this->addResourcesRouteSection($resourcesNodeBuilder);
         $this->addResourcesStaticContentSection($resourcesNodeBuilder);
         $this->addResourcesStringBlockSection($resourcesNodeBuilder);
+        $this->addResourcesTaxonBlockSection($resourcesNodeBuilder);
     }
 
     /**
@@ -139,6 +142,25 @@ final class Configuration implements ConfigurationInterface
                             ->scalarNode('controller')->defaultValue(ResourceController::class)->cannotBeEmpty()->end()
                             ->scalarNode('repository')->cannotBeEmpty()->end()
                             ->scalarNode('form')->defaultValue(StringBlockType::class)->cannotBeEmpty()->end()
+        ;
+    }
+
+    /**
+     * @param NodeBuilder $resourcesNodeBuilder
+     */
+    private function addResourcesTaxonBlockSection(NodeBuilder $resourcesNodeBuilder)
+    {
+        $resourcesNodeBuilder
+            ->arrayNode('taxon_block')
+                ->addDefaultsIfNotSet()
+                ->children()
+                    ->arrayNode('classes')
+                        ->addDefaultsIfNotSet()
+                        ->children()
+                            ->scalarNode('model')->defaultValue(TaxonBlock::class)->cannotBeEmpty()->end()
+                            ->scalarNode('controller')->defaultValue(ResourceController::class)->cannotBeEmpty()->end()
+                            ->scalarNode('repository')->cannotBeEmpty()->end()
+                            ->scalarNode('form')->defaultValue(TaxonBlockType::class)->cannotBeEmpty()->end()
         ;
     }
 }

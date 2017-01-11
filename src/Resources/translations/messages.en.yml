@@ -36,6 +36,14 @@ lakion_sylius_cms:
             body: "Body"
             name: "Name"
 
+        taxon_block:
+            body: "Body"
+            image: "Image"
+            link: "Link"
+            name: "Name"
+            taxon: "Taxon"
+            title: "Title"
+
     menu:
         admin:
             custom_blocks: "Custom blocks"
@@ -43,6 +51,7 @@ lakion_sylius_cms:
             routes: "Routes"
             static_contents: "Static contents"
             string_blocks: "String blocks"
+            taxon_blocks: "Taxon blocks"
 
     ui:
         custom_blocks: "Custom blocks"
@@ -50,3 +59,4 @@ lakion_sylius_cms:
         routes: "Routes"
         static_contents: "Static contents"
         string_blocks: "String blocks"
+        taxon_blocks: "Taxon blocks"
