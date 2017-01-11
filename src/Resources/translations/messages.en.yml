@@ -7,6 +7,14 @@ lakion_sylius_cms:
             name: "Name"
             title: "Title"
 
+        product_block:
+            body: "Body"
+            image: "Image"
+            link: "Link"
+            name: "Name"
+            product: "Product"
+            title: "Title"
+
         route:
             content: "Content"
             name: "Name"
@@ -31,12 +39,14 @@ lakion_sylius_cms:
     menu:
         admin:
             custom_blocks: "Custom blocks"
+            product_blocks: "Product blocks"
             routes: "Routes"
             static_contents: "Static contents"
             string_blocks: "String blocks"
 
     ui:
         custom_blocks: "Custom blocks"
+        product_blocks: "Product blocks"
         routes: "Routes"
         static_contents: "Static contents"
         string_blocks: "String blocks"

@@ -1,6 +1,9 @@
 lakion_sylius_cms_admin_custom_block:
     resource: "@LakionSyliusCmsBundle/Resources/config/app/routing/admin/custom_block.yml"
 
+lakion_sylius_cms_admin_product_block:
+    resource: "@LakionSyliusCmsBundle/Resources/config/app/routing/admin/product_block.yml"
+
 lakion_sylius_cms_admin_route:
     resource: "@LakionSyliusCmsBundle/Resources/config/app/routing/admin/route.yml"
 

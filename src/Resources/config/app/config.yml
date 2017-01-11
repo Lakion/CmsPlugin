@@ -1,5 +1,6 @@
 imports:
     - { resource: "grids/custom_block.yml" }
+    - { resource: "grids/product_block.yml" }
     - { resource: "grids/route.yml" }
     - { resource: "grids/static_content.yml" }
     - { resource: "grids/string_block.yml" }
