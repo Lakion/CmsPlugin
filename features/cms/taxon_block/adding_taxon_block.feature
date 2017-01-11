@@ -9,7 +9,7 @@ Feature: Adding a new taxon block
         And I am logged in as an administrator
 
     @ui
-    Scenario: Adding taxon block
+    Scenario: Adding a new taxon block
         Given I want to add a new taxon block
         When I set its name to "free-shipping-for-herons"
         And I choose "Heron" as its taxon
@@ -18,7 +18,7 @@ Feature: Adding a new taxon block
         And the taxon block "free-shipping-for-herons" should appear in the store
 
     @ui
-    Scenario: Adding taxon block with only taxon, name and title
+    Scenario: Adding a new taxon block with taxon, name and title
         Given I want to add a new taxon block
         When I set its name to "free-shipping-for-herons"
         And I choose "Heron" as its taxon
@@ -28,7 +28,7 @@ Feature: Adding a new taxon block
         And the taxon block "free-shipping-for-herons" should appear in the store
 
     @ui
-    Scenario: Adding taxon block with only taxon, name and body
+    Scenario: Adding a new taxon block with taxon, name and body
         Given I want to add a new taxon block
         When I set its name to "free-shipping-for-herons"
         And I choose "Heron" as its taxon
@@ -38,7 +38,7 @@ Feature: Adding a new taxon block
         And the taxon block "free-shipping-for-herons" should appear in the store
 
     @ui
-    Scenario: Adding taxon block with only taxon, name and link
+    Scenario: Adding a new taxon block with taxon, name and link
         Given I want to add a new taxon block
         When I set its name to "the-best-heron"
         And I choose "Heron" as its taxon
@@ -48,7 +48,7 @@ Feature: Adding a new taxon block
         And the taxon block "the-best-heron" should appear in the store
 
     @ui
-    Scenario: Adding taxon block with only taxon, name and image
+    Scenario: Adding a new taxon block with taxon, name and image
         Given I want to add a new taxon block
         When I set its name to "the-best-heron"
         And I choose "Heron" as its taxon

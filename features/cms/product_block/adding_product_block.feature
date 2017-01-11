@@ -9,7 +9,7 @@ Feature: Adding a new product block
         And I am logged in as an administrator
 
     @ui
-    Scenario: Adding product block
+    Scenario: Adding a new product block
         Given I want to add a new product block
         When I set its name to "free-shipping-for-herons"
         And I choose "Heron" as its product
@@ -18,7 +18,7 @@ Feature: Adding a new product block
         And the product block "free-shipping-for-herons" should appear in the store
 
     @ui
-    Scenario: Adding product block with only product, name and title
+    Scenario: Adding a new product block with product, name and title
         Given I want to add a new product block
         When I set its name to "free-shipping-for-herons"
         And I choose "Heron" as its product
@@ -28,7 +28,7 @@ Feature: Adding a new product block
         And the product block "free-shipping-for-herons" should appear in the store
 
     @ui
-    Scenario: Adding product block with only product, name and body
+    Scenario: Adding a new product block with product, name and body
         Given I want to add a new product block
         When I set its name to "free-shipping-for-herons"
         And I choose "Heron" as its product
@@ -38,7 +38,7 @@ Feature: Adding a new product block
         And the product block "free-shipping-for-herons" should appear in the store
 
     @ui
-    Scenario: Adding product block with only product, name and link
+    Scenario: Adding a new product block with product, name and link
         Given I want to add a new product block
         When I set its name to "the-best-heron"
         And I choose "Heron" as its product
@@ -48,7 +48,7 @@ Feature: Adding a new product block
         And the product block "the-best-heron" should appear in the store
 
     @ui
-    Scenario: Adding product block with only product, name and image
+    Scenario: Adding a new product block with product, name and image
         Given I want to add a new product block
         When I set its name to "the-best-heron"
         And I choose "Heron" as its product

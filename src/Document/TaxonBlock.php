@@ -9,12 +9,12 @@ class TaxonBlock extends CustomBlock
     /**
      * @var TaxonInterface
      */
-    private $taxon;
+    protected $taxon;
 
     /**
      * @var string
      */
-    private $taxonCode;
+    protected $taxonCode;
 
     /**
      * {@inheritdoc}

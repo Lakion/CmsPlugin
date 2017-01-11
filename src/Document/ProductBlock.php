@@ -9,12 +9,12 @@ class ProductBlock extends CustomBlock
     /**
      * @var ProductInterface
      */
-    private $product;
+    protected $product;
 
     /**
      * @var string
      */
-    private $productCode;
+    protected $productCode;
 
     /**
      * {@inheritdoc}
