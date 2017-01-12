@@ -18,7 +18,7 @@ Feature: Adding a new custom block
         And the custom block "free-shipping-info" should appear in the store
 
     @ui
-    Scenario: Adding custom block with only name and title
+    Scenario: Adding custom block with name and title
         Given I want to add a new custom block
         When I set its name to "free-shipping-info"
         And I set its title to "Free shipping"
@@ -27,7 +27,7 @@ Feature: Adding a new custom block
         And the custom block "free-shipping-info" should appear in the store
 
     @ui
-    Scenario: Adding custom block with only name and body
+    Scenario: Adding custom block with name and body
         Given I want to add a new custom block
         When I set its name to "free-shipping-info"
         And I set its body to "Free shipping for orders over 40$"
@@ -36,7 +36,7 @@ Feature: Adding a new custom block
         And the custom block "free-shipping-info" should appear in the store
 
     @ui
-    Scenario: Adding custom block with only name and link
+    Scenario: Adding custom block with name and link
         Given I want to add a new custom block
         When I set its name to "the-best-website"
         And I set its link to "http://www.krzysztofkrawczyk.eu/"
@@ -45,7 +45,7 @@ Feature: Adding a new custom block
         And the custom block "the-best-website" should appear in the store
 
     @ui
-    Scenario: Adding custom block with only name and image
+    Scenario: Adding custom block with name and image
         Given I want to add a new custom block
         When I set its name to "the-best-website"
         And I attach "logo.png" as its image

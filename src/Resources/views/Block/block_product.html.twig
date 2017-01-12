@@ -1,0 +1,13 @@
+{% extends sonata_block.templates.block_base %}
+
+{% block block %}
+    {% if block.linkUrl %}
+        <a href="{{ block.linkUrl }}" title="{{ block.label }}">
+    {% endif %}
+    <p><strong>{{ block.product.name }} - {{ block.title }}</strong></p>
+    <p>{{ block.body }}</p>
+    {% if block.image is not null %}<img src="{{ block.image.id|imagine_filter(block.filter|default('cmf_block')) }}" alt="{{ block.label }}" />{% endif %}
+    {% if block.linkUrl %}
+        </a>
+    {% endif %}
+{% endblock %}
