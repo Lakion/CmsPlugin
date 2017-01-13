@@ -43,9 +43,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
-        "psr-4": { "Lakion\\SyliusCmsBundle\\": "src/" }
-    },
-    "autoload-dev": {
-        "psr-4": { "Lakion\\SyliusCmsBundle\\Tests\\": "tests/" }
+        "psr-4": {
+            "Lakion\\SyliusCmsBundle\\": "src/",
+            "Tests\\Lakion\\SyliusCmsBundle\\": "tests/"
+        }
     }
 }

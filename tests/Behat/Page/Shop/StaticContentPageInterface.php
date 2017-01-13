@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Tests\Behat\Page\Shop;
+namespace Tests\Lakion\SyliusCmsBundle\Behat\Page\Shop;
 
 use Lakion\SyliusCmsBundle\Document\StaticContent;
 use Sylius\Behat\Page\SymfonyPageInterface;

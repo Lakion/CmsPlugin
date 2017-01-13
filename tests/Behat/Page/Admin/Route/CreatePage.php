@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\Route;
+namespace Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\Route;
 
 use Sylius\Behat\Page\Admin\Crud\CreatePage as BaseCreatePage;
 

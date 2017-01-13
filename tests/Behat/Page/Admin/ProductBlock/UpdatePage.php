@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\ProductBlock;
+namespace Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\ProductBlock;
 
 use Sylius\Behat\Page\Admin\Crud\UpdatePage as BaseUpdatePage;
 

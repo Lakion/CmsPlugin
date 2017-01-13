@@ -1,9 +1,9 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Tests\Behat\Context\Ui\Shop;
+namespace Tests\Lakion\SyliusCmsBundle\Behat\Context\Ui\Shop;
 
 use Behat\Behat\Context\Context;
-use Lakion\SyliusCmsBundle\Tests\Behat\Page\Shop\StaticContentPageInterface;
+use Tests\Lakion\SyliusCmsBundle\Behat\Page\Shop\StaticContentPageInterface;
 use Lakion\SyliusCmsBundle\Document\StaticContent;
 
 final class StaticContentContext implements Context
