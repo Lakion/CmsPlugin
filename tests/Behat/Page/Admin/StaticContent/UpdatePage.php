@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\StaticContent;
+namespace Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StaticContent;
 
 use Sylius\Behat\Page\Admin\Crud\UpdatePage as BaseUpdatePage;
 

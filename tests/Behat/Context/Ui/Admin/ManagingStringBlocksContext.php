@@ -1,12 +1,12 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Tests\Behat\Context\Ui\Admin;
+namespace Tests\Lakion\SyliusCmsBundle\Behat\Context\Ui\Admin;
 
 use Behat\Behat\Context\Context;
-use Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\StringBlock\ShowPageInterface;
+use Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StringBlock\ShowPageInterface;
 use Sylius\Behat\Page\Admin\Crud\IndexPageInterface;
-use Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\StringBlock\CreatePageInterface;
-use Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\StringBlock\UpdatePageInterface;
+use Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StringBlock\CreatePageInterface;
+use Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StringBlock\UpdatePageInterface;
 use Lakion\SyliusCmsBundle\Document\StringBlock;
 use Webmozart\Assert\Assert;
 

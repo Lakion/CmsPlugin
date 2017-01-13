@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\CustomBlock;
+namespace Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\CustomBlock;
 
 use Sylius\Behat\Page\Admin\Crud\UpdatePageInterface as BaseUpdatePageInterface;
 

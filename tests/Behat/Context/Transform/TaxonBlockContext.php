@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Tests\Behat\Context\Transform;
+namespace Tests\Lakion\SyliusCmsBundle\Behat\Context\Transform;
 
 use Behat\Behat\Context\Context;
 use Sylius\Component\Resource\Repository\RepositoryInterface;

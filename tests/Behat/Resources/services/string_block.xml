@@ -3,20 +3,20 @@
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <parameters>
         <parameter key="lakion_sylius_cms.page.admin.string_block.index.class">%sylius.behat.page.admin.crud.index.class%</parameter>
-        <parameter key="lakion_sylius_cms.page.admin.string_block.create.class">Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\StringBlock\CreatePage</parameter>
-        <parameter key="lakion_sylius_cms.page.admin.string_block.update.class">Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\StringBlock\UpdatePage</parameter>
-        <parameter key="lakion_sylius_cms.page.admin.string_block.show.class">Lakion\SyliusCmsBundle\Tests\Behat\Page\Admin\StringBlock\ShowPage</parameter>
+        <parameter key="lakion_sylius_cms.page.admin.string_block.create.class">Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StringBlock\CreatePage</parameter>
+        <parameter key="lakion_sylius_cms.page.admin.string_block.update.class">Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StringBlock\UpdatePage</parameter>
+        <parameter key="lakion_sylius_cms.page.admin.string_block.show.class">Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StringBlock\ShowPage</parameter>
     </parameters>
 
     <services>
-        <service id="lakion_sylius_cms.context.setup.string_block" class="Lakion\SyliusCmsBundle\Tests\Behat\Context\Setup\StringBlockContext">
+        <service id="lakion_sylius_cms.context.setup.string_block" class="Tests\Lakion\SyliusCmsBundle\Behat\Context\Setup\StringBlockContext">
             <argument type="service" id="sylius.behat.shared_storage" />
             <argument type="service" id="__symfony__.lakion_sylius_cms.fixture.example_factory.string_block" />
             <argument type="service" id="__symfony__.lakion_sylius_cms.manager.string_block" />
             <tag name="fob.context_service" />
         </service>
 
-        <service id="lakion_sylius_cms.context.ui.admin.managing_string_blocks" class="Lakion\SyliusCmsBundle\Tests\Behat\Context\Ui\Admin\ManagingStringBlocksContext">
+        <service id="lakion_sylius_cms.context.ui.admin.managing_string_blocks" class="Tests\Lakion\SyliusCmsBundle\Behat\Context\Ui\Admin\ManagingStringBlocksContext">
             <argument type="service" id="lakion_sylius_cms.page.admin.string_block.index" />
             <argument type="service" id="lakion_sylius_cms.page.admin.string_block.create" />
             <argument type="service" id="lakion_sylius_cms.page.admin.string_block.update" />
