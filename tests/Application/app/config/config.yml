@@ -52,3 +52,6 @@ sylius_grid:
     drivers:
         - doctrine/orm
         - doctrine/phpcr-odm
+
+fos_rest:
+    exception: ~
