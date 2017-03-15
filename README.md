@@ -60,6 +60,16 @@ Simple CMS for Sylius.
         odm:
             auto_mapping: true
             auto_generate_proxy_classes: "%kernel.debug%"
+            
+    sylius_resource:
+         drivers:
+            - doctrine/orm
+            - doctrine/phpcr-odm
+        
+    sylius_grid:
+         drivers:
+            - doctrine/orm
+            - doctrine/phpcr-odm         
     ```
 
 ## Complementary documentation
