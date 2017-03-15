@@ -72,6 +72,22 @@ Simple CMS for Sylius.
             - doctrine/phpcr-odm         
     ```
 
+7. Update your database schema when using Doctrine
+
+    Using the schema updater:
+
+    ```bash
+    $ bin/console doctrine:schema:update
+    ```
+    
+    Or migrations:
+    
+    ```bash
+    $ bin/console doctrine:migrations:diff
+    $ bin/console doctrine:migrations:migrate
+    ```
+    
+
 ## Complementary documentation
 
 - [Sylius ResourceBundle](http://docs.sylius.org/en/latest/bundles/SyliusResourceBundle/)
