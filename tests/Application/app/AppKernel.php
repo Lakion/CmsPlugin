@@ -19,16 +19,10 @@ final class AppKernel extends Kernel
             new \Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
             new \Symfony\Cmf\Bundle\MenuBundle\CmfMenuBundle(),
             new \Symfony\Cmf\Bundle\MediaBundle\CmfMediaBundle(),
-
-            new \Sonata\BlockBundle\SonataBlockBundle(),
-            new \Sonata\CoreBundle\SonataCoreBundle(),
             new \Symfony\Cmf\Bundle\BlockBundle\CmfBlockBundle(),
 
             new \Sylius\Bundle\AdminBundle\SyliusAdminBundle(),
             new \Sylius\Bundle\ShopBundle\SyliusShopBundle(),
-
-            new \FOS\OAuthServerBundle\FOSOAuthServerBundle(), // Required by SyliusApiBundle
-            new \Sylius\Bundle\ApiBundle\SyliusApiBundle(),
         ]);
     }
 

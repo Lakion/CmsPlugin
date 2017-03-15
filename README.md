@@ -20,8 +20,6 @@ Simple CMS for Sylius.
 
     ```php
     new \Doctrine\Bundle\PHPCRBundle\DoctrinePHPCRBundle(),
-    new \Sonata\BlockBundle\SonataBlockBundle(),
-    new \Sonata\CoreBundle\SonataCoreBundle(),
     new \Symfony\Cmf\Bundle\BlockBundle\CmfBlockBundle(),
     new \Symfony\Cmf\Bundle\ContentBundle\CmfContentBundle(),
     new \Symfony\Cmf\Bundle\CoreBundle\CmfCoreBundle(),
@@ -86,7 +84,6 @@ Simple CMS for Sylius.
     $ bin/console doctrine:migrations:diff
     $ bin/console doctrine:migrations:migrate
     ```
-    
 
 ## Complementary documentation
 
