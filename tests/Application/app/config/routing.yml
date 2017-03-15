@@ -12,10 +12,6 @@ sylius_admin:
     resource: "@SyliusAdminBundle/Resources/config/routing.yml"
     prefix: /admin
 
-sylius_api:
-    resource: "@SyliusApiBundle/Resources/config/routing/main.yml"
-    prefix: /api
-
 lakion_sylius_cms_admin:
     resource: "@LakionSyliusCmsBundle/Resources/config/app/admin_routing.yml"
     prefix: /admin

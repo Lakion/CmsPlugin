@@ -24,16 +24,6 @@ security:
                 target: sylius_admin_login
             anonymous: true
 
-        oauth_token:
-            pattern:  ^/api/oauth/v2/token
-            security: false
-
-        api:
-            pattern:    ^/api
-            fos_oauth:  true
-            stateless: true
-            anonymous: true
-
         shop:
             switch_user: { role: ROLE_ALLOWED_TO_SWITCH }
             context: shop
