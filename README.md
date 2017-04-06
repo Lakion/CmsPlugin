@@ -26,6 +26,7 @@ Simple CMS for Sylius.
     new \Symfony\Cmf\Bundle\MenuBundle\CmfMenuBundle(),
     new \Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
     new \Lakion\SyliusCmsBundle\LakionSyliusCmsBundle(),
+    new \Symfony\Cmf\Bundle\MediaBundle\CmfMediaBundle(),
     ```
 
 4. Import config file in `app/config/config.yml`:
