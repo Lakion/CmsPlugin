@@ -41,7 +41,7 @@ lakion_sylius_cms:
             image: Obraz
             link: Odnośnik
             name: Nazwa
-            taxon: Kategoria
+            taxon: Takson
             title: Tytuł
 
     menu:
@@ -52,7 +52,7 @@ lakion_sylius_cms:
             routes: Ścieżki
             static_contents: Zawartość statyczna
             string_blocks: Bloki treści
-            taxon_blocks: Bloki kategorii
+            taxon_blocks: Bloki taksonomii
 
     ui:
         new_product_block: Nowy blok produktu
@@ -65,4 +65,4 @@ lakion_sylius_cms:
         routes: Ścieżki
         static_contents: Zawartość statyczna
         string_blocks: Bloki treści
-        taxon_blocks: Bloki kategorii
+        taxon_blocks: Bloki taksonomii

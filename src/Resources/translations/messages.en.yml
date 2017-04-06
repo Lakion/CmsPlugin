@@ -55,10 +55,12 @@ lakion_sylius_cms:
             taxon_blocks: Taxon blocks
 
     ui:
+        new_product_block: New product block
         administration: Administration
+        new_static_content: New static content
         edit: Edit
         new_custom_block: New custom block
-        custom_blocks: Custom blocks
+        custom_blocks: Dynamic blocks
         product_blocks: Product blocks
         routes: Routes
         static_contents: Static contents
