@@ -1,0 +1,68 @@
+lakion_sylius_cms:
+    form:
+        custom_block:
+            body: Treść
+            image: Obraz
+            link: Odnośnik
+            name: Nazwa
+            title: Tytuł
+
+        product_block:
+            body: Treść
+            image: Obraz
+            link: Odnośnik
+            name: Nazwa
+            product: Produkt
+            title: Tytuł
+
+        route:
+            content: Zawartość
+            name: Nazwa
+            parent: Rodzic
+
+        static_content:
+            body: Treść
+            id: Identyfikator
+            internal_name: Nazwa wewnętrzna
+            parent: Rodzic
+            publish_end_date: Publikuj datę zakończenia
+            publish_start_date: Publikuj datę rozpoczęcia
+            publishable: Opublikowane
+            routes: Ścieżki
+            title: Tytuł
+            locale: Region
+
+        string_block:
+            body: Treść
+            name: Nazwa
+
+        taxon_block:
+            body: Treść
+            image: Obraz
+            link: Odnośnik
+            name: Nazwa
+            taxon: Takson
+            title: Tytuł
+
+    menu:
+        admin:
+            header: Zarządzanie treścią
+            custom_blocks: Dynamiczne bloki
+            product_blocks: Bloki produktów
+            routes: Ścieżki
+            static_contents: Zawartość statyczna
+            string_blocks: Bloki treści
+            taxon_blocks: Bloki taksonomii
+
+    ui:
+        new_product_block: Nowy blok produktu
+        administration: Administracja
+        new_static_content: Nowa zawartość statyczna
+        edit: Edycja
+        new_custom_block: Nowy blok dynamiczny
+        custom_blocks: Dynamiczne bloki
+        product_blocks: Bloki produktów
+        routes: Ścieżki
+        static_contents: Zawartość statyczna
+        string_blocks: Bloki treści
+        taxon_blocks: Bloki taksonomii

@@ -1,62 +1,68 @@
 lakion_sylius_cms:
     form:
         custom_block:
-            body: "Body"
-            image: "Image"
-            link: "Link"
-            name: "Name"
-            title: "Title"
+            body: Body
+            image: Image
+            link: Link
+            name: Name
+            title: Title
 
         product_block:
-            body: "Body"
-            image: "Image"
-            link: "Link"
-            name: "Name"
-            product: "Product"
-            title: "Title"
+            body: Body
+            image: Image
+            link: Link
+            name: Name
+            product: Product
+            title: Title
 
         route:
-            content: "Content"
-            name: "Name"
-            parent: "Parent"
+            content: Content
+            name: Name
+            parent: Parent
 
         static_content:
-            body: "Body"
-            id: "Id"
-            internal_name: "Internal name"
-            parent: "Parent"
-            publish_end_date: "Publish end date"
-            publish_start_date: "Publish start date"
-            publishable: "Published"
-            routes: "Routes"
-            title: "Title"
-            locale: "Locale"
+            body: Body
+            id: Id
+            internal_name: Internal name
+            parent: Parent
+            publish_end_date: Publish end date
+            publish_start_date: Publish start date
+            publishable: Published
+            routes: Routes
+            title: Title
+            locale: Locale
 
         string_block:
-            body: "Body"
-            name: "Name"
+            body: Body
+            name: Name
 
         taxon_block:
-            body: "Body"
-            image: "Image"
-            link: "Link"
-            name: "Name"
-            taxon: "Taxon"
-            title: "Title"
+            body: Body
+            image: Image
+            link: Link
+            name: Name
+            taxon: Taxon
+            title: Title
 
     menu:
         admin:
-            custom_blocks: "Custom blocks"
-            product_blocks: "Product blocks"
-            routes: "Routes"
-            static_contents: "Static contents"
-            string_blocks: "String blocks"
-            taxon_blocks: "Taxon blocks"
+            header: Manage content
+            custom_blocks: Custom blocks
+            product_blocks: Product blocks
+            routes: Routes
+            static_contents: Static contents
+            string_blocks: String blocks
+            taxon_blocks: Taxon blocks
 
     ui:
-        custom_blocks: "Custom blocks"
-        product_blocks: "Product blocks"
-        routes: "Routes"
-        static_contents: "Static contents"
-        string_blocks: "String blocks"
-        taxon_blocks: "Taxon blocks"
+        new_product_block: New product block
+        administration: Administration
+        new_static_content: New static content
+        edit: Edit
+        new_custom_block: New custom block
+        custom_blocks: Dynamic blocks
+        product_blocks: Product blocks
+        routes: Routes
+        static_contents: Static contents
+        string_blocks: String blocks
+        taxon_blocks: Taxon blocks
