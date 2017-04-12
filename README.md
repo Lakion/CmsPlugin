@@ -84,6 +84,12 @@ Simple CMS for Sylius.
     $ bin/console doctrine:migrations:diff
     $ bin/console doctrine:migrations:migrate
     ```
+    
+8. Initialize PHPCR repository
+
+    ```bash
+    $ bin/console doctrine:phpcr:repository:init
+    ```    
 
 ## Complementary documentation
 
