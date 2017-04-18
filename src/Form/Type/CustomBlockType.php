@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Form\Type;
+namespace Lakion\CmsPlugin\Form\Type;
 
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -16,19 +16,19 @@ final class CustomBlockType extends AbstractResourceType
     {
         $builder
             ->add('name', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.custom_block.name',
+                'label' => 'lakion_cms.form.custom_block.name',
             ])
             ->add('title', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.custom_block.title',
+                'label' => 'lakion_cms.form.custom_block.title',
             ])
             ->add('body', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.custom_block.body',
+                'label' => 'lakion_cms.form.custom_block.body',
             ])
             ->add('linkUrl', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.custom_block.link',
+                'label' => 'lakion_cms.form.custom_block.link',
             ])
             ->add('image', FileType::class, [
-                'label' => 'lakion_sylius_cms.form.custom_block.image',
+                'label' => 'lakion_cms.form.custom_block.image',
             ])
         ;
     }
@@ -38,6 +38,6 @@ final class CustomBlockType extends AbstractResourceType
      */
     public function getBlockPrefix()
     {
-        return 'lakion_sylius_cms_custom_block';
+        return 'lakion_cms_custom_block';
     }
 }

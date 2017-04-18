@@ -1,9 +1,9 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Listener;
+namespace Lakion\CmsPlugin\Listener;
 
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
-use Lakion\SyliusCmsBundle\Document\ProductBlock;
+use Lakion\CmsPlugin\Document\ProductBlock;
 use Sylius\Component\Core\Model\ProductInterface;
 use Sylius\Component\Resource\Repository\RepositoryInterface;
 

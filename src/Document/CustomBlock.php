@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Document;
+namespace Lakion\CmsPlugin\Document;
 
 use Sylius\Component\Resource\Model\ResourceInterface;
 use Symfony\Cmf\Bundle\BlockBundle\Doctrine\Phpcr\ImagineBlock;
@@ -22,7 +22,7 @@ class CustomBlock extends ImagineBlock implements ResourceInterface
      */
     public function getType()
     {
-        return 'lakion_sylius_cms.block.custom';
+        return 'lakion_cms.block.custom';
     }
 
     /**

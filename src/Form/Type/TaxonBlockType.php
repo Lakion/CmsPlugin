@@ -1,9 +1,10 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Form\Type;
+namespace Lakion\CmsPlugin\Form\Type;
 
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
-use Sylius\Bundle\TaxonomyBundle\Form\Type\TaxonChoiceType;
+use Sylius\Bundle\TaxonomyBundle\Form\Type\TaxonAutocompleteChoiceType;
+use Symfony\Cmf\Bundle\MediaBundle\Doctrine\Phpcr\Image;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -17,22 +18,23 @@ final class TaxonBlockType extends AbstractResourceType
     {
         $builder
             ->add('name', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.taxon_block.name',
+                'label' => 'lakion_cms.form.taxon_block.name',
             ])
             ->add('title', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.taxon_block.title',
+                'label' => 'lakion_cms.form.taxon_block.title',
             ])
             ->add('body', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.taxon_block.body',
+                'label' => 'lakion_cms.form.taxon_block.body',
             ])
             ->add('linkUrl', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.taxon_block.link',
+                'label' => 'lakion_cms.form.taxon_block.link',
             ])
             ->add('image', FileType::class, [
-                'label' => 'lakion_sylius_cms.form.taxon_block.image',
+                'label' => 'lakion_cms.form.taxon_block.image',
+                'data_class' => Image::class,
             ])
-            ->add('taxon', TaxonChoiceType::class, [
-                'label' => 'lakion_sylius_cms.form.taxon_block.taxon',
+            ->add('taxon', TaxonAutocompleteChoiceType::class, [
+                'label' => 'lakion_cms.form.taxon_block.taxon',
                 'multiple' => false,
                 'required' => true,
             ])
@@ -44,6 +46,6 @@ final class TaxonBlockType extends AbstractResourceType
      */
     public function getBlockPrefix()
     {
-        return 'lakion_sylius_cms_taxon_block';
+        return 'lakion_cms_taxon_block';
     }
 }

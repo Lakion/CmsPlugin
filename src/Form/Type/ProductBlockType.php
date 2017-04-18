@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Form\Type;
+namespace Lakion\CmsPlugin\Form\Type;
 
 use Sylius\Bundle\ProductBundle\Form\Type\ProductChoiceType;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
@@ -17,22 +17,22 @@ final class ProductBlockType extends AbstractResourceType
     {
         $builder
             ->add('name', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.product_block.name',
+                'label' => 'lakion_cms.form.product_block.name',
             ])
             ->add('title', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.product_block.title',
+                'label' => 'lakion_cms.form.product_block.title',
             ])
             ->add('body', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.product_block.body',
+                'label' => 'lakion_cms.form.product_block.body',
             ])
             ->add('linkUrl', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.product_block.link',
+                'label' => 'lakion_cms.form.product_block.link',
             ])
             ->add('image', FileType::class, [
-                'label' => 'lakion_sylius_cms.form.product_block.image',
+                'label' => 'lakion_cms.form.product_block.image',
             ])
             ->add('product', ProductChoiceType::class, [
-                'label' => 'lakion_sylius_cms.form.product_block.product',
+                'label' => 'lakion_cms.form.product_block.product',
                 'multiple' => false,
                 'required' => true,
             ])
@@ -44,6 +44,6 @@ final class ProductBlockType extends AbstractResourceType
      */
     public function getBlockPrefix()
     {
-        return 'lakion_sylius_cms_product_block';
+        return 'lakion_cms_product_block';
     }
 }

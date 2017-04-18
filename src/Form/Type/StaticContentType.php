@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Form\Type;
+namespace Lakion\CmsPlugin\Form\Type;
 
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
@@ -19,38 +19,38 @@ final class StaticContentType extends AbstractResourceType
     {
         $builder
             ->add('publishable', CheckboxType::class, [
-                'label' => 'lakion_sylius_cms.form.static_content.publishable',
+                'label' => 'lakion_cms.form.static_content.publishable',
             ])
             ->add('id', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.static_content.id',
+                'label' => 'lakion_cms.form.static_content.id',
             ])
             ->add('name', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.static_content.internal_name',
+                'label' => 'lakion_cms.form.static_content.internal_name',
             ])
             ->add('locale', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.static_content.locale',
+                'label' => 'lakion_cms.form.static_content.locale',
             ])
             ->add('title', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.static_content.title',
+                'label' => 'lakion_cms.form.static_content.title',
             ])
             ->add('routes', CollectionType::class, [
                 'entry_type' => RouteType::class,
                 'allow_add' => true,
                 'allow_delete' => true,
                 'by_reference' => false,
-                'label' => 'lakion_sylius_cms.form.static_content.routes',
+                'label' => 'lakion_cms.form.static_content.routes',
              ])
             ->add('body', TextareaType::class, [
                 'required' => false,
-                'label' => 'lakion_sylius_cms.form.static_content.body',
+                'label' => 'lakion_cms.form.static_content.body',
             ])
             ->add('publishStartDate', DateTimeType::class, [
-                'label' => 'lakion_sylius_cms.form.static_content.publish_start_date',
+                'label' => 'lakion_cms.form.static_content.publish_start_date',
                 'placeholder' => ['year' => '-', 'month' => '-', 'day' => '-'],
                 'time_widget' => 'text',
             ])
             ->add('publishEndDate', DateTimeType::class, [
-                'label' => 'lakion_sylius_cms.form.static_content.publish_end_date',
+                'label' => 'lakion_cms.form.static_content.publish_end_date',
                 'placeholder' => ['year' => '-', 'month' => '-', 'day' => '-'],
                 'time_widget' => 'text',
             ])
@@ -62,6 +62,6 @@ final class StaticContentType extends AbstractResourceType
      */
     public function getBlockPrefix()
     {
-        return 'lakion_sylius_cms_static_content';
+        return 'lakion_cms_static_content';
     }
 }

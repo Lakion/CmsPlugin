@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\CustomBlock;
+namespace Tests\Lakion\CmsPlugin\Behat\Page\Admin\CustomBlock;
 
 use Sylius\Behat\Page\Admin\Crud\UpdatePage as BaseUpdatePage;
 
@@ -60,9 +60,9 @@ class UpdatePage extends BaseUpdatePage implements UpdatePageInterface
     protected function getDefinedElements()
     {
         return array_merge(parent::getDefinedElements(), [
-            'body' => '#lakion_sylius_cms_custom_block_body',
-            'link' => '#lakion_sylius_cms_custom_block_linkUrl',
-            'title' => '#lakion_sylius_cms_custom_block_title',
+            'body' => '#lakion_cms_custom_block_body',
+            'link' => '#lakion_cms_custom_block_linkUrl',
+            'title' => '#lakion_cms_custom_block_title',
         ]);
     }
 }

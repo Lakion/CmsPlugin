@@ -2,37 +2,37 @@
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <parameters>
-        <parameter key="lakion_sylius_cms.page.admin.string_block.index.class">%sylius.behat.page.admin.crud.index.class%</parameter>
-        <parameter key="lakion_sylius_cms.page.admin.string_block.create.class">Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StringBlock\CreatePage</parameter>
-        <parameter key="lakion_sylius_cms.page.admin.string_block.update.class">Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StringBlock\UpdatePage</parameter>
-        <parameter key="lakion_sylius_cms.page.admin.string_block.show.class">Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StringBlock\ShowPage</parameter>
+        <parameter key="lakion_cms.page.admin.string_block.index.class">%sylius.behat.page.admin.crud.index.class%</parameter>
+        <parameter key="lakion_cms.page.admin.string_block.create.class">Tests\Lakion\CmsPlugin\Behat\Page\Admin\StringBlock\CreatePage</parameter>
+        <parameter key="lakion_cms.page.admin.string_block.update.class">Tests\Lakion\CmsPlugin\Behat\Page\Admin\StringBlock\UpdatePage</parameter>
+        <parameter key="lakion_cms.page.admin.string_block.show.class">Tests\Lakion\CmsPlugin\Behat\Page\Admin\StringBlock\ShowPage</parameter>
     </parameters>
 
     <services>
-        <service id="lakion_sylius_cms.context.setup.string_block" class="Tests\Lakion\SyliusCmsBundle\Behat\Context\Setup\StringBlockContext">
+        <service id="lakion_cms.context.setup.string_block" class="Tests\Lakion\CmsPlugin\Behat\Context\Setup\StringBlockContext">
             <argument type="service" id="sylius.behat.shared_storage" />
-            <argument type="service" id="__symfony__.lakion_sylius_cms.fixture.example_factory.string_block" />
-            <argument type="service" id="__symfony__.lakion_sylius_cms.manager.string_block" />
+            <argument type="service" id="__symfony__.lakion_cms.fixture.example_factory.string_block" />
+            <argument type="service" id="__symfony__.lakion_cms.manager.string_block" />
             <tag name="fob.context_service" />
         </service>
 
-        <service id="lakion_sylius_cms.context.ui.admin.managing_string_blocks" class="Tests\Lakion\SyliusCmsBundle\Behat\Context\Ui\Admin\ManagingStringBlocksContext">
-            <argument type="service" id="lakion_sylius_cms.page.admin.string_block.index" />
-            <argument type="service" id="lakion_sylius_cms.page.admin.string_block.create" />
-            <argument type="service" id="lakion_sylius_cms.page.admin.string_block.update" />
-            <argument type="service" id="lakion_sylius_cms.page.admin.string_block.show" />
+        <service id="lakion_cms.context.ui.admin.managing_string_blocks" class="Tests\Lakion\CmsPlugin\Behat\Context\Ui\Admin\ManagingStringBlocksContext">
+            <argument type="service" id="lakion_cms.page.admin.string_block.index" />
+            <argument type="service" id="lakion_cms.page.admin.string_block.create" />
+            <argument type="service" id="lakion_cms.page.admin.string_block.update" />
+            <argument type="service" id="lakion_cms.page.admin.string_block.show" />
             <tag name="fob.context_service" />
         </service>
 
-        <service id="lakion_sylius_cms.page.admin.string_block.index" class="%lakion_sylius_cms.page.admin.string_block.index.class%" parent="sylius.behat.page.admin.crud.index" public="false">
-            <argument type="string">lakion_sylius_cms_admin_string_block_index</argument>
+        <service id="lakion_cms.page.admin.string_block.index" class="%lakion_cms.page.admin.string_block.index.class%" parent="sylius.behat.page.admin.crud.index" public="false">
+            <argument type="string">lakion_cms_admin_string_block_index</argument>
         </service>
-        <service id="lakion_sylius_cms.page.admin.string_block.create" class="%lakion_sylius_cms.page.admin.string_block.create.class%" parent="sylius.behat.page.admin.crud.create" public="false">
-            <argument type="string">lakion_sylius_cms_admin_string_block_create</argument>
+        <service id="lakion_cms.page.admin.string_block.create" class="%lakion_cms.page.admin.string_block.create.class%" parent="sylius.behat.page.admin.crud.create" public="false">
+            <argument type="string">lakion_cms_admin_string_block_create</argument>
         </service>
-        <service id="lakion_sylius_cms.page.admin.string_block.update" class="%lakion_sylius_cms.page.admin.string_block.update.class%" parent="sylius.behat.page.admin.crud.update" public="false">
-            <argument type="string">lakion_sylius_cms_admin_string_block_update</argument>
+        <service id="lakion_cms.page.admin.string_block.update" class="%lakion_cms.page.admin.string_block.update.class%" parent="sylius.behat.page.admin.crud.update" public="false">
+            <argument type="string">lakion_cms_admin_string_block_update</argument>
         </service>
-        <service id="lakion_sylius_cms.page.admin.string_block.show" class="%lakion_sylius_cms.page.admin.string_block.show.class%" parent="sylius.behat.symfony_page" public="false" />
+        <service id="lakion_cms.page.admin.string_block.show" class="%lakion_cms.page.admin.string_block.show.class%" parent="sylius.behat.symfony_page" public="false" />
     </services>
 </container>

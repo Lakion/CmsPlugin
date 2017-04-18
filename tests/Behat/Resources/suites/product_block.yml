@@ -2,18 +2,18 @@ default:
     suites:
         ui_product_block:
             contexts_services:
-                - lakion_sylius_cms.context.hook.phpcr
+                - lakion_cms.context.hook.phpcr
                 - sylius.behat.context.hook.doctrine_orm
 
-                - lakion_sylius_cms.context.transform.product_block
+                - lakion_cms.context.transform.product_block
                 - sylius.behat.context.transform.product
                 - sylius.behat.context.transform.shared_storage
 
-                - lakion_sylius_cms.context.setup.product_block
+                - lakion_cms.context.setup.product_block
                 - sylius.behat.context.setup.admin_security
                 - sylius.behat.context.setup.product
 
-                - lakion_sylius_cms.context.ui.admin.managing_product_blocks
+                - lakion_cms.context.ui.admin.managing_product_blocks
                 - sylius.behat.context.ui.admin.notification
 
             filters:

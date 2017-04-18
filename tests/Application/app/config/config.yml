@@ -6,7 +6,7 @@ imports:
     - { resource: "@SyliusCoreBundle/Resources/config/app/config.yml" }
     - { resource: "@SyliusAdminBundle/Resources/config/app/config.yml" }
     - { resource: "@SyliusShopBundle/Resources/config/app/config.yml" }
-    - { resource: "@LakionSyliusCmsBundle/Resources/config/app/config.yml" }
+    - { resource: "@LakionCmsPlugin/Resources/config/app/config.yml" }
 
     - { resource: "security.yml" }
 

@@ -11,7 +11,7 @@
     </imports>
 
     <services>
-        <service id="lakion_sylius_cms.context.hook.phpcr" class="Tests\Lakion\SyliusCmsBundle\Behat\Context\Hook\PhpcrContext">
+        <service id="lakion_cms.context.hook.phpcr" class="Tests\Lakion\CmsPlugin\Behat\Context\Hook\PhpcrContext">
             <argument type="service" id="__symfony_shared__.doctrine_phpcr.odm.document_manager" />
             <argument type="service" id="__symfony_shared__.doctrine_phpcr.initializer_manager" />
             <tag name="fob.context_service" />

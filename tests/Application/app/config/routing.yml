@@ -12,9 +12,9 @@ sylius_admin:
     resource: "@SyliusAdminBundle/Resources/config/routing.yml"
     prefix: /admin
 
-lakion_sylius_cms_admin:
-    resource: "@LakionSyliusCmsBundle/Resources/config/app/admin_routing.yml"
+lakion_cms_admin:
+    resource: "@LakionCmsPlugin/Resources/config/app/admin_routing.yml"
     prefix: /admin
 
-lakion_sylius_cms_shop:
-    resource: "@LakionSyliusCmsBundle/Resources/config/app/shop_routing.yml"
+lakion_cms_shop:
+    resource: "@LakionCmsPlugin/Resources/config/app/shop_routing.yml"

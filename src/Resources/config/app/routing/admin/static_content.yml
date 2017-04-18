@@ -1,37 +1,37 @@
-lakion_sylius_cms_admin_static_content:
+lakion_cms_admin_static_content:
     resource: |
-        alias: lakion_sylius_cms.static_content
+        alias: lakion_cms.static_content
         section: admin
         templates: SyliusAdminBundle:Crud
         except: ['show', 'update', 'delete']
         redirect: index
-        grid: lakion_sylius_cms_admin_static_content
+        grid: lakion_cms_admin_static_content
         vars:
             all:
                 templates:
-                    form: "@LakionSyliusCms/Admin/StaticContent/_form.html.twig"
+                    form: "@LakionCmsPlugin/Admin/StaticContent/_form.html.twig"
     type: sylius.resource
 
-lakion_sylius_cms_admin_static_content_update:
+lakion_cms_admin_static_content_update:
     path: /static-contents/{id}/edit
     methods: [GET, PUT]
     defaults:
-        _controller: lakion_sylius_cms.controller.static_content:updateAction
+        _controller: lakion_cms.controller.static_content:updateAction
         _sylius:
             section: admin
             template: "@SyliusAdmin/Crud/update.html.twig"
             vars:
                 templates:
-                    form: "@LakionSyliusCms/Admin/StaticContent/_form.html.twig"
-                    breadcrumb: "@LakionSyliusCms/Admin/StaticContent/Update/_breadcrumb.html.twig"
+                    form: "@LakionCmsPlugin/Admin/StaticContent/_form.html.twig"
+                    breadcrumb: "@LakionCmsPlugin/Admin/StaticContent/Update/_breadcrumb.html.twig"
     requirements:
         id: ".+"
 
-lakion_sylius_cms_admin_static_content_delete:
+lakion_cms_admin_static_content_delete:
     path: /static-contents/{id}
     methods: [DELETE]
     defaults:
-        _controller: lakion_sylius_cms.controller.static_content:deleteAction
+        _controller: lakion_cms.controller.static_content:deleteAction
         _sylius:
             section: admin
     requirements:

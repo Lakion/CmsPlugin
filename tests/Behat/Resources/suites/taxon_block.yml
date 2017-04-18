@@ -2,18 +2,18 @@ default:
     suites:
         ui_taxon_block:
             contexts_services:
-                - lakion_sylius_cms.context.hook.phpcr
+                - lakion_cms.context.hook.phpcr
                 - sylius.behat.context.hook.doctrine_orm
 
-                - lakion_sylius_cms.context.transform.taxon_block
+                - lakion_cms.context.transform.taxon_block
                 - sylius.behat.context.transform.taxon
                 - sylius.behat.context.transform.shared_storage
 
-                - lakion_sylius_cms.context.setup.taxon_block
+                - lakion_cms.context.setup.taxon_block
                 - sylius.behat.context.setup.admin_security
                 - sylius.behat.context.setup.taxonomy
 
-                - lakion_sylius_cms.context.ui.admin.managing_taxon_blocks
+                - lakion_cms.context.ui.admin.managing_taxon_blocks
                 - sylius.behat.context.ui.admin.notification
 
             filters:

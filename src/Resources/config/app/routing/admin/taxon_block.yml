@@ -1,50 +1,50 @@
-lakion_sylius_cms_admin_taxon_block:
+lakion_cms_admin_taxon_block:
     resource: |
-        alias: lakion_sylius_cms.taxon_block
+        alias: lakion_cms.taxon_block
         section: admin
         templates: SyliusAdminBundle:Crud
         except: ['show', 'update', 'delete']
         redirect: index
-        grid: lakion_sylius_cms_admin_taxon_block
+        grid: lakion_cms_admin_taxon_block
         vars:
             all:
                 templates:
-                    form: "@LakionSyliusCms/Admin/TaxonBlock/_form.html.twig"
+                    form: "@LakionCmsPlugin/Admin/TaxonBlock/_form.html.twig"
             index:
                 icon: font
     type: sylius.resource
 
-lakion_sylius_cms_admin_taxon_block_show:
+lakion_cms_admin_taxon_block_show:
     path: /taxon-blocks{id}/show
     methods: [GET]
     defaults:
-        _controller: lakion_sylius_cms.controller.taxon_block:showAction
+        _controller: lakion_cms.controller.taxon_block:showAction
         _sylius:
             section: admin
-            template: "@LakionSyliusCms/Admin/TaxonBlock/show.html.twig"
+            template: "@LakionCmsPlugin/Admin/TaxonBlock/show.html.twig"
     requirements:
         id: ".+"
 
-lakion_sylius_cms_admin_taxon_block_update:
+lakion_cms_admin_taxon_block_update:
     path: /taxon-blocks{id}/edit
     methods: [GET, PUT]
     defaults:
-        _controller: lakion_sylius_cms.controller.taxon_block:updateAction
+        _controller: lakion_cms.controller.taxon_block:updateAction
         _sylius:
             section: admin
             template: "@SyliusAdmin/Crud/update.html.twig"
             vars:
                 templates:
-                    form: "@LakionSyliusCms/Admin/TaxonBlock/_form.html.twig"
-                    breadcrumb: "@LakionSyliusCms/Admin/TaxonBlock/Update/_breadcrumb.html.twig"
+                    form: "@LakionCmsPlugin/Admin/TaxonBlock/_form.html.twig"
+                    breadcrumb: "@LakionCmsPlugin/Admin/TaxonBlock/Update/_breadcrumb.html.twig"
     requirements:
         id: ".+"
 
-lakion_sylius_cms_admin_taxon_block_delete:
+lakion_cms_admin_taxon_block_delete:
     path: /taxon-blocks{id}
     methods: [DELETE]
     defaults:
-        _controller: lakion_sylius_cms.controller.taxon_block:deleteAction
+        _controller: lakion_cms.controller.taxon_block:deleteAction
         _sylius:
             section: admin
     requirements:

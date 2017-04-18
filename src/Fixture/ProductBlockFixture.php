@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Fixture;
+namespace Lakion\CmsPlugin\Fixture;
 
 use Sylius\Bundle\CoreBundle\Fixture\AbstractResourceFixture;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
@@ -12,7 +12,7 @@ final class ProductBlockFixture extends AbstractResourceFixture
      */
     public function getName()
     {
-        return 'lakion_sylius_cms_product_block';
+        return 'lakion_cms_product_block';
     }
 
     /**

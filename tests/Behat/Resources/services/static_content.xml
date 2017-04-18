@@ -2,46 +2,46 @@
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <parameters>
-        <parameter key="lakion_sylius_cms.page.admin.static_content.index.class">%sylius.behat.page.admin.crud.index.class%</parameter>
-        <parameter key="lakion_sylius_cms.page.admin.static_content.create.class">Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StaticContent\CreatePage</parameter>
-        <parameter key="lakion_sylius_cms.page.admin.static_content.update.class">Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StaticContent\UpdatePage</parameter>
-        <parameter key="lakion_sylius_cms.page.shop.static_content.show.class">Tests\Lakion\SyliusCmsBundle\Behat\Page\Shop\StaticContentPage</parameter>
+        <parameter key="lakion_cms.page.admin.static_content.index.class">%sylius.behat.page.admin.crud.index.class%</parameter>
+        <parameter key="lakion_cms.page.admin.static_content.create.class">Tests\Lakion\CmsPlugin\Behat\Page\Admin\StaticContent\CreatePage</parameter>
+        <parameter key="lakion_cms.page.admin.static_content.update.class">Tests\Lakion\CmsPlugin\Behat\Page\Admin\StaticContent\UpdatePage</parameter>
+        <parameter key="lakion_cms.page.shop.static_content.show.class">Tests\Lakion\CmsPlugin\Behat\Page\Shop\StaticContentPage</parameter>
     </parameters>
 
     <services>
-        <service id="lakion_sylius_cms.context.setup.static_content" class="Tests\Lakion\SyliusCmsBundle\Behat\Context\Setup\StaticContentContext">
+        <service id="lakion_cms.context.setup.static_content" class="Tests\Lakion\CmsPlugin\Behat\Context\Setup\StaticContentContext">
             <argument type="service" id="sylius.behat.shared_storage" />
-            <argument type="service" id="__symfony__.lakion_sylius_cms.fixture.example_factory.static_content" />
-            <argument type="service" id="__symfony__.lakion_sylius_cms.manager.static_content" />
+            <argument type="service" id="__symfony__.lakion_cms.fixture.example_factory.static_content" />
+            <argument type="service" id="__symfony__.lakion_cms.manager.static_content" />
             <tag name="fob.context_service" />
         </service>
 
-        <service id="lakion_sylius_cms.context.ui.admin.managing_static_contents" class="Tests\Lakion\SyliusCmsBundle\Behat\Context\Ui\Admin\ManagingStaticContentsContext">
-            <argument type="service" id="lakion_sylius_cms.page.admin.static_content.index" />
-            <argument type="service" id="lakion_sylius_cms.page.admin.static_content.create" />
-            <argument type="service" id="lakion_sylius_cms.page.admin.static_content.update" />
+        <service id="lakion_cms.context.ui.admin.managing_static_contents" class="Tests\Lakion\CmsPlugin\Behat\Context\Ui\Admin\ManagingStaticContentsContext">
+            <argument type="service" id="lakion_cms.page.admin.static_content.index" />
+            <argument type="service" id="lakion_cms.page.admin.static_content.create" />
+            <argument type="service" id="lakion_cms.page.admin.static_content.update" />
             <tag name="fob.context_service" />
         </service>
 
-        <service id="lakion_sylius_cms.context.ui.shop.static_content" class="Tests\Lakion\SyliusCmsBundle\Behat\Context\Ui\Shop\StaticContentContext">
-            <argument type="service" id="lakion_sylius_cms.page.shop.static_content.show" />
+        <service id="lakion_cms.context.ui.shop.static_content" class="Tests\Lakion\CmsPlugin\Behat\Context\Ui\Shop\StaticContentContext">
+            <argument type="service" id="lakion_cms.page.shop.static_content.show" />
             <tag name="fob.context_service" />
         </service>
 
-        <service id="lakion_sylius_cms.page.admin.static_content.index" class="%lakion_sylius_cms.page.admin.static_content.index.class%"
+        <service id="lakion_cms.page.admin.static_content.index" class="%lakion_cms.page.admin.static_content.index.class%"
                  parent="sylius.behat.page.admin.crud.index" public="false">
-            <argument type="string">lakion_sylius_cms_admin_static_content_index</argument>
+            <argument type="string">lakion_cms_admin_static_content_index</argument>
         </service>
-        <service id="lakion_sylius_cms.page.admin.static_content.create" class="%lakion_sylius_cms.page.admin.static_content.create.class%"
+        <service id="lakion_cms.page.admin.static_content.create" class="%lakion_cms.page.admin.static_content.create.class%"
                  parent="sylius.behat.page.admin.crud.create" public="false">
-            <argument type="string">lakion_sylius_cms_admin_static_content_create</argument>
+            <argument type="string">lakion_cms_admin_static_content_create</argument>
         </service>
-        <service id="lakion_sylius_cms.page.admin.static_content.update" class="%lakion_sylius_cms.page.admin.static_content.update.class%"
+        <service id="lakion_cms.page.admin.static_content.update" class="%lakion_cms.page.admin.static_content.update.class%"
                  parent="sylius.behat.page.admin.crud.update" public="false">
-            <argument type="string">lakion_sylius_cms_admin_static_content_update</argument>
+            <argument type="string">lakion_cms_admin_static_content_update</argument>
         </service>
 
-        <service id="lakion_sylius_cms.page.shop.static_content.show" class="%lakion_sylius_cms.page.shop.static_content.show.class%"
+        <service id="lakion_cms.page.shop.static_content.show" class="%lakion_cms.page.shop.static_content.show.class%"
                  parent="sylius.behat.symfony_page" public="false" />
     </services>
 </container>

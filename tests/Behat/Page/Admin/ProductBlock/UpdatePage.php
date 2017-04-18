@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\ProductBlock;
+namespace Tests\Lakion\CmsPlugin\Behat\Page\Admin\ProductBlock;
 
 use Sylius\Behat\Page\Admin\Crud\UpdatePage as BaseUpdatePage;
 
@@ -76,10 +76,10 @@ class UpdatePage extends BaseUpdatePage implements UpdatePageInterface
     protected function getDefinedElements()
     {
         return array_merge(parent::getDefinedElements(), [
-            'body' => '#lakion_sylius_cms_product_block_body',
-            'link' => '#lakion_sylius_cms_product_block_linkUrl',
-            'product' => '#lakion_sylius_cms_product_block_product',
-            'title' => '#lakion_sylius_cms_product_block_title',
+            'body' => '#lakion_cms_product_block_body',
+            'link' => '#lakion_cms_product_block_linkUrl',
+            'product' => '#lakion_cms_product_block_product',
+            'title' => '#lakion_cms_product_block_title',
         ]);
     }
 }
