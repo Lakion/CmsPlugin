@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Document;
+namespace Lakion\CmsPlugin\Document;
 
 use Sylius\Component\Core\Model\TaxonInterface;
 
@@ -21,7 +21,7 @@ class TaxonBlock extends CustomBlock
      */
     public function getType()
     {
-        return 'lakion_sylius_cms.block.taxon';
+        return 'lakion_cms.block.taxon';
     }
 
     /**

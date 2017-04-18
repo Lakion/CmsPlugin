@@ -2,33 +2,33 @@
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="lakion_sylius_cms.form.type.string_block" class="Lakion\SyliusCmsBundle\Form\Type\StringBlockType">
-            <argument>%lakion_sylius_cms.model.string_block.class%</argument>
+        <service id="lakion_cms.form.type.string_block" class="Lakion\CmsPlugin\Form\Type\StringBlockType">
+            <argument>%lakion_cms.model.string_block.class%</argument>
             <argument type="collection"><argument>sylius</argument></argument>
             <tag name="form.type" />
         </service>
 
-        <service id="lakion_sylius_cms.factory.string_block" class="Lakion\SyliusCmsBundle\Factory\DocumentFactory">
+        <service id="lakion_cms.factory.string_block" class="Lakion\CmsPlugin\Factory\DocumentFactory">
             <argument type="service">
                 <service class="Sylius\Component\Resource\Factory\Factory">
-                    <argument>%lakion_sylius_cms.model.string_block.class%</argument>
+                    <argument>%lakion_cms.model.string_block.class%</argument>
                 </service>
             </argument>
-            <argument type="service" id="lakion_sylius_cms.manager.string_block" />
+            <argument type="service" id="lakion_cms.manager.string_block" />
             <argument>%cmf_block.persistence.phpcr.block_basepath%</argument>
         </service>
 
-        <service id="lakion_sylius_cms.fixture.example_factory.string_block" class="Lakion\SyliusCmsBundle\Fixture\Factory\StringBlockExampleFactory">
-            <argument type="service" id="lakion_sylius_cms.factory.string_block" />
+        <service id="lakion_cms.fixture.example_factory.string_block" class="Lakion\CmsPlugin\Fixture\Factory\StringBlockExampleFactory">
+            <argument type="service" id="lakion_cms.factory.string_block" />
         </service>
 
-        <service id="lakion_sylius_cms.fixture.string_block" class="Lakion\SyliusCmsBundle\Fixture\StringBlockFixture">
-            <argument type="service" id="lakion_sylius_cms.manager.string_block" />
-            <argument type="service" id="lakion_sylius_cms.fixture.example_factory.string_block" />
+        <service id="lakion_cms.fixture.string_block" class="Lakion\CmsPlugin\Fixture\StringBlockFixture">
+            <argument type="service" id="lakion_cms.manager.string_block" />
+            <argument type="service" id="lakion_cms.fixture.example_factory.string_block" />
             <tag name="sylius_fixtures.fixture" />
         </service>
 
-        <service id="lakion_sylius_cms.admin.content_menu_builder.string_block" class="Lakion\SyliusCmsBundle\Menu\ContentMenuBuilder">
+        <service id="lakion_cms.admin.content_menu_builder.string_block" class="Lakion\CmsPlugin\Menu\ContentMenuBuilder">
             <tag name="kernel.event_listener" event="sylius.menu.admin.main" method="configureStringBlockMenu" />
         </service>
     </services>

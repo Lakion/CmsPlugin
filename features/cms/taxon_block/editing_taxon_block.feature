@@ -8,7 +8,7 @@ Feature: Editing a taxon block
         Given the store has "Heron" taxonomy
         And I am logged in as an administrator
 
-    @ui
+    @ui @javascript @todo
     Scenario: Changing taxon of a taxon block
         Given the store has "Banana" taxonomy
         And the store has taxon block "delivery-info" with taxon "Heron"

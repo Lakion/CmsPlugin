@@ -1,9 +1,9 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Fixture\Factory;
+namespace Lakion\CmsPlugin\Fixture\Factory;
 
-use Lakion\SyliusCmsBundle\Document\Route;
-use Lakion\SyliusCmsBundle\Document\StaticContent;
+use Lakion\CmsPlugin\Document\Route;
+use Lakion\CmsPlugin\Document\StaticContent;
 use Sylius\Bundle\CoreBundle\Fixture\Factory\ExampleFactoryInterface;
 use Sylius\Bundle\CoreBundle\Fixture\OptionsResolver\LazyOption;
 use Sylius\Component\Core\Formatter\StringInflector;

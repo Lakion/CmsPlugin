@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StringBlock;
+namespace Tests\Lakion\CmsPlugin\Behat\Page\Admin\StringBlock;
 
 use Sylius\Behat\Page\Admin\Crud\CreatePage as BaseCreatePage;
 
@@ -28,8 +28,8 @@ class CreatePage extends BaseCreatePage implements CreatePageInterface
     protected function getDefinedElements()
     {
         return array_merge(parent::getDefinedElements(), [
-            'body' => '#lakion_sylius_cms_string_block_body',
-            'name' => '#lakion_sylius_cms_string_block_name',
+            'body' => '#lakion_cms_string_block_body',
+            'name' => '#lakion_cms_string_block_name',
         ]);
     }
 }

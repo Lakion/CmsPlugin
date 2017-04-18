@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Page\Shop;
+namespace Tests\Lakion\CmsPlugin\Behat\Page\Shop;
 
-use Lakion\SyliusCmsBundle\Document\StaticContent;
+use Lakion\CmsPlugin\Document\StaticContent;
 use Sylius\Behat\Page\SymfonyPage;
 use Webmozart\Assert\Assert;
 
@@ -32,6 +32,6 @@ final class StaticContentPage extends SymfonyPage implements StaticContentPageIn
      */
     public function getRouteName()
     {
-        return 'lakion_sylius_cms_shop_static_content_show';
+        return 'lakion_cms_shop_static_content_show';
     }
 }

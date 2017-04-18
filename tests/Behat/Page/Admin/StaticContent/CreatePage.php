@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StaticContent;
+namespace Tests\Lakion\CmsPlugin\Behat\Page\Admin\StaticContent;
 
 use Sylius\Behat\Page\Admin\Crud\CreatePage as BaseCreatePage;
 
@@ -36,9 +36,9 @@ final class CreatePage extends BaseCreatePage implements CreatePageInterface
     protected function getDefinedElements()
     {
         return array_merge(parent::getDefinedElements(), [
-            'body' => '#lakion_sylius_cms_static_content_body',
-            'name' => '#lakion_sylius_cms_static_content_name',
-            'title' => '#lakion_sylius_cms_static_content_title',
+            'body' => '#lakion_cms_static_content_body',
+            'name' => '#lakion_cms_static_content_name',
+            'title' => '#lakion_cms_static_content_title',
         ]);
     }
 }

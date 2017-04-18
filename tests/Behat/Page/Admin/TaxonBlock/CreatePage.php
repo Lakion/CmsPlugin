@@ -1,8 +1,10 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\TaxonBlock;
+namespace Tests\Lakion\CmsPlugin\Behat\Page\Admin\TaxonBlock;
 
+use Behat\Mink\Driver\Selenium2Driver;
 use Sylius\Behat\Page\Admin\Crud\CreatePage as BaseCreatePage;
+use Sylius\Behat\Service\AutocompleteHelper;
 
 class CreatePage extends BaseCreatePage implements CreatePageInterface
 {
@@ -43,7 +45,9 @@ class CreatePage extends BaseCreatePage implements CreatePageInterface
      */
     public function chooseTaxon($taxonName)
     {
-        $this->getSession()->getPage()->selectFieldOption('Taxon', $taxonName);
+        if ($this->getDriver() instanceof Selenium2Driver) {
+            AutocompleteHelper::chooseValue($this->getSession(), $this->getElement('taxon'), $taxonName);
+        }
     }
 
     /**
@@ -60,11 +64,11 @@ class CreatePage extends BaseCreatePage implements CreatePageInterface
     protected function getDefinedElements()
     {
         return array_merge(parent::getDefinedElements(), [
-            'body' => '#lakion_sylius_cms_taxon_block_body',
-            'link' => '#lakion_sylius_cms_taxon_block_linkUrl',
-            'name' => '#lakion_sylius_cms_taxon_block_name',
-            'taxon' => '#lakion_sylius_cms_taxon_block_taxon',
-            'title' => '#lakion_sylius_cms_taxon_block_title',
+            'body' => '#lakion_cms_taxon_block_body',
+            'link' => '#lakion_cms_taxon_block_linkUrl',
+            'name' => '#lakion_cms_taxon_block_name',
+            'taxon' => '#lakion_cms_taxon_block_taxon',
+            'title' => '#lakion_cms_taxon_block_title',
         ]);
     }
 }

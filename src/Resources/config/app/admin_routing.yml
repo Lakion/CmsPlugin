@@ -1,17 +1,17 @@
-lakion_sylius_cms_admin_custom_block:
-    resource: "@LakionSyliusCmsBundle/Resources/config/app/routing/admin/custom_block.yml"
+lakion_cms_admin_custom_block:
+    resource: "@LakionCmsPlugin/Resources/config/app/routing/admin/custom_block.yml"
 
-lakion_sylius_cms_admin_product_block:
-    resource: "@LakionSyliusCmsBundle/Resources/config/app/routing/admin/product_block.yml"
+lakion_cms_admin_product_block:
+    resource: "@LakionCmsPlugin/Resources/config/app/routing/admin/product_block.yml"
 
-lakion_sylius_cms_admin_route:
-    resource: "@LakionSyliusCmsBundle/Resources/config/app/routing/admin/route.yml"
+lakion_cms_admin_route:
+    resource: "@LakionCmsPlugin/Resources/config/app/routing/admin/route.yml"
 
-lakion_sylius_cms_admin_static_content:
-    resource: "@LakionSyliusCmsBundle/Resources/config/app/routing/admin/static_content.yml"
+lakion_cms_admin_static_content:
+    resource: "@LakionCmsPlugin/Resources/config/app/routing/admin/static_content.yml"
 
-lakion_sylius_cms_admin_string_block:
-    resource: "@LakionSyliusCmsBundle/Resources/config/app/routing/admin/string_block.yml"
+lakion_cms_admin_string_block:
+    resource: "@LakionCmsPlugin/Resources/config/app/routing/admin/string_block.yml"
 
-lakion_sylius_cms_admin_taxon_block:
-    resource: "@LakionSyliusCmsBundle/Resources/config/app/routing/admin/taxon_block.yml"
+lakion_cms_admin_taxon_block:
+    resource: "@LakionCmsPlugin/Resources/config/app/routing/admin/taxon_block.yml"

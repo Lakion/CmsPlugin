@@ -1,10 +1,10 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Context\Setup;
+namespace Tests\Lakion\CmsPlugin\Behat\Context\Setup;
 
 use Behat\Behat\Context\Context;
 use Doctrine\Common\Persistence\ObjectManager;
-use Lakion\SyliusCmsBundle\Document\StaticContent;
+use Lakion\CmsPlugin\Document\StaticContent;
 use Sylius\Bundle\CoreBundle\Fixture\Factory\ExampleFactoryInterface;
 use Sylius\Behat\Service\SharedStorageInterface;
 
@@ -45,7 +45,7 @@ final class StaticContentContext implements Context
      */
     public function theStoreHasStaticContent($title)
     {
-        $staticContent = $this->staticContentExampleFactory->create(['title' => $title]);
+        $staticContent = $this->staticContentExampleFactory->create(['title' => $title, 'publishable' => true]);
 
         $this->staticContentManager->persist($staticContent);
         $this->staticContentManager->flush();
@@ -68,7 +68,11 @@ final class StaticContentContext implements Context
      */
     public function theStoreHasStaticContentWithBody($title, $body)
     {
-        $staticContent = $this->staticContentExampleFactory->create(['title' => $title, 'body' => $body]);
+        $staticContent = $this->staticContentExampleFactory->create([
+            'title' => $title,
+            'body' => $body,
+            'publishable' => true,
+        ]);
 
         $this->staticContentManager->persist($staticContent);
         $this->staticContentManager->flush();
@@ -81,7 +85,11 @@ final class StaticContentContext implements Context
      */
     public function theStoreHasStaticContentWithName($title, $name)
     {
-        $staticContent = $this->staticContentExampleFactory->create(['title' => $title, 'name' => $name]);
+        $staticContent = $this->staticContentExampleFactory->create([
+            'title' => $title,
+            'name' => $name,
+            'publishable' => true,
+        ]);
 
         $this->staticContentManager->persist($staticContent);
         $this->staticContentManager->flush();

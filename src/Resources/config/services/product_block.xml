@@ -2,46 +2,46 @@
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="lakion_sylius_cms.form.type.product_block" class="Lakion\SyliusCmsBundle\Form\Type\ProductBlockType">
-            <argument>%lakion_sylius_cms.model.product_block.class%</argument>
+        <service id="lakion_cms.form.type.product_block" class="Lakion\CmsPlugin\Form\Type\ProductBlockType">
+            <argument>%lakion_cms.model.product_block.class%</argument>
             <argument type="collection"><argument>sylius</argument></argument>
             <tag name="form.type" />
         </service>
 
-        <service id="lakion_sylius_cms.factory.product_block" class="Lakion\SyliusCmsBundle\Factory\DocumentFactory">
+        <service id="lakion_cms.factory.product_block" class="Lakion\CmsPlugin\Factory\DocumentFactory">
             <argument type="service">
                 <service class="Sylius\Component\Resource\Factory\Factory">
-                    <argument>%lakion_sylius_cms.model.product_block.class%</argument>
+                    <argument>%lakion_cms.model.product_block.class%</argument>
                 </service>
             </argument>
-            <argument type="service" id="lakion_sylius_cms.manager.product_block" />
+            <argument type="service" id="lakion_cms.manager.product_block" />
             <argument>%cmf_block.persistence.phpcr.block_basepath%</argument>
         </service>
 
-        <service id="lakion_sylius_cms.fixture.example_factory.product_block" class="Lakion\SyliusCmsBundle\Fixture\Factory\ProductBlockExampleFactory">
-            <argument type="service" id="lakion_sylius_cms.factory.product_block" />
+        <service id="lakion_cms.fixture.example_factory.product_block" class="Lakion\CmsPlugin\Fixture\Factory\ProductBlockExampleFactory">
+            <argument type="service" id="lakion_cms.factory.product_block" />
             <argument type="service" id="sylius.repository.product"/>
         </service>
 
-        <service id="lakion_sylius_cms.fixture.product_block" class="Lakion\SyliusCmsBundle\Fixture\ProductBlockFixture">
-            <argument type="service" id="lakion_sylius_cms.manager.product_block" />
-            <argument type="service" id="lakion_sylius_cms.fixture.example_factory.product_block" />
+        <service id="lakion_cms.fixture.product_block" class="Lakion\CmsPlugin\Fixture\ProductBlockFixture">
+            <argument type="service" id="lakion_cms.manager.product_block" />
+            <argument type="service" id="lakion_cms.fixture.example_factory.product_block" />
             <tag name="sylius_fixtures.fixture" />
         </service>
 
-        <service id="lakion_sylius_cms.admin.content_menu_builder.product_block" class="Lakion\SyliusCmsBundle\Menu\ContentMenuBuilder">
+        <service id="lakion_cms.admin.content_menu_builder.product_block" class="Lakion\CmsPlugin\Menu\ContentMenuBuilder">
             <tag name="kernel.event_listener" event="sylius.menu.admin.main" method="configureProductBlockMenu" />
         </service>
 
-        <service id="lakion_sylius_cms.listener.product_block_initializer" class="Lakion\SyliusCmsBundle\Listener\ProductBlockInitializer">
+        <service id="lakion_cms.listener.product_block_initializer" class="Lakion\CmsPlugin\Listener\ProductBlockInitializer">
             <argument type="service" id="sylius.repository.product"/>
             <tag name="doctrine_phpcr.event_listener" event="postLoad" />
         </service>
 
-        <service id="lakion_sylius_cms.block.product" class="Symfony\Cmf\Bundle\BlockBundle\Block\SimpleBlockService">
-            <argument>lakion_sylius_cms.block.product</argument>
+        <service id="lakion_cms.block.product" class="Symfony\Cmf\Bundle\BlockBundle\Block\SimpleBlockService">
+            <argument>lakion_cms.block.product</argument>
             <argument type="service" id="templating" />
-            <argument>LakionSyliusCmsBundle:Block:block_product.html.twig</argument>
+            <argument>LakionCmsPlugin:Block:block_product.html.twig</argument>
             <tag name="sonata.block" />
         </service>
     </services>

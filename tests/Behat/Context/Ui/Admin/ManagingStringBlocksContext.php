@@ -1,13 +1,13 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Context\Ui\Admin;
+namespace Tests\Lakion\CmsPlugin\Behat\Context\Ui\Admin;
 
 use Behat\Behat\Context\Context;
-use Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StringBlock\ShowPageInterface;
+use Tests\Lakion\CmsPlugin\Behat\Page\Admin\StringBlock\ShowPageInterface;
 use Sylius\Behat\Page\Admin\Crud\IndexPageInterface;
-use Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StringBlock\CreatePageInterface;
-use Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StringBlock\UpdatePageInterface;
-use Lakion\SyliusCmsBundle\Document\StringBlock;
+use Tests\Lakion\CmsPlugin\Behat\Page\Admin\StringBlock\CreatePageInterface;
+use Tests\Lakion\CmsPlugin\Behat\Page\Admin\StringBlock\UpdatePageInterface;
+use Lakion\CmsPlugin\Document\StringBlock;
 use Webmozart\Assert\Assert;
 
 final class ManagingStringBlocksContext implements Context

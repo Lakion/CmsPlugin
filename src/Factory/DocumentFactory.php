@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Factory;
+namespace Lakion\CmsPlugin\Factory;
 
 use Doctrine\ODM\PHPCR\DocumentManagerInterface;
 use Sylius\Component\Resource\Factory\FactoryInterface;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Form\Type;
+namespace Lakion\CmsPlugin\Form\Type;
 
 use Doctrine\Bundle\PHPCRBundle\Form\Type\DocumentType;
 use Symfony\Component\Form\AbstractType;
@@ -42,6 +42,6 @@ final class StaticContentChoiceType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'lakion_sylius_cms_static_content_choice';
+        return 'lakion_cms_static_content_choice';
     }
 }
