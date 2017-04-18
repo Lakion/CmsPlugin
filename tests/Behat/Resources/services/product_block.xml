@@ -2,42 +2,42 @@
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <parameters>
-        <parameter key="lakion_sylius_cms.page.admin.product_block.index.class">%sylius.behat.page.admin.crud.index.class%</parameter>
-        <parameter key="lakion_sylius_cms.page.admin.product_block.create.class">Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\ProductBlock\CreatePage</parameter>
-        <parameter key="lakion_sylius_cms.page.admin.product_block.update.class">Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\ProductBlock\UpdatePage</parameter>
-        <parameter key="lakion_sylius_cms.page.admin.product_block.show.class">Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\ProductBlock\ShowPage</parameter>
+        <parameter key="lakion_cms.page.admin.product_block.index.class">%sylius.behat.page.admin.crud.index.class%</parameter>
+        <parameter key="lakion_cms.page.admin.product_block.create.class">Tests\Lakion\CmsPlugin\Behat\Page\Admin\ProductBlock\CreatePage</parameter>
+        <parameter key="lakion_cms.page.admin.product_block.update.class">Tests\Lakion\CmsPlugin\Behat\Page\Admin\ProductBlock\UpdatePage</parameter>
+        <parameter key="lakion_cms.page.admin.product_block.show.class">Tests\Lakion\CmsPlugin\Behat\Page\Admin\ProductBlock\ShowPage</parameter>
     </parameters>
 
     <services>
-        <service id="lakion_sylius_cms.context.transform.product_block" class="Tests\Lakion\SyliusCmsBundle\Behat\Context\Transform\ProductBlockContext">
-            <argument type="service" id="__symfony__.lakion_sylius_cms.repository.product_block" />
+        <service id="lakion_cms.context.transform.product_block" class="Tests\Lakion\CmsPlugin\Behat\Context\Transform\ProductBlockContext">
+            <argument type="service" id="__symfony__.lakion_cms.repository.product_block" />
             <tag name="fob.context_service" />
         </service>
 
-        <service id="lakion_sylius_cms.context.setup.product_block" class="Tests\Lakion\SyliusCmsBundle\Behat\Context\Setup\ProductBlockContext">
+        <service id="lakion_cms.context.setup.product_block" class="Tests\Lakion\CmsPlugin\Behat\Context\Setup\ProductBlockContext">
             <argument type="service" id="sylius.behat.shared_storage" />
-            <argument type="service" id="__symfony__.lakion_sylius_cms.fixture.example_factory.product_block" />
-            <argument type="service" id="__symfony__.lakion_sylius_cms.manager.product_block" />
+            <argument type="service" id="__symfony__.lakion_cms.fixture.example_factory.product_block" />
+            <argument type="service" id="__symfony__.lakion_cms.manager.product_block" />
             <tag name="fob.context_service" />
         </service>
 
-        <service id="lakion_sylius_cms.context.ui.admin.managing_product_blocks" class="Tests\Lakion\SyliusCmsBundle\Behat\Context\Ui\Admin\ManagingProductBlocksContext">
-            <argument type="service" id="lakion_sylius_cms.page.admin.product_block.index" />
-            <argument type="service" id="lakion_sylius_cms.page.admin.product_block.create" />
-            <argument type="service" id="lakion_sylius_cms.page.admin.product_block.update" />
-            <argument type="service" id="lakion_sylius_cms.page.admin.product_block.show" />
+        <service id="lakion_cms.context.ui.admin.managing_product_blocks" class="Tests\Lakion\CmsPlugin\Behat\Context\Ui\Admin\ManagingProductBlocksContext">
+            <argument type="service" id="lakion_cms.page.admin.product_block.index" />
+            <argument type="service" id="lakion_cms.page.admin.product_block.create" />
+            <argument type="service" id="lakion_cms.page.admin.product_block.update" />
+            <argument type="service" id="lakion_cms.page.admin.product_block.show" />
             <tag name="fob.context_service" />
         </service>
 
-        <service id="lakion_sylius_cms.page.admin.product_block.index" class="%lakion_sylius_cms.page.admin.product_block.index.class%" parent="sylius.behat.page.admin.crud.index" public="false">
-            <argument type="string">lakion_sylius_cms_admin_product_block_index</argument>
+        <service id="lakion_cms.page.admin.product_block.index" class="%lakion_cms.page.admin.product_block.index.class%" parent="sylius.behat.page.admin.crud.index" public="false">
+            <argument type="string">lakion_cms_admin_product_block_index</argument>
         </service>
-        <service id="lakion_sylius_cms.page.admin.product_block.create" class="%lakion_sylius_cms.page.admin.product_block.create.class%" parent="sylius.behat.page.admin.crud.create" public="false">
-            <argument type="string">lakion_sylius_cms_admin_product_block_create</argument>
+        <service id="lakion_cms.page.admin.product_block.create" class="%lakion_cms.page.admin.product_block.create.class%" parent="sylius.behat.page.admin.crud.create" public="false">
+            <argument type="string">lakion_cms_admin_product_block_create</argument>
         </service>
-        <service id="lakion_sylius_cms.page.admin.product_block.update" class="%lakion_sylius_cms.page.admin.product_block.update.class%" parent="sylius.behat.page.admin.crud.update" public="false">
-            <argument type="string">lakion_sylius_cms_admin_product_block_update</argument>
+        <service id="lakion_cms.page.admin.product_block.update" class="%lakion_cms.page.admin.product_block.update.class%" parent="sylius.behat.page.admin.crud.update" public="false">
+            <argument type="string">lakion_cms_admin_product_block_update</argument>
         </service>
-        <service id="lakion_sylius_cms.page.admin.product_block.show" class="%lakion_sylius_cms.page.admin.product_block.show.class%" parent="sylius.behat.symfony_page" public="false" />
+        <service id="lakion_cms.page.admin.product_block.show" class="%lakion_cms.page.admin.product_block.show.class%" parent="sylius.behat.symfony_page" public="false" />
     </services>
 </container>

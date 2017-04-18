@@ -1,10 +1,9 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Factory;
+namespace Lakion\CmsPlugin\Factory;
 
-use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ODM\PHPCR\DocumentManagerInterface;
-use Lakion\SyliusCmsBundle\Document\Route;
+use Lakion\CmsPlugin\Document\Route;
 use Sylius\Component\Resource\Factory\FactoryInterface;
 use Webmozart\Assert\Assert;
 

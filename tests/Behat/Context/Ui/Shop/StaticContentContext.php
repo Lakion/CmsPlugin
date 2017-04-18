@@ -1,10 +1,10 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Context\Ui\Shop;
+namespace Tests\Lakion\CmsPlugin\Behat\Context\Ui\Shop;
 
 use Behat\Behat\Context\Context;
-use Tests\Lakion\SyliusCmsBundle\Behat\Page\Shop\StaticContentPageInterface;
-use Lakion\SyliusCmsBundle\Document\StaticContent;
+use Tests\Lakion\CmsPlugin\Behat\Page\Shop\StaticContentPageInterface;
+use Lakion\CmsPlugin\Document\StaticContent;
 
 final class StaticContentContext implements Context
 {

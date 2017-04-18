@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Menu;
+namespace Lakion\CmsPlugin\Menu;
 
 use Knp\Menu\ItemInterface;
 use Sylius\Bundle\UiBundle\Menu\Event\MenuBuilderEvent;
@@ -15,8 +15,8 @@ final class ContentMenuBuilder
         $contentMenu = $this->getContentMenu($event);
 
         $contentMenu
-            ->addChild('custom_blocks', ['route' => 'lakion_sylius_cms_admin_custom_block_index'])
-            ->setLabel('lakion_sylius_cms.menu.admin.custom_blocks')
+            ->addChild('custom_blocks', ['route' => 'lakion_cms_admin_custom_block_index'])
+            ->setLabel('lakion_cms.menu.admin.custom_blocks')
             ->setLabelAttribute('icon', 'font')
         ;
     }
@@ -29,8 +29,8 @@ final class ContentMenuBuilder
         $contentMenu = $this->getContentMenu($event);
 
         $contentMenu
-            ->addChild('product_blocks', ['route' => 'lakion_sylius_cms_admin_product_block_index'])
-            ->setLabel('lakion_sylius_cms.menu.admin.product_blocks')
+            ->addChild('product_blocks', ['route' => 'lakion_cms_admin_product_block_index'])
+            ->setLabel('lakion_cms.menu.admin.product_blocks')
             ->setLabelAttribute('icon', 'font')
         ;
     }
@@ -43,8 +43,8 @@ final class ContentMenuBuilder
         $contentMenu = $this->getContentMenu($event);
 
         $contentMenu
-            ->addChild('routes', ['route' => 'lakion_sylius_cms_admin_route_index'])
-            ->setLabel('lakion_sylius_cms.menu.admin.routes')
+            ->addChild('routes', ['route' => 'lakion_cms_admin_route_index'])
+            ->setLabel('lakion_cms.menu.admin.routes')
             ->setLabelAttribute('icon', 'sitemap')
         ;
     }
@@ -57,8 +57,8 @@ final class ContentMenuBuilder
         $contentMenu = $this->getContentMenu($event);
 
         $contentMenu
-            ->addChild('static_contents', ['route' => 'lakion_sylius_cms_admin_static_content_index'])
-            ->setLabel('lakion_sylius_cms.menu.admin.static_contents')
+            ->addChild('static_contents', ['route' => 'lakion_cms_admin_static_content_index'])
+            ->setLabel('lakion_cms.menu.admin.static_contents')
             ->setLabelAttribute('icon', 'file')
         ;
     }
@@ -71,8 +71,8 @@ final class ContentMenuBuilder
         $contentMenu = $this->getContentMenu($event);
 
         $contentMenu
-            ->addChild('string_blocks', ['route' => 'lakion_sylius_cms_admin_string_block_index'])
-            ->setLabel('lakion_sylius_cms.menu.admin.string_blocks')
+            ->addChild('string_blocks', ['route' => 'lakion_cms_admin_string_block_index'])
+            ->setLabel('lakion_cms.menu.admin.string_blocks')
             ->setLabelAttribute('icon', 'font')
         ;
     }
@@ -85,8 +85,8 @@ final class ContentMenuBuilder
         $contentMenu = $this->getContentMenu($event);
 
         $contentMenu
-            ->addChild('taxon_blocks', ['route' => 'lakion_sylius_cms_admin_taxon_block_index'])
-            ->setLabel('lakion_sylius_cms.menu.admin.taxon_blocks')
+            ->addChild('taxon_blocks', ['route' => 'lakion_cms_admin_taxon_block_index'])
+            ->setLabel('lakion_cms.menu.admin.taxon_blocks')
             ->setLabelAttribute('icon', 'font')
         ;
     }
@@ -104,7 +104,7 @@ final class ContentMenuBuilder
         if (null === $contentMenu) {
             $contentMenu = $adminMenu
                 ->addChild('content')
-                ->setLabel('lakion_sylius_cms.menu.admin.header')
+                ->setLabel('lakion_cms.menu.admin.header')
             ;
         }
 

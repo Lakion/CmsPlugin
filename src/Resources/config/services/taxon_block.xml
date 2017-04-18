@@ -2,46 +2,46 @@
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="lakion_sylius_cms.form.type.taxon_block" class="Lakion\SyliusCmsBundle\Form\Type\TaxonBlockType">
-            <argument>%lakion_sylius_cms.model.taxon_block.class%</argument>
+        <service id="lakion_cms.form.type.taxon_block" class="Lakion\CmsPlugin\Form\Type\TaxonBlockType">
+            <argument>%lakion_cms.model.taxon_block.class%</argument>
             <argument type="collection"><argument>sylius</argument></argument>
             <tag name="form.type" />
         </service>
 
-        <service id="lakion_sylius_cms.factory.taxon_block" class="Lakion\SyliusCmsBundle\Factory\DocumentFactory">
+        <service id="lakion_cms.factory.taxon_block" class="Lakion\CmsPlugin\Factory\DocumentFactory">
             <argument type="service">
                 <service class="Sylius\Component\Resource\Factory\Factory">
-                    <argument>%lakion_sylius_cms.model.taxon_block.class%</argument>
+                    <argument>%lakion_cms.model.taxon_block.class%</argument>
                 </service>
             </argument>
-            <argument type="service" id="lakion_sylius_cms.manager.taxon_block" />
+            <argument type="service" id="lakion_cms.manager.taxon_block" />
             <argument>%cmf_block.persistence.phpcr.block_basepath%</argument>
         </service>
 
-        <service id="lakion_sylius_cms.fixture.example_factory.taxon_block" class="Lakion\SyliusCmsBundle\Fixture\Factory\TaxonBlockExampleFactory">
-            <argument type="service" id="lakion_sylius_cms.factory.taxon_block" />
+        <service id="lakion_cms.fixture.example_factory.taxon_block" class="Lakion\CmsPlugin\Fixture\Factory\TaxonBlockExampleFactory">
+            <argument type="service" id="lakion_cms.factory.taxon_block" />
             <argument type="service" id="sylius.repository.taxon"/>
         </service>
 
-        <service id="lakion_sylius_cms.fixture.taxon_block" class="Lakion\SyliusCmsBundle\Fixture\TaxonBlockFixture">
-            <argument type="service" id="lakion_sylius_cms.manager.taxon_block" />
-            <argument type="service" id="lakion_sylius_cms.fixture.example_factory.taxon_block" />
+        <service id="lakion_cms.fixture.taxon_block" class="Lakion\CmsPlugin\Fixture\TaxonBlockFixture">
+            <argument type="service" id="lakion_cms.manager.taxon_block" />
+            <argument type="service" id="lakion_cms.fixture.example_factory.taxon_block" />
             <tag name="sylius_fixtures.fixture" />
         </service>
 
-        <service id="lakion_sylius_cms.admin.content_menu_builder.taxon_block" class="Lakion\SyliusCmsBundle\Menu\ContentMenuBuilder">
+        <service id="lakion_cms.admin.content_menu_builder.taxon_block" class="Lakion\CmsPlugin\Menu\ContentMenuBuilder">
             <tag name="kernel.event_listener" event="sylius.menu.admin.main" method="configureTaxonBlockMenu" />
         </service>
 
-        <service id="lakion_sylius_cms.listener.taxon_block_initializer" class="Lakion\SyliusCmsBundle\Listener\TaxonBlockInitializer">
+        <service id="lakion_cms.listener.taxon_block_initializer" class="Lakion\CmsPlugin\Listener\TaxonBlockInitializer">
             <argument type="service" id="sylius.repository.taxon"/>
             <tag name="doctrine_phpcr.event_listener" event="postLoad" />
         </service>
 
-        <service id="lakion_sylius_cms.block.taxon" class="Symfony\Cmf\Bundle\BlockBundle\Block\SimpleBlockService">
-            <argument>lakion_sylius_cms.block.taxon</argument>
+        <service id="lakion_cms.block.taxon" class="Symfony\Cmf\Bundle\BlockBundle\Block\SimpleBlockService">
+            <argument>lakion_cms.block.taxon</argument>
             <argument type="service" id="templating" />
-            <argument>LakionSyliusCmsBundle:Block:block_taxon.html.twig</argument>
+            <argument>LakionCmsPlugin:Block:block_taxon.html.twig</argument>
             <tag name="sonata.block" />
         </service>
     </services>

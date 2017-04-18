@@ -2,38 +2,38 @@
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="lakion_sylius_cms.form.type.static_content" class="Lakion\SyliusCmsBundle\Form\Type\StaticContentType">
-            <argument>%lakion_sylius_cms.model.static_content.class%</argument>
+        <service id="lakion_cms.form.type.static_content" class="Lakion\CmsPlugin\Form\Type\StaticContentType">
+            <argument>%lakion_cms.model.static_content.class%</argument>
             <argument type="collection"><argument>sylius</argument></argument>
             <tag name="form.type" />
         </service>
 
-        <service id="lakion_sylius_cms.form.type.static_content_choice" class="Lakion\SyliusCmsBundle\Form\Type\StaticContentChoiceType">
-            <argument>%lakion_sylius_cms.model.static_content.class%</argument>
+        <service id="lakion_cms.form.type.static_content_choice" class="Lakion\CmsPlugin\Form\Type\StaticContentChoiceType">
+            <argument>%lakion_cms.model.static_content.class%</argument>
             <tag name="form.type" />
         </service>
 
-        <service id="lakion_sylius_cms.factory.static_content" class="Lakion\SyliusCmsBundle\Factory\DocumentFactory">
+        <service id="lakion_cms.factory.static_content" class="Lakion\CmsPlugin\Factory\DocumentFactory">
             <argument type="service">
                 <service class="Sylius\Component\Resource\Factory\Factory">
-                    <argument>%lakion_sylius_cms.model.static_content.class%</argument>
+                    <argument>%lakion_cms.model.static_content.class%</argument>
                 </service>
             </argument>
-            <argument type="service" id="lakion_sylius_cms.manager.static_content" />
+            <argument type="service" id="lakion_cms.manager.static_content" />
             <argument>%cmf_content.persistence.phpcr.content_basepath%</argument>
         </service>
 
-        <service id="lakion_sylius_cms.fixture.example_factory.static_content" class="Lakion\SyliusCmsBundle\Fixture\Factory\StaticContentExampleFactory">
-            <argument type="service" id="lakion_sylius_cms.factory.static_content" />
+        <service id="lakion_cms.fixture.example_factory.static_content" class="Lakion\CmsPlugin\Fixture\Factory\StaticContentExampleFactory">
+            <argument type="service" id="lakion_cms.factory.static_content" />
         </service>
 
-        <service id="lakion_sylius_cms.fixture.static_content" class="Lakion\SyliusCmsBundle\Fixture\StaticContentFixture">
-            <argument type="service" id="lakion_sylius_cms.manager.static_content" />
-            <argument type="service" id="lakion_sylius_cms.fixture.example_factory.static_content" />
+        <service id="lakion_cms.fixture.static_content" class="Lakion\CmsPlugin\Fixture\StaticContentFixture">
+            <argument type="service" id="lakion_cms.manager.static_content" />
+            <argument type="service" id="lakion_cms.fixture.example_factory.static_content" />
             <tag name="sylius_fixtures.fixture" />
         </service>
 
-        <service id="lakion_sylius_cms.admin.content_menu_builder.static_content" class="Lakion\SyliusCmsBundle\Menu\ContentMenuBuilder">
+        <service id="lakion_cms.admin.content_menu_builder.static_content" class="Lakion\CmsPlugin\Menu\ContentMenuBuilder">
             <tag name="kernel.event_listener" event="sylius.menu.admin.main" method="configureStaticContentMenu" />
         </service>
     </services>

@@ -1,10 +1,10 @@
 sylius_grid:
     grids:
-        lakion_sylius_cms_admin_custom_block:
+        lakion_cms_admin_custom_block:
             driver:
                 name: doctrine/phpcr-odm
                 options:
-                    class: "%lakion_sylius_cms.model.custom_block.class%"
+                    class: "%lakion_cms.model.custom_block.class%"
             fields:
                 name:
                     type: string

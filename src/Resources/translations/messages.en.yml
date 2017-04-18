@@ -1,4 +1,4 @@
-lakion_sylius_cms:
+lakion_cms:
     form:
         custom_block:
             body: "Body"

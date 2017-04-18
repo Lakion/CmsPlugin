@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Document;
+namespace Lakion\CmsPlugin\Document;
 
 use Sylius\Component\Resource\Model\ResourceInterface;
 use Symfony\Cmf\Bundle\BlockBundle\Doctrine\Phpcr\StringBlock as BaseStringBlock;

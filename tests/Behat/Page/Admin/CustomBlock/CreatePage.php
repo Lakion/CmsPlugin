@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\CustomBlock;
+namespace Tests\Lakion\CmsPlugin\Behat\Page\Admin\CustomBlock;
 
 use Sylius\Behat\Page\Admin\Crud\CreatePage as BaseCreatePage;
 
@@ -52,10 +52,10 @@ class CreatePage extends BaseCreatePage implements CreatePageInterface
     protected function getDefinedElements()
     {
         return array_merge(parent::getDefinedElements(), [
-            'body' => '#lakion_sylius_cms_custom_block_body',
-            'link' => '#lakion_sylius_cms_custom_block_linkUrl',
-            'name' => '#lakion_sylius_cms_custom_block_name',
-            'title' => '#lakion_sylius_cms_custom_block_title',
+            'body' => '#lakion_cms_custom_block_body',
+            'link' => '#lakion_cms_custom_block_linkUrl',
+            'name' => '#lakion_cms_custom_block_name',
+            'title' => '#lakion_cms_custom_block_title',
         ]);
     }
 }

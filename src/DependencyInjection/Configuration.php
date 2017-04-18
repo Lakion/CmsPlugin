@@ -1,20 +1,20 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\DependencyInjection;
+namespace Lakion\CmsPlugin\DependencyInjection;
 
-use Lakion\SyliusCmsBundle\Document\CustomBlock;
-use Lakion\SyliusCmsBundle\Document\ProductBlock;
-use Lakion\SyliusCmsBundle\Document\Route;
-use Lakion\SyliusCmsBundle\Document\StaticContent;
-use Lakion\SyliusCmsBundle\Document\StringBlock;
-use Lakion\SyliusCmsBundle\Document\TaxonBlock;
-use Lakion\SyliusCmsBundle\Form\Type\CustomBlockType;
-use Lakion\SyliusCmsBundle\Form\Type\ProductBlockType;
-use Lakion\SyliusCmsBundle\Form\Type\RouteType;
-use Lakion\SyliusCmsBundle\Form\Type\StaticContentType;
-use Lakion\SyliusCmsBundle\Form\Type\StringBlockType;
-use Lakion\SyliusCmsBundle\Form\Type\TaxonBlockType;
-use Lakion\SyliusCmsBundle\Repository\StaticContentRepository;
+use Lakion\CmsPlugin\Document\CustomBlock;
+use Lakion\CmsPlugin\Document\ProductBlock;
+use Lakion\CmsPlugin\Document\Route;
+use Lakion\CmsPlugin\Document\StaticContent;
+use Lakion\CmsPlugin\Document\StringBlock;
+use Lakion\CmsPlugin\Form\Type\CustomBlockType;
+use Lakion\CmsPlugin\Form\Type\ProductBlockType;
+use Lakion\CmsPlugin\Form\Type\RouteType;
+use Lakion\CmsPlugin\Form\Type\StaticContentType;
+use Lakion\CmsPlugin\Form\Type\StringBlockType;
+use Lakion\CmsPlugin\Repository\StaticContentRepository;
+use Lakion\CmsPlugin\Document\TaxonBlock;
+use Lakion\CmsPlugin\Form\Type\TaxonBlockType;
 use Sylius\Bundle\ResourceBundle\Controller\ResourceController;
 use Symfony\Component\Config\Definition\Builder\NodeBuilder;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
@@ -28,7 +28,7 @@ final class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('lakion_sylius_cms');
+        $rootNode = $treeBuilder->root('lakion_cms');
 
         $this->addResourcesSection($rootNode->children());
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Document;
+namespace Lakion\CmsPlugin\Document;
 
 use Sylius\Component\Core\Model\ProductInterface;
 
@@ -21,7 +21,7 @@ class ProductBlock extends CustomBlock
      */
     public function getType()
     {
-        return 'lakion_sylius_cms.block.product';
+        return 'lakion_cms.block.product';
     }
 
     /**

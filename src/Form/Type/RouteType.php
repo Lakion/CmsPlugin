@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Form\Type;
+namespace Lakion\CmsPlugin\Form\Type;
 
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -15,10 +15,10 @@ final class RouteType extends AbstractResourceType
     {
         $builder
             ->add('name', TextType::class, [
-                'label' => 'lakion_sylius_cms.form.route.name',
+                'label' => 'lakion_cms.form.route.name',
             ])
             ->add('content', StaticContentChoiceType::class, [
-                'label' => 'lakion_sylius_cms.form.route.content',
+                'label' => 'lakion_cms.form.route.content',
                 'choice_label' => 'title',
                 'choice_translation_domain' => false,
             ])
@@ -30,6 +30,6 @@ final class RouteType extends AbstractResourceType
      */
     public function getBlockPrefix()
     {
-        return 'lakion_sylius_cms_route';
+        return 'lakion_cms_route';
     }
 }
