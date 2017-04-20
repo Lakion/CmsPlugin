@@ -15,7 +15,7 @@ Simple CMS for Sylius.
     ```bash
     $ composer require lakion/sylius-cms-bundle
     ```
-    
+
 3. Add this bundle & dependent ones to `AppKernel.php` if they do not exist yet:
 
     ```php
@@ -23,10 +23,10 @@ Simple CMS for Sylius.
     new \Symfony\Cmf\Bundle\BlockBundle\CmfBlockBundle(),
     new \Symfony\Cmf\Bundle\ContentBundle\CmfContentBundle(),
     new \Symfony\Cmf\Bundle\CoreBundle\CmfCoreBundle(),
+    new \Symfony\Cmf\Bundle\MediaBundle\CmfMediaBundle(),
     new \Symfony\Cmf\Bundle\MenuBundle\CmfMenuBundle(),
     new \Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
     new \Lakion\SyliusCmsBundle\LakionSyliusCmsBundle(),
-    new \Symfony\Cmf\Bundle\MediaBundle\CmfMediaBundle(),
     ```
 
 4. Import config file in `app/config/config.yml`:
@@ -42,7 +42,7 @@ Simple CMS for Sylius.
     lakion_sylius_cms_admin:
         resource: "@LakionSyliusCmsBundle/Resources/config/app/admin_routing.yml"
         prefix: /admin # root path of SyliusAdmin
-    
+
     lakion_sylius_cms_shop:
         resource: "@LakionSyliusCmsBundle/Resources/config/app/shop_routing.yml"
     ```
@@ -59,16 +59,16 @@ Simple CMS for Sylius.
         odm:
             auto_mapping: true
             auto_generate_proxy_classes: "%kernel.debug%"
-            
+
     sylius_resource:
          drivers:
             - doctrine/orm
             - doctrine/phpcr-odm
-        
+
     sylius_grid:
          drivers:
             - doctrine/orm
-            - doctrine/phpcr-odm         
+            - doctrine/phpcr-odm
     ```
 
 7. Update your database schema when using Doctrine
@@ -78,19 +78,19 @@ Simple CMS for Sylius.
     ```bash
     $ bin/console doctrine:schema:update
     ```
-    
+
     Or migrations:
-    
+
     ```bash
     $ bin/console doctrine:migrations:diff
     $ bin/console doctrine:migrations:migrate
     ```
-    
+
 8. Initialize PHPCR repository
 
     ```bash
     $ bin/console doctrine:phpcr:repository:init
-    ```    
+    ```
 
 ## Complementary documentation
 
