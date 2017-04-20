@@ -1,4 +1,4 @@
-# CMS Plugin by Lakion [![License](https://img.shields.io/packagist/l/lakion/cms-plugin.svg)](https://packagist.org/packages/lakion/cms-plugin) [![Version](https://img.shields.io/packagist/v/lakion/cms-plugin.svg)](https://packagist.org/packages/lakion/cms-plugin) [![Build status on Linux](https://img.shields.io/travis/Lakion/CmsPlugin/master.svg)](http://travis-ci.org/Lakion/CmsPlugin) [![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/Lakion/CmsPlugin.svg)](https://scrutinizer-ci.com/g/Lakion/CmsPlugin/)
+# CMS Plugin for Sylius by Lakion [![License](https://img.shields.io/packagist/l/lakion/cms-plugin.svg)](https://packagist.org/packages/lakion/cms-plugin) [![Version](https://img.shields.io/packagist/v/lakion/cms-plugin.svg)](https://packagist.org/packages/lakion/cms-plugin) [![Build status on Linux](https://img.shields.io/travis/Lakion/CmsPlugin/master.svg)](http://travis-ci.org/Lakion/CmsPlugin) [![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/Lakion/CmsPlugin.svg)](https://scrutinizer-ci.com/g/Lakion/CmsPlugin/)
 
 Simple CMS for Sylius.
 

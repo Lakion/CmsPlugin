@@ -11,7 +11,7 @@ lakion_cms_admin_product_block:
                 templates:
                     form: "@LakionCmsPlugin/Admin/ProductBlock/_form.html.twig"
             index:
-                icon: font
+                icon: cube
     type: sylius.resource
 
 lakion_cms_admin_product_block_show:

@@ -7,6 +7,9 @@ lakion_cms_admin_route:
         redirect: index
         grid: lakion_cms_admin_route
         permission: true
+        vars:
+            index:
+                icon: sitemap
     type: sylius.resource
 
 lakion_cms_admin_route_update:

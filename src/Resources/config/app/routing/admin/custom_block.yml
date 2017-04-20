@@ -11,7 +11,7 @@ lakion_cms_admin_custom_block:
                 templates:
                     form: "@LakionCmsPlugin/Admin/CustomBlock/_form.html.twig"
             index:
-                icon: font
+                icon: folder open outline
     type: sylius.resource
 
 lakion_cms_admin_custom_block_show:

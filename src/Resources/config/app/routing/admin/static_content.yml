@@ -10,6 +10,8 @@ lakion_cms_admin_static_content:
             all:
                 templates:
                     form: "@LakionCmsPlugin/Admin/StaticContent/_form.html.twig"
+            index:
+                icon: file text outline
     type: sylius.resource
 
 lakion_cms_admin_static_content_update:
