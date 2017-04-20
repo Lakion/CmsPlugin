@@ -1,12 +1,12 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Context\Ui\Admin;
+namespace Tests\Lakion\CmsPlugin\Behat\Context\Ui\Admin;
 
 use Behat\Behat\Context\Context;
-use Lakion\SyliusCmsBundle\Document\TaxonBlock;
-use Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\TaxonBlock\CreatePageInterface;
-use Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\TaxonBlock\ShowPageInterface;
-use Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\TaxonBlock\UpdatePageInterface;
+use Lakion\CmsPlugin\Document\TaxonBlock;
+use Tests\Lakion\CmsPlugin\Behat\Page\Admin\TaxonBlock\CreatePageInterface;
+use Tests\Lakion\CmsPlugin\Behat\Page\Admin\TaxonBlock\ShowPageInterface;
+use Tests\Lakion\CmsPlugin\Behat\Page\Admin\TaxonBlock\UpdatePageInterface;
 use Sylius\Behat\Page\Admin\Crud\IndexPageInterface;
 use Webmozart\Assert\Assert;
 

@@ -1,50 +1,50 @@
-lakion_sylius_cms_admin_product_block:
+lakion_cms_admin_product_block:
     resource: |
-        alias: lakion_sylius_cms.product_block
+        alias: lakion_cms.product_block
         section: admin
         templates: SyliusAdminBundle:Crud
         except: ['show', 'update', 'delete']
         redirect: index
-        grid: lakion_sylius_cms_admin_product_block
+        grid: lakion_cms_admin_product_block
         vars:
             all:
                 templates:
-                    form: "@LakionSyliusCms/Admin/ProductBlock/_form.html.twig"
+                    form: "@LakionCmsPlugin/Admin/ProductBlock/_form.html.twig"
             index:
                 icon: font
     type: sylius.resource
 
-lakion_sylius_cms_admin_product_block_show:
+lakion_cms_admin_product_block_show:
     path: /product-blocks{id}/show
     methods: [GET]
     defaults:
-        _controller: lakion_sylius_cms.controller.product_block:showAction
+        _controller: lakion_cms.controller.product_block:showAction
         _sylius:
             section: admin
-            template: "@LakionSyliusCms/Admin/ProductBlock/show.html.twig"
+            template: "@LakionCmsPlugin/Admin/ProductBlock/show.html.twig"
     requirements:
         id: ".+"
 
-lakion_sylius_cms_admin_product_block_update:
+lakion_cms_admin_product_block_update:
     path: /product-blocks{id}/edit
     methods: [GET, PUT]
     defaults:
-        _controller: lakion_sylius_cms.controller.product_block:updateAction
+        _controller: lakion_cms.controller.product_block:updateAction
         _sylius:
             section: admin
             template: "@SyliusAdmin/Crud/update.html.twig"
             vars:
                 templates:
-                    form: "@LakionSyliusCms/Admin/ProductBlock/_form.html.twig"
-                    breadcrumb: "@LakionSyliusCms/Admin/ProductBlock/Update/_breadcrumb.html.twig"
+                    form: "@LakionCmsPlugin/Admin/ProductBlock/_form.html.twig"
+                    breadcrumb: "@LakionCmsPlugin/Admin/ProductBlock/Update/_breadcrumb.html.twig"
     requirements:
         id: ".+"
 
-lakion_sylius_cms_admin_product_block_delete:
+lakion_cms_admin_product_block_delete:
     path: /product-blocks{id}
     methods: [DELETE]
     defaults:
-        _controller: lakion_sylius_cms.controller.product_block:deleteAction
+        _controller: lakion_cms.controller.product_block:deleteAction
         _sylius:
             section: admin
     requirements:

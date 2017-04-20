@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Context\Hook;
+namespace Tests\Lakion\CmsPlugin\Behat\Context\Hook;
 
 use Behat\Behat\Context\Context;
 use Doctrine\Bundle\PHPCRBundle\Initializer\InitializerManager;

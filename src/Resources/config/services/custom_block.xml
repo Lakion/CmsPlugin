@@ -2,40 +2,40 @@
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="lakion_sylius_cms.form.type.custom_block" class="Lakion\SyliusCmsBundle\Form\Type\CustomBlockType">
-            <argument>%lakion_sylius_cms.model.custom_block.class%</argument>
+        <service id="lakion_cms.form.type.custom_block" class="Lakion\CmsPlugin\Form\Type\CustomBlockType">
+            <argument>%lakion_cms.model.custom_block.class%</argument>
             <argument type="collection"><argument>sylius</argument></argument>
             <tag name="form.type" />
         </service>
 
-        <service id="lakion_sylius_cms.factory.custom_block" class="Lakion\SyliusCmsBundle\Factory\DocumentFactory">
+        <service id="lakion_cms.factory.custom_block" class="Lakion\CmsPlugin\Factory\DocumentFactory">
             <argument type="service">
                 <service class="Sylius\Component\Resource\Factory\Factory">
-                    <argument>%lakion_sylius_cms.model.custom_block.class%</argument>
+                    <argument>%lakion_cms.model.custom_block.class%</argument>
                 </service>
             </argument>
-            <argument type="service" id="lakion_sylius_cms.manager.custom_block" />
+            <argument type="service" id="lakion_cms.manager.custom_block" />
             <argument>%cmf_block.persistence.phpcr.block_basepath%</argument>
         </service>
 
-        <service id="lakion_sylius_cms.fixture.example_factory.custom_block" class="Lakion\SyliusCmsBundle\Fixture\Factory\CustomBlockExampleFactory">
-            <argument type="service" id="lakion_sylius_cms.factory.custom_block" />
+        <service id="lakion_cms.fixture.example_factory.custom_block" class="Lakion\CmsPlugin\Fixture\Factory\CustomBlockExampleFactory">
+            <argument type="service" id="lakion_cms.factory.custom_block" />
         </service>
 
-        <service id="lakion_sylius_cms.fixture.custom_block" class="Lakion\SyliusCmsBundle\Fixture\CustomBlockFixture">
-            <argument type="service" id="lakion_sylius_cms.manager.custom_block" />
-            <argument type="service" id="lakion_sylius_cms.fixture.example_factory.custom_block" />
+        <service id="lakion_cms.fixture.custom_block" class="Lakion\CmsPlugin\Fixture\CustomBlockFixture">
+            <argument type="service" id="lakion_cms.manager.custom_block" />
+            <argument type="service" id="lakion_cms.fixture.example_factory.custom_block" />
             <tag name="sylius_fixtures.fixture" />
         </service>
 
-        <service id="lakion_sylius_cms.admin.content_menu_builder.custom_block" class="Lakion\SyliusCmsBundle\Menu\ContentMenuBuilder">
+        <service id="lakion_cms.admin.content_menu_builder.custom_block" class="Lakion\CmsPlugin\Menu\ContentMenuBuilder">
             <tag name="kernel.event_listener" event="sylius.menu.admin.main" method="configureCustomBlockMenu" />
         </service>
 
-        <service id="lakion_sylius_cms.block.custom" class="Symfony\Cmf\Bundle\BlockBundle\Block\SimpleBlockService">
-            <argument>lakion_sylius_cms.block.custom</argument>
+        <service id="lakion_cms.block.custom" class="Symfony\Cmf\Bundle\BlockBundle\Block\SimpleBlockService">
+            <argument>lakion_cms.block.custom</argument>
             <argument type="service" id="templating" />
-            <argument>LakionSyliusCmsBundle:Block:block_custom.html.twig</argument>
+            <argument>LakionCmsPlugin:Block:block_custom.html.twig</argument>
             <tag name="sonata.block" />
         </service>
     </services>

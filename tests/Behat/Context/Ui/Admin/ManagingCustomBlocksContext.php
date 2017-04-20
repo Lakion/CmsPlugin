@@ -1,13 +1,13 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Context\Ui\Admin;
+namespace Tests\Lakion\CmsPlugin\Behat\Context\Ui\Admin;
 
 use Behat\Behat\Context\Context;
-use Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\CustomBlock\ShowPageInterface;
+use Tests\Lakion\CmsPlugin\Behat\Page\Admin\CustomBlock\ShowPageInterface;
 use Sylius\Behat\Page\Admin\Crud\IndexPageInterface;
-use Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\CustomBlock\CreatePageInterface;
-use Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\CustomBlock\UpdatePageInterface;
-use Lakion\SyliusCmsBundle\Document\CustomBlock;
+use Tests\Lakion\CmsPlugin\Behat\Page\Admin\CustomBlock\CreatePageInterface;
+use Tests\Lakion\CmsPlugin\Behat\Page\Admin\CustomBlock\UpdatePageInterface;
+use Lakion\CmsPlugin\Document\CustomBlock;
 use Webmozart\Assert\Assert;
 
 final class ManagingCustomBlocksContext implements Context

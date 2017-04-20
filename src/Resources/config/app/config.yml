@@ -35,7 +35,7 @@ cmf_block:
             block_basepath: /cms/content
 
 sonata_block:
-    default_contexts: [lakion_sylius_cms]
+    default_contexts: [lakion_cms]
 
 liip_imagine:
     filter_sets:

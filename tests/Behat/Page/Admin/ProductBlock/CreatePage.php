@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\ProductBlock;
+namespace Tests\Lakion\CmsPlugin\Behat\Page\Admin\ProductBlock;
 
 use Sylius\Behat\Page\Admin\Crud\CreatePage as BaseCreatePage;
 
@@ -60,11 +60,11 @@ class CreatePage extends BaseCreatePage implements CreatePageInterface
     protected function getDefinedElements()
     {
         return array_merge(parent::getDefinedElements(), [
-            'body' => '#lakion_sylius_cms_product_block_body',
-            'link' => '#lakion_sylius_cms_product_block_linkUrl',
-            'name' => '#lakion_sylius_cms_product_block_name',
-            'product' => '#lakion_sylius_cms_product_block_product',
-            'title' => '#lakion_sylius_cms_product_block_title',
+            'body' => '#lakion_cms_product_block_body',
+            'link' => '#lakion_cms_product_block_linkUrl',
+            'name' => '#lakion_cms_product_block_name',
+            'product' => '#lakion_cms_product_block_product',
+            'title' => '#lakion_cms_product_block_title',
         ]);
     }
 }

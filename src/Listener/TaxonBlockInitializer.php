@@ -1,9 +1,9 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Listener;
+namespace Lakion\CmsPlugin\Listener;
 
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
-use Lakion\SyliusCmsBundle\Document\TaxonBlock;
+use Lakion\CmsPlugin\Document\TaxonBlock;
 use Sylius\Component\Core\Model\TaxonInterface;
 use Sylius\Component\Resource\Repository\RepositoryInterface;
 

@@ -22,4 +22,7 @@ install:
 script:
     - composer validate
 
-    - vendor/bin/behat --strict -vvv --no-interaction || vendor/bin/behat --strict -vvv --no-interaction --rerun
+    - vendor/bin/behat --strict -f progress --no-snippets || vendor/bin/behat --strict -f progress --no-snippets --rerun
+
+notifications:
+    email: false

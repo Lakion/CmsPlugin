@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\Route;
+namespace Tests\Lakion\CmsPlugin\Behat\Page\Admin\Route;
 
 use Sylius\Behat\Page\Admin\Crud\CreatePage as BaseCreatePage;
 
@@ -28,8 +28,8 @@ final class CreatePage extends BaseCreatePage implements CreatePageInterface
     protected function getDefinedElements()
     {
         return array_merge(parent::getDefinedElements(), [
-            'content' => '#lakion_sylius_cms_route_content',
-            'name' => '#lakion_sylius_cms_route_name',
+            'content' => '#lakion_cms_route_content',
+            'name' => '#lakion_cms_route_name',
         ]);
     }
 }

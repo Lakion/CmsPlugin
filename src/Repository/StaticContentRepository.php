@@ -1,10 +1,10 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Repository;
+namespace Lakion\CmsPlugin\Repository;
 
 use Doctrine\ODM\PHPCR\DocumentManagerInterface;
 use Doctrine\ODM\PHPCR\Mapping\ClassMetadata;
-use Lakion\SyliusCmsBundle\Document\StaticContent;
+use Lakion\CmsPlugin\Document\StaticContent;
 use Sylius\Bundle\ResourceBundle\Doctrine\ODM\PHPCR\DocumentRepository;
 
 class StaticContentRepository extends DocumentRepository implements StaticContentRepositoryInterface

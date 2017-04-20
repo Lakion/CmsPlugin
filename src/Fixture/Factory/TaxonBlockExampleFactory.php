@@ -1,8 +1,8 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Fixture\Factory;
+namespace Lakion\CmsPlugin\Fixture\Factory;
 
-use Lakion\SyliusCmsBundle\Document\TaxonBlock;
+use Lakion\CmsPlugin\Document\TaxonBlock;
 use Sylius\Bundle\CoreBundle\Fixture\Factory\ExampleFactoryInterface;
 use Sylius\Bundle\CoreBundle\Fixture\OptionsResolver\LazyOption;
 use Sylius\Component\Core\Formatter\StringInflector;

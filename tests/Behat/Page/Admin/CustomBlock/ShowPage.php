@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\CustomBlock;
+namespace Tests\Lakion\CmsPlugin\Behat\Page\Admin\CustomBlock;
 
 use Sylius\Behat\Page\SymfonyPage;
 
@@ -28,7 +28,7 @@ class ShowPage extends SymfonyPage implements ShowPageInterface
     protected function getDefinedElements()
     {
         return array_merge(parent::getDefinedElements(), [
-            'block' => '#lakion_sylius_cms_block_preview',
+            'block' => '#lakion_cms_block_preview',
         ]);
     }
 
@@ -37,6 +37,6 @@ class ShowPage extends SymfonyPage implements ShowPageInterface
      */
     public function getRouteName()
     {
-        return 'lakion_sylius_cms_admin_custom_block_show';
+        return 'lakion_cms_admin_custom_block_show';
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\TaxonBlock;
+namespace Tests\Lakion\CmsPlugin\Behat\Page\Admin\TaxonBlock;
 
 use Sylius\Behat\Page\PageInterface;
 

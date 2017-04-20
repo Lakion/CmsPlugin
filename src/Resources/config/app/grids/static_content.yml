@@ -1,10 +1,10 @@
 sylius_grid:
     grids:
-        lakion_sylius_cms_admin_static_content:
+        lakion_cms_admin_static_content:
             driver:
                 name: doctrine/phpcr-odm
                 options:
-                    class: "%lakion_sylius_cms.model.static_content.class%"
+                    class: "%lakion_cms.model.static_content.class%"
             fields:
                 name:
                     type: string

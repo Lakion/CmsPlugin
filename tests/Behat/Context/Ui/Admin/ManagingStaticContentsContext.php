@@ -1,12 +1,12 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Context\Ui\Admin;
+namespace Tests\Lakion\CmsPlugin\Behat\Context\Ui\Admin;
 
 use Behat\Behat\Context\Context;
 use Sylius\Behat\Page\Admin\Crud\IndexPageInterface;
-use Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StaticContent\CreatePageInterface;
-use Tests\Lakion\SyliusCmsBundle\Behat\Page\Admin\StaticContent\UpdatePageInterface;
-use Lakion\SyliusCmsBundle\Document\StaticContent;
+use Tests\Lakion\CmsPlugin\Behat\Page\Admin\StaticContent\CreatePageInterface;
+use Tests\Lakion\CmsPlugin\Behat\Page\Admin\StaticContent\UpdatePageInterface;
+use Lakion\CmsPlugin\Document\StaticContent;
 use Webmozart\Assert\Assert;
 
 final class ManagingStaticContentsContext implements Context

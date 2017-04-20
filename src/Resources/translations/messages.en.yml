@@ -1,4 +1,4 @@
-lakion_sylius_cms:
+lakion_cms:
     form:
         custom_block:
             body: "Body"
@@ -46,6 +46,7 @@ lakion_sylius_cms:
 
     menu:
         admin:
+            header: "Manage content"
             custom_blocks: "Custom blocks"
             product_blocks: "Product blocks"
             routes: "Routes"
@@ -54,7 +55,12 @@ lakion_sylius_cms:
             taxon_blocks: "Taxon blocks"
 
     ui:
-        custom_blocks: "Custom blocks"
+        new_product_block: "New product block"
+        administration: "Administration"
+        new_static_content: "New static content"
+        edit: "Edit"
+        new_custom_block: "New custom block"
+        custom_blocks: "Dynamic blocks"
         product_blocks: "Product blocks"
         routes: "Routes"
         static_contents: "Static contents"

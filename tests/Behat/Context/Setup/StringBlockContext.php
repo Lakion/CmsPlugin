@@ -1,13 +1,11 @@
 <?php
 
-namespace Tests\Lakion\SyliusCmsBundle\Behat\Context\Setup;
+namespace Tests\Lakion\CmsPlugin\Behat\Context\Setup;
 
 use Behat\Behat\Context\Context;
 use Doctrine\Common\Persistence\ObjectManager;
-use Lakion\SyliusCmsBundle\Document\StringBlock;
 use Sylius\Behat\Service\SharedStorageInterface;
 use Sylius\Bundle\CoreBundle\Fixture\Factory\ExampleFactoryInterface;
-use Sylius\Component\Resource\Factory\FactoryInterface;
 
 final class StringBlockContext implements Context
 {

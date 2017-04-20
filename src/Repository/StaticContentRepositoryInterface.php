@@ -1,8 +1,8 @@
 <?php
 
-namespace Lakion\SyliusCmsBundle\Repository;
+namespace Lakion\CmsPlugin\Repository;
 
-use Lakion\SyliusCmsBundle\Document\StaticContent;
+use Lakion\CmsPlugin\Document\StaticContent;
 
 interface StaticContentRepositoryInterface
 {

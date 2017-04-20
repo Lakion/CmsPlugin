@@ -8,7 +8,7 @@ Feature: Editing a product block
         Given the store has a product "Heron"
         And I am logged in as an administrator
 
-    @ui
+    @ui @javascript @todo
     Scenario: Changing product of a product block
         Given the store has a product "Banana"
         And the store has product block "delivery-info" with product "Heron"

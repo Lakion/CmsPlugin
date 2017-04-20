@@ -5,7 +5,8 @@ Feature: Deleting a taxon block
     I want to be able to delete a taxon block
 
     Background:
-        Given I am logged in as an administrator
+        Given the store has "Winter" taxonomy
+        And I am logged in as an administrator
 
     @ui @todo
     Scenario: Deleted taxon block should disappear from the registry

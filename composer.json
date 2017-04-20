@@ -1,6 +1,7 @@
 {
-    "name": "lakion/sylius-cms-bundle",
-    "type": "sylius-bundle",
+    "name": "lakion/cms-plugin",
+    "type": "sylius-plugin",
+    "keywords": ["sylius", "sylius-plugin", "plugin", "cms"],
     "description": "Simple CMS for Sylius.",
     "license": "MIT",
     "authors": [
@@ -13,7 +14,7 @@
     "require": {
         "php": "^5.6|^7.0",
 
-        "sylius/sylius": "dev-master",
+        "sylius/sylius": "1.0.0-beta.2",
 
         "doctrine/phpcr-odm": "^2.0@dev",
         "symfony-cmf/block-bundle": "^2.0@dev",
@@ -44,12 +45,12 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Lakion\\SyliusCmsBundle\\": "src/"
+            "Lakion\\CmsPlugin\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Lakion\\SyliusCmsBundle\\": "tests/"
+            "Tests\\Lakion\\CmsPlugin\\": "tests/"
         }
     }
 }

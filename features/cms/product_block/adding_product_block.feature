@@ -8,7 +8,7 @@ Feature: Adding a new product block
         Given the store has a product "Heron"
         And I am logged in as an administrator
 
-    @ui
+    @ui @javascript @todo
     Scenario: Adding a new product block
         Given I want to add a new product block
         When I set its name to "free-shipping-for-herons"
@@ -17,7 +17,7 @@ Feature: Adding a new product block
         Then I should be notified that it has been successfully created
         And the product block "free-shipping-for-herons" should appear in the store
 
-    @ui
+    @ui @javascript @todo
     Scenario: Adding a new product block with product, name and title
         Given I want to add a new product block
         When I set its name to "free-shipping-for-herons"
@@ -27,7 +27,7 @@ Feature: Adding a new product block
         Then I should be notified that it has been successfully created
         And the product block "free-shipping-for-herons" should appear in the store
 
-    @ui
+    @ui @javascript @todo
     Scenario: Adding a new product block with product, name and body
         Given I want to add a new product block
         When I set its name to "free-shipping-for-herons"
@@ -37,7 +37,7 @@ Feature: Adding a new product block
         Then I should be notified that it has been successfully created
         And the product block "free-shipping-for-herons" should appear in the store
 
-    @ui
+    @ui @javascript @todo
     Scenario: Adding a new product block with product, name and link
         Given I want to add a new product block
         When I set its name to "the-best-heron"
@@ -47,7 +47,7 @@ Feature: Adding a new product block
         Then I should be notified that it has been successfully created
         And the product block "the-best-heron" should appear in the store
 
-    @ui
+    @ui @javascript @todo
     Scenario: Adding a new product block with product, name and image
         Given I want to add a new product block
         When I set its name to "the-best-heron"

@@ -2,34 +2,34 @@
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="lakion_sylius_cms.form.type.route" class="Lakion\SyliusCmsBundle\Form\Type\RouteType">
-            <argument>%lakion_sylius_cms.model.route.class%</argument>
+        <service id="lakion_cms.form.type.route" class="Lakion\CmsPlugin\Form\Type\RouteType">
+            <argument>%lakion_cms.model.route.class%</argument>
             <argument type="collection"><argument>sylius</argument></argument>
             <tag name="form.type" />
         </service>
 
-        <service id="lakion_sylius_cms.factory.route" class="Lakion\SyliusCmsBundle\Factory\RouteFactory">
+        <service id="lakion_cms.factory.route" class="Lakion\CmsPlugin\Factory\RouteFactory">
             <argument type="service">
                 <service class="Sylius\Component\Resource\Factory\Factory">
-                    <argument>%lakion_sylius_cms.model.route.class%</argument>
+                    <argument>%lakion_cms.model.route.class%</argument>
                 </service>
             </argument>
-            <argument type="service" id="lakion_sylius_cms.manager.route" />
+            <argument type="service" id="lakion_cms.manager.route" />
             <argument>%cmf_routing.dynamic.persistence.phpcr.route_basepaths%</argument>
         </service>
 
-        <service id="lakion_sylius_cms.fixture.example_factory.route" class="Lakion\SyliusCmsBundle\Fixture\Factory\RouteExampleFactory">
-            <argument type="service" id="lakion_sylius_cms.factory.route" />
-            <argument type="service" id="lakion_sylius_cms.repository.static_content" />
+        <service id="lakion_cms.fixture.example_factory.route" class="Lakion\CmsPlugin\Fixture\Factory\RouteExampleFactory">
+            <argument type="service" id="lakion_cms.factory.route" />
+            <argument type="service" id="lakion_cms.repository.static_content" />
         </service>
 
-        <service id="lakion_sylius_cms.fixture.route" class="Lakion\SyliusCmsBundle\Fixture\RouteFixture">
-            <argument type="service" id="lakion_sylius_cms.manager.route" />
-            <argument type="service" id="lakion_sylius_cms.fixture.example_factory.route" />
+        <service id="lakion_cms.fixture.route" class="Lakion\CmsPlugin\Fixture\RouteFixture">
+            <argument type="service" id="lakion_cms.manager.route" />
+            <argument type="service" id="lakion_cms.fixture.example_factory.route" />
             <tag name="sylius_fixtures.fixture" />
         </service>
 
-        <service id="lakion_sylius_cms.admin.content_menu_builder.route" class="Lakion\SyliusCmsBundle\Menu\ContentMenuBuilder">
+        <service id="lakion_cms.admin.content_menu_builder.route" class="Lakion\CmsPlugin\Menu\ContentMenuBuilder">
             <tag name="kernel.event_listener" event="sylius.menu.admin.main" method="configureRouteMenu" />
         </service>
     </services>
