@@ -1,0 +1,68 @@
+lakion_cms:
+    form:
+        custom_block:
+            body: "Inhoud"
+            image: "Afbeelding"
+            link: "Link"
+            name: "Naam"
+            title: "Titel"
+
+        product_block:
+            body: "Inhoud"
+            image: "Afbeelding"
+            link: "Link"
+            name: "Naam"
+            product: "Product"
+            title: "Titel"
+
+        route:
+            content: "Content"
+            name: "Naam"
+            parent: "Bovenliggend item"
+
+        static_content:
+            body: "Inhoud"
+            id: "Id"
+            internal_name: "Interne naam"
+            parent: "Bovenliggend item"
+            publish_end_date: "Publiceren tot"
+            publish_start_date: "Publiceren vanaf"
+            publishable: "Gepubliceerd"
+            routes: "Routes"
+            title: "Titel"
+            locale: "Locale"
+
+        string_block:
+            body: "Inhoud"
+            name: "Naam"
+
+        taxon_block:
+            body: "Inhoud"
+            image: "Afbeelding"
+            link: "Link"
+            name: "Naam"
+            taxon: "Taxon"
+            title: "Titel"
+
+    menu:
+        admin:
+            header: "Beheer content"
+            custom_blocks: "Custom blocks"
+            product_blocks: "Product blocks"
+            routes: "Routes"
+            static_contents: "Static contents"
+            string_blocks: "String blocks"
+            taxon_blocks: "Taxon blocks"
+
+    ui:
+        new_product_block: "Nieuw product block"
+        administration: "Nieuw"
+        new_static_content: "Nieuw static content"
+        edit: "Wijzigen"
+        new_custom_block: "Nieuw custom block"
+        custom_blocks: "Dynamic blocks"
+        product_blocks: "Product blocks"
+        routes: "Routes"
+        static_contents: "Static contents"
+        string_blocks: "String blocks"
+        taxon_blocks: "Taxon blocks"
