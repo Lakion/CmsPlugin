@@ -51,6 +51,16 @@ final class StaticContentExampleFactory implements ExampleFactoryInterface
                 })
                 ->setAllowedTypes('body', 'string')
 
+                ->setDefault('meta_keywords', function (Options $options) {
+                    return $this->faker->words(10, true);
+                })
+                ->setAllowedTypes('meta_keywords', 'string')
+
+                ->setDefault('meta_description', function (Options $options) {
+                    return $this->faker->paragraphs(1, true);
+                })
+                ->setAllowedTypes('meta_description', 'string')
+
                 ->setDefault('publishable', function (Options $options) {
                     return $this->faker->boolean(90);
                 })
@@ -71,6 +81,8 @@ final class StaticContentExampleFactory implements ExampleFactoryInterface
         $staticContent->setName($options['name']);
         $staticContent->setBody($options['body']);
         $staticContent->setPublishable($options['publishable']);
+        $staticContent->setMetaKeywords($options['meta_keywords']);
+        $staticContent->setMetaDescription($options['meta_description']);
 
         return $staticContent;
     }

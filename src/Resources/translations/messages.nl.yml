@@ -28,6 +28,8 @@ lakion_cms:
             publish_end_date: "Publiceren tot"
             publish_start_date: "Publiceren vanaf"
             publishable: "Gepubliceerd"
+            meta_keywords: "Meta steekwoorden"
+            meta_description: "Meta beschrijving"
             routes: "Routes"
             title: "Titel"
             locale: "Locale"
