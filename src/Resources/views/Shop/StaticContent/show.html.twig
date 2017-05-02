@@ -1,5 +1,14 @@
 {% extends '@SyliusShop/layout.html.twig' %}
 
+{% block metatags %}
+    {% if resource.metaKeywords is not empty %}
+        <meta name="keywords" content="{{ resource.metaKeywords }}" />
+    {% endif %}
+    {% if resource.metaDescription is not empty %}
+        <meta name="description" content="{{ resource.metaDescription }}" />
+    {% endif %}
+{% endblock %}
+
 {% block content %}
     <div class="ui segment">
         <h1 class="ui dividing header">{{ resource.title }}</h1>

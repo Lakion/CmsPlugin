@@ -25,6 +25,8 @@ final class StaticContentFixture extends AbstractResourceFixture
                 ->scalarNode('title')->end()
                 ->scalarNode('name')->end()
                 ->scalarNode('body')->end()
+                ->scalarNode('meta_keywords')->end()
+                ->scalarNode('meta_description')->end()
                 ->booleanNode('publishable')->end()
         ;
     }

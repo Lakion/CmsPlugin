@@ -44,6 +44,14 @@ final class StaticContentType extends AbstractResourceType
                 'required' => false,
                 'label' => 'lakion_cms.form.static_content.body',
             ])
+            ->add('meta_keywords', TextType::class, [
+                'required' => false,
+                'label' => 'lakion_cms.form.static_content.meta_keywords',
+            ])
+            ->add('meta_description', TextareaType::class, [
+                'required' => false,
+                'label' => 'lakion_cms.form.static_content.meta_description',
+            ])
             ->add('publishStartDate', DateTimeType::class, [
                 'label' => 'lakion_cms.form.static_content.publish_start_date',
                 'placeholder' => ['year' => '-', 'month' => '-', 'day' => '-'],
