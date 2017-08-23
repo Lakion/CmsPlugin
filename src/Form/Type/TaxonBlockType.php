@@ -4,7 +4,7 @@ namespace Lakion\CmsPlugin\Form\Type;
 
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Sylius\Bundle\TaxonomyBundle\Form\Type\TaxonAutocompleteChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\ImageType;
+use Symfony\Cmf\Bundle\MediaBundle\Form\Type\ImageType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
