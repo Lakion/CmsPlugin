@@ -14,7 +14,7 @@
     "require": {
         "php": "^5.6|^7.0",
 
-        "sylius/sylius": "1.0.0-beta.2",
+        "sylius/sylius": "^1.0",
 
         "doctrine/phpcr-odm": "^2.0@dev",
         "symfony-cmf/block-bundle": "^2.0@dev",
