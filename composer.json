@@ -41,7 +41,6 @@
         "phpspec/phpspec": "^3.2",
         "phpunit/phpunit": "^5.6"
     },
-    "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
