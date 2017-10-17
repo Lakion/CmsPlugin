@@ -11,7 +11,7 @@ class ShowPage extends SymfonyPage implements ShowPageInterface
      */
     public function getBlockContents()
     {
-        return $this->getElement('block')->getHtml();
+        return $this->getElement('cmf-block')->getHtml();
     }
 
     /**
@@ -19,7 +19,7 @@ class ShowPage extends SymfonyPage implements ShowPageInterface
      */
     public function getBlockImageUrl()
     {
-        return $this->getElement('block')->find('css', 'img')->getAttribute('src');
+        return $this->getElement('cmf-block')->find('css', 'img')->getAttribute('src');
     }
 
     /**
@@ -28,7 +28,7 @@ class ShowPage extends SymfonyPage implements ShowPageInterface
     protected function getDefinedElements()
     {
         return array_merge(parent::getDefinedElements(), [
-            'block' => '#lakion_cms_block_preview',
+            'cmf-block' => '#lakion_cms_block_preview',
         ]);
     }
 
