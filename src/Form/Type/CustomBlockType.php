@@ -3,7 +3,7 @@
 namespace Lakion\CmsPlugin\Form\Type;
 
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Cmf\Bundle\MediaBundle\Form\Type\ImageType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
@@ -27,7 +27,7 @@ final class CustomBlockType extends AbstractResourceType
             ->add('linkUrl', TextType::class, [
                 'label' => 'lakion_cms.form.custom_block.link',
             ])
-            ->add('image', FileType::class, [
+            ->add('image', ImageType::class, [
                 'label' => 'lakion_cms.form.custom_block.image',
             ])
         ;
