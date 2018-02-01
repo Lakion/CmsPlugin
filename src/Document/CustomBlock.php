@@ -3,7 +3,6 @@
 namespace Lakion\CmsPlugin\Document;
 
 use Sylius\Component\Resource\Model\ResourceInterface;
-use Symfony\Cmf\Bundle\BlockBundle\Doctrine\Phpcr\ImagineBlock;
 
 class CustomBlock extends ImagineBlock implements ResourceInterface
 {
